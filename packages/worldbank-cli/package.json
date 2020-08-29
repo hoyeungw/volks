@@ -1,0 +1,62 @@
+{
+  "name": "@volks/worldbank-cli",
+  "version": "0.0.0",
+  "description": "A worldbank-cli",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "bin": {
+    "worldbank": "service/cli/fin-cli/src/script.js"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "inquirer-autocomplete-prompt": "^1.1.0",
+    "inquirer-checkbox-plus-prompt": "^1.0.1",
+    "@analys/convert": "^0.3.9",
+    "@vect/vector-init": "^0.2.9",
+    "@spare/enum-chars": "^0.9.3-alpha.0",
+    "@acq/acq": "^0.2.8",
+    "@analys/enum-tabular-types": "^0.3.9",
+    "@analys/table": "^0.3.9",
+    "@aryth/rand": "^0.2.14",
+    "@flua/utils": "^0.2.9",
+    "@palett/says": "^0.4.5",
+    "@spare/deco": "^0.9.3-alpha.0",
+    "@spare/logger": "^0.9.3-alpha.0",
+    "@valjoux/linger": "^0.1.11",
+    "@volks/countries-and-subdivisions": "^0.0.0",
+    "@volks/worldbank-indicator": "^0.0.0",
+    "@volks/worldbank-sources": "^0.0.0",
+    "fuzzy": "^0.1.3"
+  },
+  "devDependencies": {
+    "fuzzy": "^0.1.3",
+    "@valjoux/linger": "^0.1.11",
+    "@valjoux/timestamp-pretty": "^0.1.11",
+    "@aryth/rand": "^0.2.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/volks.git"
+  },
+  "keywords": [
+    "volks",
+    "function",
+    "worldbank-cli"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/volks"
+  },
+  "homepage": "https://github.com/hoyeungw/volks#readme"
+}

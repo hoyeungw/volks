@@ -1,0 +1,37 @@
+{
+  "name": "@volks/worldbank-sources",
+  "version": "0.0.0",
+  "description": "A worldbank-sources",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "dependencies": {
+    "@acq/acq": "^0.2.8",
+    "@analys/enum-tabular-types": "^0.3.9",
+    "@spare/cite": "^0.9.3-alpha.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/volks.git"
+  },
+  "keywords": [
+    "volks",
+    "function",
+    "worldbank-sources"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/volks"
+  },
+  "homepage": "https://github.com/hoyeungw/volks#readme"
+}
