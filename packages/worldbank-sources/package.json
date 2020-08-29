@@ -1,6 +1,6 @@
 {
   "name": "@volks/worldbank-sources",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A worldbank-sources",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
