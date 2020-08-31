@@ -1,5 +1,10 @@
 // const main = async function () {
 //   await require('..').WorldbankCli.start()
 // }
-const { WorldbankCli } = require('..')
-WorldbankCli.start().then()
+const { WorldbankCli } = require('../dist/index.cjs')
+
+const main = async () => {
+  await WorldbankCli.start()
+}
+
+main().then()

@@ -15,7 +15,7 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "bin": {
-    "worldbank": "src/script.js"
+    "worldbank": "./src/script.js"
   },
   "dependencies": {
     "@acq/acq": "^0.2.8",
