@@ -1,6 +1,5 @@
-// const main = async function () {
-//   await require('..').WorldbankCli.start()
-// }
+#! /usr/bin/env node
+
 const { WorldbankCli } = require('../dist/index.cjs')
 
 const main = async () => {
