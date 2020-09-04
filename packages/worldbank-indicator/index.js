@@ -1,0 +1,1 @@
+export { getIndicator, getIndicators } from './src/getIndicator'

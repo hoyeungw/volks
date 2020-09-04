@@ -1,9 +1,11 @@
 #! /usr/bin/env node
 
-const { WorldbankCli } = require('../dist/index.cjs')
+(async function () { await require('..').WorldbankCli.start() })()
 
-const main = async () => {
-  await WorldbankCli.start()
-}
-
-main().then()
+// const { WorldbankCli } = require('../dist/index.cjs')
+//
+// const main = async () => {
+//   await WorldbankCli.start()
+// }
+//
+// main().then()

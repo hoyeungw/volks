@@ -1,20 +1,20 @@
-import { TABLE }                             from '@analys/enum-tabular-types'
-import { Table }                             from '@analys/table'
-import { randInt }                           from '@aryth/rand'
-import { greyNow }                           from '@flua/utils'
-import { says }                              from '@palett/says'
-import { deco }                              from '@spare/deco'
-import { SP }                                from '@spare/enum-chars'
-import { decoString, decoTable, logger, Xr } from '@spare/logger'
-import { linger }                            from '@valjoux/linger'
-import { range }                             from '@vect/vector-init'
-import { CountryIsos }                       from '@volks/countries-and-subdivisions'
-import { getIndicator }                      from '@volks/worldbank-indicator/src/getIndicator'
-import { Sources }                           from '@volks/worldbank-sources'
-import fuzzy                                 from 'fuzzy'
-import inquirer                              from 'inquirer'
-import searchableList                        from 'inquirer-autocomplete-prompt'
-import searchableCheckbox                    from 'inquirer-checkbox-plus-prompt'
+import { TABLE }                 from '@analys/enum-tabular-types'
+import { Table }                 from '@analys/table'
+import { randInt }               from '@aryth/rand'
+import { greyNow }               from '@flua/utils'
+import { says }                  from '@palett/says'
+import { deco }                  from '@spare/deco'
+import { SP }                    from '@spare/enum-chars'
+import { decoTable, logger, Xr } from '@spare/logger'
+import { linger }                from '@valjoux/linger'
+import { range }                 from '@vect/vector-init'
+import { CountryIsos }           from '@volks/countries-and-subdivisions'
+import { getIndicator }          from '@volks/worldbank-indicator/src/getIndicator'
+import { Sources }               from '@volks/worldbank-sources'
+import fuzzy                     from 'fuzzy'
+import inquirer                  from 'inquirer'
+import searchableList            from 'inquirer-autocomplete-prompt'
+import searchableCheckbox        from 'inquirer-checkbox-plus-prompt'
 
 const SEARCHABLE_LIST = 'searchable-list'
 const SEARCHABLE_CHECKBOX = 'searchable-checkbox'
@@ -28,8 +28,8 @@ const searchListAsync = async function (answers, input = '') {
     randInt(30, 90),
     input => {
       const results = fuzzy
-        .filter(input, list)
-        .map(({ original }) => ({ name: decoString(original), value: original }))
+        .filter(input, list, { extract: ({ name, value }) => name + ' | ' + value })
+        .map(({ original }) => original)
       return results.push(new inquirer.Separator()), results
     },
     input)
