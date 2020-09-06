@@ -4,8 +4,8 @@ import { Vinylize } from '@flua/vinylize'
 import { Verse }    from '@spare/verse'
 import gulp         from 'gulp'
 
-const SRC = 'packages/countries-and-subdivisions/static/fetched'
-const DEST = 'packages/countries-and-subdivisions/resources'
+const SRC = 'packages/worldbank-countries/static/fetched'
+const DEST = 'packages/worldbank-countries/resources'
 const FILENAME = 'CountryTable'
 
 export const saveCountryTable = async () => {

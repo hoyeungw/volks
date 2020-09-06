@@ -1,7 +1,7 @@
 {
-  "name": "@volks/countries-and-subdivisions",
+  "name": "@volks/worldbank-countries",
   "version": "0.0.7",
-  "description": "A countries-and-subdivisions",
+  "description": "A worldbank-countries",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "files": [
@@ -27,7 +27,7 @@
   "keywords": [
     "volks",
     "function",
-    "countries-and-subdivisions"
+    "worldbank-countries"
   ],
   "author": "Hoyeung Wong",
   "license": "MIT",

@@ -43,7 +43,7 @@
     "@aryth/rand": "^0.2.14",
     "@valjoux/linger": "^0.1.11",
     "@valjoux/timestamp-pretty": "^0.2.0",
-    "@volks/countries-and-subdivisions": "^0.0.7",
+    "@volks/worldbank-countries": "^0.0.7",
     "@volks/worldbank-indicator": "^0.0.5",
     "fuzzy": "^0.1.3"
   },

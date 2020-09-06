@@ -369,7 +369,7 @@ export const AfricaDevelopmentIndicators = {
     ['DT.ODA.DACD.PROD.TRDP.CD'     , 'Gross ODA aid disbursement for trade policy and regulations, DAC donors total (current US$)'                     , null                                   ], 
     ['DT.ODA.DACD.PROD.TRSM.CD'     , 'Gross ODA aid disbursement for tourism sector, DAC donors total (current US$)'                                   , null                                   ], 
     ['DT.ODA.DACD.PRVT.CD'          , 'Total ODA Private Net, DAC donors (current US$)'                                                                 , null                                   ], 
-    ['DT.ODA.DACD.RFGE.CD'          , 'Gross ODA aid disbursement for refugees in donor countries,  DAC donors total (current US$)'                     , null                                   ], 
+    ['DT.ODA.DACD.RFGE.CD'          , 'Gross ODA aid disbursement for refugees in donor worldbank-countries,  DAC donors total (current US$)'                     , null                                   ],
     ['DT.ODA.DACD.SOCI.CD'          , 'Gross ODA aid disbursement for social infrastructure & services,  DAC donors total (current US$)'                , null                                   ], 
     ['DT.ODA.DACD.TSEC.CD'          , 'Gross ODA aid disbursement for total sector allocable, DAC donors total (current US$)'                           , null                                   ], 
     ['DT.ODA.DACD.UNAL.CD'          , 'Gross ODA aid disbursement for unallocated/unspecified support, DAC donors total (current US$)'                  , null                                   ], 

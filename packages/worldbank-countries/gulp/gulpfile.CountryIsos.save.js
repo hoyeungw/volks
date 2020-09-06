@@ -12,8 +12,8 @@ import { promises }          from 'fs'
 import gulp                  from 'gulp'
 import { NaiveCsv }          from 'naivecsv'
 
-const SRC = 'packages/countries-and-subdivisions/static'
-const DEST = 'packages/countries-and-subdivisions/resources'
+const SRC = 'packages/worldbank-countries/static'
+const DEST = 'packages/worldbank-countries/resources'
 const SOURCE_FILENAME = 'CountryTable'
 const FILENAME = 'CountryIsos'
 

@@ -3,7 +3,7 @@ import { Vinylize }    from '@flua/vinylize'
 import { says }        from '@palett/says'
 import { SP }          from '@spare/enum-chars'
 import { Verse }       from '@spare/verse'
-import { CountryIsos } from '@volks/countries-and-subdivisions'
+import { CountryIsos } from '@volks/worldbank-countries'
 import gulp            from 'gulp'
 
 const DEST = 'packages/worldbank-cli/resources'

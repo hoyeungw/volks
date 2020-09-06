@@ -6,7 +6,7 @@ import { saveRegionDefinitions }  from './gulpfile.RegionDefinitions.save'
 import { saveStaticCountryTable } from './gulpfile.StaticCountryTable.save'
 
 export const saveWorldbankCountries = gulp.series(
-  Clean('packages/countries-and-subdivisions/static/fetched'),
+  Clean('packages/worldbank-countries/static/fetched'),
   saveStaticCountryTable,
   saveCountryIsos,
   saveCountryTable,

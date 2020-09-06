@@ -87,10 +87,10 @@ export const getIndicators = async function (
     year = WITHIN_5_YEARS, easy = false, spin = false
   } = {}
 ) {
-  // const countries = parseLabel(country)
+  // const worldbank-countries = parseLabel(country)
   const indicators = parseLabel(indicator)
   // const yearEntry = parseYear(year)
-  // const per_page = countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
+  // const per_page = worldbank-countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
   const tables = {}
   for (let indicator of indicators) {
     const table = await getIndicator({ country, indicator, year, format: TABLE, spin, easy })

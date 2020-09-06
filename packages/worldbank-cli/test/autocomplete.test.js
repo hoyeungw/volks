@@ -8,7 +8,7 @@ import { SP }                    from '@spare/enum-chars'
 import { decoTable, logger, Xr } from '@spare/logger'
 import { linger }                from '@valjoux/linger'
 import { range }                 from '@vect/vector-init'
-import { CountryIsos }           from '@volks/countries-and-subdivisions'
+import { CountryIsos }           from '@volks/worldbank-countries'
 import { getIndicator }          from '@volks/worldbank-indicator/src/getIndicator'
 import { Sources }               from '@volks/worldbank-sources'
 import fuzzy                     from 'fuzzy'
@@ -52,7 +52,7 @@ const cli = async () => {
   const { countries } = await inquirer.prompt([{
     type: SEARCHABLE_CHECKBOX,
     name: 'countries',
-    message: 'Select countries',
+    message: 'Select worldbank-countries',
     pageSize: 24,
     highlight: true,
     searchable: true,

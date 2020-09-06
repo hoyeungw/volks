@@ -810,7 +810,7 @@ class WorldbankCli {
     } = await inquirer.prompt({
       type: SEARCHABLE_CHECKBOX,
       name: 'countries',
-      message: 'Select countries',
+      message: 'Select worldbank-countries',
       pageSize: 24,
       highlight: true,
       searchable: true,

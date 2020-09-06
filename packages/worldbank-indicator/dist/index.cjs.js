@@ -113,9 +113,9 @@ const getIndicators = async function ({
   easy = false,
   spin = false
 } = {}) {
-  // const countries = parseLabel(country)
+  // const worldbank-countries = parseLabel(country)
   const indicators = parseLabel(indicator); // const yearEntry = parseYear(year)
-  // const per_page = countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
+  // const per_page = worldbank-countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
 
   const tables = {};
 

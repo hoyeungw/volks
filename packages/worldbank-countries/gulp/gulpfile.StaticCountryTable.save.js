@@ -10,7 +10,7 @@ import gulp                from 'gulp'
 import { getCountries }    from '../src'
 
 
-const DEST = 'packages/countries-and-subdivisions/static/fetched'
+const DEST = 'packages/worldbank-countries/static/fetched'
 const FILENAME = 'CountryTable'
 
 const lexicon = [
