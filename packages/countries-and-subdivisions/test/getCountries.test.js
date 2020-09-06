@@ -4,7 +4,6 @@ import { getCountries }        from '../src'
 
 const test = async () => {
   const samples = await getCountries({ format: SAMPLES })
-
   samples |> decoSamples |> logger
 }
 

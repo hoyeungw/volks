@@ -5,7 +5,18 @@ const BASE = 'http://api.worldbank.org/v2'
 
 export const getCountries = async function ({ format = SAMPLES } = {}) {
   return await Acq.tabular({
-    title: 'countryList',
+    title: 'countries',
+    url: `${ BASE }/country`,
+    params: ({ format: 'json', per_page: 512 }),
+    prep: ([, samples]) => samples.filter(({ region: { id } }) => id !== 'NA'),
+    from: SAMPLES,
+    to: format,
+  })
+}
+
+export const getCountriesAndRegions = async function ({ format = SAMPLES } = {}) {
+  return await Acq.tabular({
+    title: 'countries',
     url: `${ BASE }/country`,
     params: ({ format: 'json', per_page: 512 }),
     prep: ([, samples]) => samples,
@@ -14,10 +25,10 @@ export const getCountries = async function ({ format = SAMPLES } = {}) {
   })
 }
 
-export const getDivisions = async function ({ format = SAMPLES } = {}) {
+export const getRegions = async function ({ format = SAMPLES } = {}) {
   return await Acq.tabular({
-    title: 'countryList',
-    url: `${ BASE }/country`,
+    title: 'regions',
+    url: `${ BASE }/regions`,
     params: ({ format: 'json', per_page: 512 }),
     prep: ([, samples]) => samples,
     from: SAMPLES,

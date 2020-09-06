@@ -24,7 +24,7 @@
     "@analys/table": "^0.4.1",
     "@aryth/math": "^0.2.14",
     "@aryth/rand": "^0.2.14",
-    "@flua/utils": "^0.2.9",
+    "@flua/utils": "^0.3.0",
     "@palett/says": "^0.4.5",
     "@spare/deco": "^0.9.3",
     "@spare/enum-chars": "^0.9.3",
