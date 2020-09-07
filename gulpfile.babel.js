@@ -1,14 +1,14 @@
-import { saveWorldbankCountries }    from '@volks/worldbank-countries-and-subdivisions/gulp'
 import { saveWorldbankCliResources } from '@volks/worldbank-cli/gulp'
-import { saveWorldbankSources }      from '@volks/worldbank-sources/gulp/gulpfile.allSources.save'
-import { saveWorldbankTopics }       from '@volks/worldbank-topics/gulp/gulpfile.topics.save'
+import { saveWorldbankCountries }    from '@volks/worldbank-countries/gulp'
+import { saveWorldbankSources }      from '@volks/worldbank-sources/gulp'
+import { saveWorldbankTopics }       from '@volks/worldbank-topics/gulp'
 import gulp                          from 'gulp'
 
 
 export {
-  saveWorldbankCountries,
   saveWorldbankTopics,
   saveWorldbankSources,
+  saveWorldbankCountries,
   saveWorldbankCliResources
 }
 

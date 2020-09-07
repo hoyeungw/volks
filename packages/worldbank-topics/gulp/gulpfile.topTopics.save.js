@@ -6,11 +6,11 @@ import { snakeToPascal }   from '@spare/phrasing'
 import { makeReplaceable } from '@spare/translator'
 import { Verse }           from '@spare/verse'
 import gulp                from 'gulp'
-import { getTopics }       from '../src/getTopics'
+import { getTopTopics }    from '../src'
 
 const SRC = 'packages/worldbank-topics/resources'
 const DEST = SRC
-const FILENAME = 'Topics'
+const FILENAME = 'TopTopicTable'
 
 const LEXICON = [
   [/Agriculture/gi, 'Agri'],
@@ -21,30 +21,36 @@ const LEXICON = [
   [/Environment/gi, 'Env'],
   [/Financial/gi, 'Fin'],
   [/Infrastructure/gi, 'Infras'],
+  [/Science\s+(?:&|and)\s+Technology/gi, 'STEM'],
   [/Science/gi, 'Sci'],
   [/Technology/gi, 'Tech'],
   [/Millenium/gi, '2k'],
-  [/External/gi, 'Ext'],
-  [/Internal/gi, 'Int'],
-  [/Social Protection/gi, 'SP'],
-  [/Sector$/gi, ''],
+  [/Social\s+Protection/gi, 'SP'],
   [/Growth/gi, 'Gr'],
   [/Change/gi, 'Ch'],
+  [/Internal/gi, 'Int'],
+  [/External/gi, ''],
+  [/Dev\s+Goals/i, 'Goals'],
+  [/Mining/i, ''],
+  [/Eff$/, ''],
+  [/Sector$/, ''],
+  [/Dev$/, ''],
+  [/Ch$/, ''],
+  [/Gr$/, ''],
+  [/^SP/, '']
 ] |> makeReplaceable
 
-const saveTopics = async () => {
-  const topics = Table.from(await getTopics({ format: TABLE }))
-  const codes = topics
-    .column('value')
-    .map(x => x.replace(LEXICON) |> snakeToPascal)
-  topics.insertColumn('code', codes, { field: 'value', mutate: true })
+export const saveTopTopics = async () => {
+  const topTopicTable = Table
+    .from(await getTopTopics({ format: TABLE }))
+    .renameColumn('value', 'name')
+  const codes = topTopicTable
+    .column('name')
+    .map(x => x.replace(LEXICON, snakeToPascal))
+  topTopicTable.insertColumn('code', codes, { field: 'name', mutate: true })
   await Vinylize(FILENAME + '.js')
     .p(esvar(FILENAME))
-    .p(Verse.table(topics))
-    .pipe(gulp.dest(DEST))
+    .p(Verse.table(topTopicTable))
+    .asyncPipe(gulp.dest(DEST))
 }
 
-
-export const saveWorldbankTopics = gulp.series(
-  saveTopics
-)

@@ -10,11 +10,13 @@
     "upint": "yarn upgrade-interactive --latest",
     "pub": "lerna publish --force-publish",
     "build": "lerna exec --parallel -- rollup -c ../../rollup.config.js",
-    "build-specific": "lerna exec --scope=@volks/worldbank-indicator -- rollup -c ../../rollup.config.js",
+    "build-specific": "lerna exec --scope=@volks/worldbank-topics -- rollup -c ../../rollup.config.js",
     "watch": "lerna exec --parallel -- rollup -c ../../rollup.config.js -w",
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },
   "devDependencies": {
+    "@typen/bool": "^0.1.7",
+    "@aryth/rand": "^0.2.14",
     "@analys/convert": "^0.4.1",
     "@analys/crostab": "^0.4.1",
     "@analys/enum-join-modes": "^0.4.1",
