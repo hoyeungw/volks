@@ -1,0 +1,34 @@
+{
+  "name": "@volks/worldbank-premade",
+  "version": "0.1.1",
+  "description": "A worldbank-premade",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "pub": "npm publish",
+    "test": "node -r @babel/register test/test.index.js"
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoyeungw/volks.git"
+  },
+  "keywords": [
+    "volks",
+    "function",
+    "worldbank-premade"
+  ],
+  "author": "Hoyeung Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hoyeungw/volks"
+  },
+  "homepage": "https://github.com/hoyeungw/volks#readme"
+}

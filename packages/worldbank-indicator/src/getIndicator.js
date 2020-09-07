@@ -1,30 +1,13 @@
-import { Acq }             from '@acq/acq'
-import { UNION }           from '@analys/enum-join-modes'
-import { SAMPLES, TABLE }  from '@analys/enum-tabular-types'
-import { Table }           from '@analys/table'
-import { bound }           from '@aryth/bound-vector'
-import { RT, SC }          from '@spare/enum-chars'
-import { isNumeric }       from '@typen/num-strict'
-import { pair }            from '@vect/object-init'
-import { distinctIdValue } from '../helpers/distinctIdValue'
+import { Acq }                            from '@acq/acq'
+import { SAMPLES, TABLE }                 from '@analys/enum-tabular-types'
+import { Table }                          from '@analys/table'
+import { RT, SC }                         from '@spare/enum-chars'
+import { isNumeric }                      from '@typen/num-strict'
+import { pair }                           from '@vect/object-init'
+import { distinctIdValue }                      from '../helpers/distinctIdValue'
+import { BASE, COUNTRIES, GDP, WITHIN_5_YEARS } from './constants'
+import { parseLabel, parseYear }                from './paramsParsers'
 
-const BASE = 'http://api.worldbank.org/v2'
-
-const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS'] // 'ECS': Europe & Central Asia
-const GDP = 'NY.GDP.MKTP.CD', POP = 'SP.POP.TOTL'
-const INDICATORS = [GDP, POP]
-const WITHIN_5_YEARS = [2015, 2020]
-
-export const parseLabel = label => Array.isArray(label) ? label : [label]
-
-export const parseYear = year => {
-  if (Array.isArray(year) && year?.length) {
-    const { max, min } = bound(year)
-    return [min, max]
-  }
-  if (isNumeric(year)) return [year, year]
-  return WITHIN_5_YEARS
-}
 
 export const getIndicator = async function (
   {
@@ -70,40 +53,4 @@ export const leanTable = table => {
   return table
 }
 
-/**
- *
- * @param {string|string[]} [country]
- * @param {string|string[]} [indicator]
- * @param {number|number[]} [year]
- * @param {number} [format]
- * @param {boolean} [easy]
- * @param {boolean} [spin]
- * @return {Promise<{head: *[], rows: *[][]}|Table|Object[]>}
- */
-export const getIndicators = async function (
-  {
-    country = COUNTRIES,
-    indicator = INDICATORS,
-    year = WITHIN_5_YEARS, easy = false, spin = false
-  } = {}
-) {
-  // const worldbank-countries = parseLabel(country)
-  const indicators = parseLabel(indicator)
-  // const yearEntry = parseYear(year)
-  // const per_page = worldbank-countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
-  const tables = {}
-  for (let indicator of indicators) {
-    const table = await getIndicator({ country, indicator, year, format: TABLE, spin, easy })
-    tables[table.title] = { table: Table.from(table), indicators: table.indicators, countries: table.countries }
-  }
-  let table = Table.from({ head: [], rows: [] })
-  const indicatorCollection = {}, countryCollection = {}
-  for (let [key, { table: another, indicators, countries }] of Object.entries(tables)) {
-    Object.assign(indicatorCollection, indicators)
-    Object.assign(countryCollection, countries)
-    table = table.join(another.select(['iso', 'date', key]), ['iso', 'date'], UNION)
-  }
-  table.indicators = indicatorCollection
-  table.countries = countryCollection
-  return table
-}
+

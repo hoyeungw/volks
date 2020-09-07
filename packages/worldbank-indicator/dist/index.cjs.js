@@ -3,13 +3,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var acq = require('@acq/acq');
-var enumJoinModes = require('@analys/enum-join-modes');
 var enumTabularTypes = require('@analys/enum-tabular-types');
 var table = require('@analys/table');
-var boundVector = require('@aryth/bound-vector');
 var enumChars = require('@spare/enum-chars');
 var numStrict = require('@typen/num-strict');
 var objectInit = require('@vect/object-init');
+var boundVector = require('@aryth/bound-vector');
+var enumJoinModes = require('@analys/enum-join-modes');
 
 const distinctIdValue = idValueList => {
   const o = {};
@@ -30,7 +30,8 @@ const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
 const GDP = 'NY.GDP.MKTP.CD',
       POP = 'SP.POP.TOTL';
 const INDICATORS = [GDP, POP];
-const WITHIN_5_YEARS = [2015, 2020];
+const WITHIN_5_YEARS$1 = [2015, 2020];
+
 const parseLabel = label => Array.isArray(label) ? label : [label];
 const parseYear = year => {
   if (Array.isArray(year) && (year === null || year === void 0 ? void 0 : year.length)) {
@@ -44,10 +45,11 @@ const parseYear = year => {
   if (numStrict.isNumeric(year)) return [year, year];
   return WITHIN_5_YEARS;
 };
+
 const getIndicator = async function ({
   country = COUNTRIES,
   indicator = GDP,
-  year = WITHIN_5_YEARS,
+  year = WITHIN_5_YEARS$1,
   easy = false,
   spin = false
 } = {}) {
@@ -95,6 +97,7 @@ const leanTable = table$1 => {
   table$1.countries = countries;
   return table$1;
 };
+
 /**
  *
  * @param {string|string[]} [country]
@@ -109,14 +112,11 @@ const leanTable = table$1 => {
 const getIndicators = async function ({
   country = COUNTRIES,
   indicator = INDICATORS,
-  year = WITHIN_5_YEARS,
+  year = WITHIN_5_YEARS$1,
   easy = false,
   spin = false
 } = {}) {
-  // const worldbank-countries = parseLabel(country)
-  const indicators = parseLabel(indicator); // const yearEntry = parseYear(year)
-  // const per_page = worldbank-countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
-
+  const indicators = parseLabel(indicator);
   const tables = {};
 
   for (let indicator of indicators) {

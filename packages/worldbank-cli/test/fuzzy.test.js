@@ -2,7 +2,7 @@ import { decoVector, logger } from '@spare/logger'
 import fuzzy                  from 'fuzzy'
 import inquirer               from 'inquirer'
 import searchableCheckbox     from 'inquirer-checkbox-plus-prompt'
-import { searchListAsync }    from '../src/searchListAsync'
+import { searchListLingered } from '../src/searchListLingered'
 
 const countries = [
   { name: 'the United States of America', value: 'USA' },
@@ -28,7 +28,7 @@ const cli = async () => {
     highlight: true,
     searchable: true,
     default: ['CHN', 'USA'],
-    source: searchListAsync.bind(countries),
+    source: searchListLingered.bind(countries),
     filter(label) { return label }
   })
   indicators |> decoVector |> logger

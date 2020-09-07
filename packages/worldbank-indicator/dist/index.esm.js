@@ -1,11 +1,11 @@
 import { Acq } from '@acq/acq';
-import { UNION } from '@analys/enum-join-modes';
 import { SAMPLES, TABLE } from '@analys/enum-tabular-types';
 import { Table } from '@analys/table';
-import { bound } from '@aryth/bound-vector';
 import { SC, RT } from '@spare/enum-chars';
 import { isNumeric } from '@typen/num-strict';
 import { pair } from '@vect/object-init';
+import { bound } from '@aryth/bound-vector';
+import { UNION } from '@analys/enum-join-modes';
 
 const distinctIdValue = idValueList => {
   const o = {};
@@ -26,7 +26,8 @@ const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
 const GDP = 'NY.GDP.MKTP.CD',
       POP = 'SP.POP.TOTL';
 const INDICATORS = [GDP, POP];
-const WITHIN_5_YEARS = [2015, 2020];
+const WITHIN_5_YEARS$1 = [2015, 2020];
+
 const parseLabel = label => Array.isArray(label) ? label : [label];
 const parseYear = year => {
   if (Array.isArray(year) && (year === null || year === void 0 ? void 0 : year.length)) {
@@ -40,10 +41,11 @@ const parseYear = year => {
   if (isNumeric(year)) return [year, year];
   return WITHIN_5_YEARS;
 };
+
 const getIndicator = async function ({
   country = COUNTRIES,
   indicator = GDP,
-  year = WITHIN_5_YEARS,
+  year = WITHIN_5_YEARS$1,
   easy = false,
   spin = false
 } = {}) {
@@ -91,6 +93,7 @@ const leanTable = table => {
   table.countries = countries;
   return table;
 };
+
 /**
  *
  * @param {string|string[]} [country]
@@ -105,14 +108,11 @@ const leanTable = table => {
 const getIndicators = async function ({
   country = COUNTRIES,
   indicator = INDICATORS,
-  year = WITHIN_5_YEARS,
+  year = WITHIN_5_YEARS$1,
   easy = false,
   spin = false
 } = {}) {
-  // const worldbank-countries = parseLabel(country)
-  const indicators = parseLabel(indicator); // const yearEntry = parseYear(year)
-  // const per_page = worldbank-countries.length * indicators.length * (yearEntry[1] - yearEntry[0] + 1)
-
+  const indicators = parseLabel(indicator);
   const tables = {};
 
   for (let indicator of indicators) {

@@ -1,41 +1,45 @@
-import { TABLE }                             from '@analys/enum-tabular-types'
-import { randInt }                           from '@aryth/rand'
-import { greyNow }                           from '@flua/utils'
-import { says }                              from '@palett/says'
-import { Deco, deco }                        from '@spare/deco'
-import { decoObject, decoTable, logger, Xr } from '@spare/logger'
-import { linger }                            from '@valjoux/linger'
-import { range }                             from '@vect/vector-init'
-import { getIndicators }                     from '@volks/worldbank-indicator'
-import fuzzy                                 from 'fuzzy'
-import inquirer                              from 'inquirer'
-import searchableList                        from 'inquirer-autocomplete-prompt'
-import searchableCheckbox                    from 'inquirer-checkbox-plus-prompt'
-import { countryList }                       from '../resources/countryList'
-import { indicatorList }                     from '../resources/indicatorList'
+import { TABLE }                           from '@analys/enum-tabular-types'
+import { Cards }                           from '@palett/cards'
+import { HexDye }                          from '@palett/dye'
+import { BOLD, UNDERLINE }                 from '@palett/enum-font-effects'
+import { says }                            from '@palett/says'
+import { Deco }                            from '@spare/deco'
+import { SP }                              from '@spare/enum-chars'
+import { decoObject, decoPale, decoTable } from '@spare/logger'
+import { time }                            from '@valjoux/timestamp-pretty'
+import { range }                           from '@vect/vector-init'
+import { getIndicators }                   from '@volks/worldbank-indicator'
+import inquirer                            from 'inquirer'
+import searchableList                      from 'inquirer-autocomplete-prompt'
+import searchableCheckbox                  from 'inquirer-checkbox-plus-prompt'
+import ora                                 from 'ora'
+import { countryList }                     from '../resources/countryList'
+import { indicatorList }                   from '../resources/indicatorList'
+import { searchListLingered }              from './searchListLingered'
 
-const SEARCHABLE_LIST = 'searchable-list'
-const SEARCHABLE_CHECKBOX = 'searchable-checkbox'
-const LIST = 'list'
-inquirer.registerPrompt(SEARCHABLE_LIST, searchableList)
-inquirer.registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox)
-
-const searchListAsync = async function (answers, input = '') {
-  const list = this
-  return await linger(
-    randInt(15, 75),
-    input => {
-      const results = fuzzy
-        .filter(input, list, { extract: ({ name, value }) => name + ' | ' + value })
-        .map(({ original }) => original)
-      return results.push(new inquirer.Separator()), results
-    },
-    input)
-}
+const spinner = ora()
 
 
 export class WorldbankCli {
   static async start() {
+    spinner.start(time() + ' initiating components')
+
+    const SEARCHABLE_LIST = 'searchable-list'
+    const SEARCHABLE_CHECKBOX = 'searchable-checkbox'
+    const LIST = 'list'
+    inquirer.registerPrompt(SEARCHABLE_LIST, searchableList)
+    inquirer.registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox)
+
+    const grey = HexDye(Cards.grey.darken_2, UNDERLINE)
+    const DE = SP + ('|' |> HexDye(Cards.lightBlue.accent_4, BOLD)) + SP
+    const logger = says['worldbank'].attach(time)
+
+    const prettyIndicatorList = indicatorList
+      .map(({ name, value, group }) => ({
+        name: grey(value.padEnd(17, SP)) + DE + name + SP + grey(decoPale(group)), value
+      }))
+    spinner.succeed(time() + ' initiated components')
+
     const { indicators } = await inquirer.prompt({
       type: SEARCHABLE_CHECKBOX,
       name: 'indicators',
@@ -44,7 +48,7 @@ export class WorldbankCli {
       highlight: true,
       searchable: true,
       default: [],
-      source: searchListAsync.bind(indicatorList),
+      source: searchListLingered.bind({ list: prettyIndicatorList, extract: ({ name, value }) => name + DE + value }),
       filter(label) { return label }
     })
     const { countries } = await inquirer.prompt({
@@ -55,12 +59,7 @@ export class WorldbankCli {
       highlight: true,
       searchable: true,
       default: ['USA', 'CHN', 'JPN'],
-      source: searchListAsync.bind(countryList),
-      filter(label) {
-        label |> deco |> says['countries']
-        // return label.slice(0, label.indexOf('|'))
-        return label
-      }
+      source: searchListLingered.bind({ list: countryList, extract: ({ name, value }) => name + DE + value }),
     })
     const { start } = await inquirer.prompt({
       name: 'start',
@@ -69,18 +68,21 @@ export class WorldbankCli {
       message: 'Please select start year',
       choices: range(2020, 1990).map(n => ({ name: n, value: n })),
     })
-    Xr(greyNow()).select({ indicators, countries, start } |> Deco({ hi: 1 })) |> logger
+
+    spinner.start(time() + ' querying data ' + ({ indicators, countries, start } |> Deco({ hi: 1 })))
     const table = await getIndicators({
       country: countries,
       indicator: indicators,
       year: [start, 2020],
       format: TABLE,
-      spin: true
+      spin: false
     })
+    spinner.succeed(time() + ' queried from worldbank')
+
     if (table.wd) {
       table.indicators |> decoObject |> says['indicators']
       table.countries |> decoObject |> says['countries']
-      table |> decoTable |> says['worldbank.org'].p(greyNow())
+      table |> decoTable |> logger
     }
   }
 }

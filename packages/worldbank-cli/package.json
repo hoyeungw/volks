@@ -18,6 +18,7 @@
     "worldbank": "./src/script.js"
   },
   "dependencies": {
+    "ora": "^5.1.0",
     "@acq/acq": "^0.2.8",
     "@analys/convert": "^0.4.1",
     "@analys/enum-tabular-types": "^0.4.1",

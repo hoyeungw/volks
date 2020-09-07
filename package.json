@@ -15,6 +15,10 @@
     "watch-specific": "lerna exec --scope=kalorie -- rollup -c ../../rollup.config.js -w"
   },
   "devDependencies": {
+    "@palett/cards": "^0.4.5",
+    "@palett/presets": "^0.4.5",
+    "@palett/enum-font-effects": "^0.4.5",
+    "@palett/dye": "^0.4.5",
     "@typen/bool": "^0.1.7",
     "@aryth/rand": "^0.2.14",
     "@analys/convert": "^0.4.1",
