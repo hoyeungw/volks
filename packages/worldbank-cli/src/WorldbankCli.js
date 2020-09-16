@@ -33,11 +33,15 @@ export class WorldbankCli {
     const grey = HexDye(Cards.grey.darken_2, UNDERLINE)
     const DE = SP + ('|' |> HexDye(Cards.lightBlue.accent_4, BOLD)) + SP
     const logger = says['worldbank'].attach(time)
-
     const prettyIndicatorList = indicatorList
       .map(({ name, value, group }) => ({
         name: grey(value.padEnd(17, SP)) + DE + name + SP + grey(decoPale(group)), value
       }))
+    const prettyCountryList = countryList
+      .map(({ name, value }) => ({
+        name: name + SP + grey(value), value
+      }))
+
     spinner.succeed(time() + ' initiated components')
 
     const { indicators } = await inquirer.prompt({
@@ -59,7 +63,7 @@ export class WorldbankCli {
       highlight: true,
       searchable: true,
       default: ['USA', 'CHN', 'JPN'],
-      source: searchListLingered.bind({ list: countryList, extract: ({ name, value }) => name + DE + value }),
+      source: searchListLingered.bind({ list: prettyCountryList, extract: ({ name, value }) => name + DE + value }),
     })
     const { start } = await inquirer.prompt({
       name: 'start',

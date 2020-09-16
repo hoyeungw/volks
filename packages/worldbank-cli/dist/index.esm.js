@@ -1781,6 +1781,13 @@ class WorldbankCli {
       name: grey(value.padEnd(17, SP)) + DE + name + SP + grey(decoPale(group)),
       value
     }));
+    const prettyCountryList = countryList.map(({
+      name,
+      value
+    }) => ({
+      name: name + SP + grey(value),
+      value
+    }));
     spinner.succeed(time() + ' initiated components');
     const {
       indicators
@@ -1816,7 +1823,7 @@ class WorldbankCli {
       searchable: true,
       default: ['USA', 'CHN', 'JPN'],
       source: searchListLingered.bind({
-        list: countryList,
+        list: prettyCountryList,
         extract: ({
           name,
           value

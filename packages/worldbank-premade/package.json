@@ -15,6 +15,19 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
+    "@aryth/comparer": "^0.2.14",
+    "@aryth/distinct-vector": "^0.2.14",
+    "@aryth/math": "^0.2.14",
+    "@spare/markdown": "^0.9.6",
+    "@volks/worldbank-indicator": "^0.1.2"
+  },
+  "devDependencies": {
+    "@analys/enum-pivot-mode": "^0.4.10",
+    "@typen/num-strict": "^0.1.9",
+    "@aryth/bound-vector": "^0.2.14",
+    "@vect/column-mapper": "^0.2.9",
+    "@typen/enum-data-types": "^0.1.9",
+    "ora": "^5.1.0"
   },
   "repository": {
     "type": "git",

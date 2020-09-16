@@ -1,12 +1,12 @@
-import { Acq }                            from '@acq/acq'
-import { SAMPLES, TABLE }                 from '@analys/enum-tabular-types'
-import { Table }                          from '@analys/table'
-import { RT, SC }                         from '@spare/enum-chars'
-import { isNumeric }                      from '@typen/num-strict'
-import { pair }                           from '@vect/object-init'
+import { Acq }                                  from '@acq/acq'
+import { SAMPLES, TABLE }                       from '@analys/enum-tabular-types'
+import { Table }                                from '@analys/table'
+import { RT, SC }                               from '@spare/enum-chars'
+import { isNumeric }                            from '@typen/num-strict'
+import { pair }                                 from '@vect/object-init'
 import { distinctIdValue }                      from '../helpers/distinctIdValue'
 import { BASE, COUNTRIES, GDP, WITHIN_5_YEARS } from './constants'
-import { parseLabel, parseYear }                from './paramsParsers'
+import { parseLabel, parseYear }                from './parsers'
 
 
 export const getIndicator = async function (
@@ -24,7 +24,7 @@ export const getIndicator = async function (
     title: indicator,
     url: `${ BASE }/country/${ countries.join(SC) }/indicator/${ indicator }`,
     params: ({ date: yearEntry.join(RT), format: 'json', per_page: per_page }),
-    prep: ([message, samples]) => { return samples },
+    prep: ([message, samples]) => samples,
     from: SAMPLES,
     to: TABLE,
     easy,
@@ -35,7 +35,7 @@ export const getIndicator = async function (
 
 
 export const leanTable = table => {
-  if (table.ht === 0) return table
+  if (!table?.head?.length || !table?.rows?.length) return table
   table = Table.from(table)
   const [{ id: indicatorId, value: indicatorName }] = table.column('indicator')
   const countries = table

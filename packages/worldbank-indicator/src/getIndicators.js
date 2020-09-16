@@ -2,8 +2,8 @@ import { UNION }                                 from '@analys/enum-join-modes'
 import { TABLE }                                 from '@analys/enum-tabular-types'
 import { Table }                                 from '@analys/table'
 import { COUNTRIES, INDICATORS, WITHIN_5_YEARS } from './constants'
-import { getIndicator }                          from './getIndicator'
-import { parseLabel }                            from './paramsParsers'
+import { getIndicator } from './getIndicator'
+import { parseLabel }   from './parsers'
 
 /**
  *
@@ -27,12 +27,14 @@ export const getIndicators = async function (
   for (let indicator of indicators) {
     const table = await getIndicator({ country, indicator, year, format: TABLE, spin, easy })
     tables[table.title] = { table: Table.from(table), indicators: table.indicators, countries: table.countries }
+    // table |> deco |> says[table.title]
   }
   let table = Table.from({ head: [], rows: [] })
   const indicatorCollection = {}, countryCollection = {}
   for (let [key, { table: another, indicators, countries }] of Object.entries(tables)) {
     Object.assign(indicatorCollection, indicators)
     Object.assign(countryCollection, countries)
+    // another.select(['iso', 'date', key]) |>deco |> logger;
     table = table.join(another.select(['iso', 'date', key]), ['iso', 'date'], UNION)
   }
   table.indicators = indicatorCollection
