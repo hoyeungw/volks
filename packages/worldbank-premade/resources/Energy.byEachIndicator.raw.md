@@ -4,18 +4,26 @@
 
 ### EG.USE.ELEC.KH.PC
 
-Electric power consumption (kWh per capita)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Electric power consumption (kWh per capita))
+
+##### Filter definition
+  - indicator: Electric power consumption (kWh per capita)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA   |
+  | year | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA   |
   | ---- | ---- | ---- | ---- | --- | ---- | ---- | ----- |
   | 2019 |    0 |    0 |    0 |   0 |    0 |    0 |     0 |
   | 2018 |    0 |    0 |    0 |   0 |    0 |    0 |     0 |
@@ -42,18 +50,26 @@ Electric power consumption (kWh per capita)
 
 ### EG.USE.PCAP.KG.OE
 
-Energy use (kg of oil equivalent per capita)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Energy use (kg of oil equivalent per capita))
+
+##### Filter definition
+  - indicator: Energy use (kg of oil equivalent per capita)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | --- | ---- | ---- | ---- |
   | 2019 |    0 |    0 |    0 |   0 |    0 |    0 |    0 |
   | 2018 |    0 |    0 |    0 |   0 |    0 |    0 |    0 |
@@ -80,18 +96,26 @@ Energy use (kg of oil equivalent per capita)
 
 ### EN.ATM.CO2E.PC
 
-CO2 emissions (metric tons per capita)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (CO2 emissions (metric tons per capita))
+
+##### Filter definition
+  - indicator: CO2 emissions (metric tons per capita)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU  | GBR | IND | JPN | RUS  | USA  |
+  | year | CHN | DEU  | GBR | IND | JPN | RUS  | USA  |
   | ---- | --- | ---- | --- | --- | --- | ---- | ---- |
   | 2019 |   0 |    0 |   0 |   0 |   0 |    0 |    0 |
   | 2018 |   0 |    0 |   0 |   0 |   0 |    0 |    0 |
@@ -118,18 +142,26 @@ CO2 emissions (metric tons per capita)
 
 ### EN.ATM.CO2E.KT
 
-CO2 emissions (kt)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (CO2 emissions (kt))
+
+##### Filter definition
+  - indicator: CO2 emissions (kt)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN      | DEU    | GBR    | IND     | JPN     | RUS     | USA     |
+  | year | CHN      | DEU    | GBR    | IND     | JPN     | RUS     | USA     |
   | ---- | -------- | ------ | ------ | ------- | ------- | ------- | ------- |
   | 2019 |        0 |      0 |      0 |       0 |       0 |       0 |       0 |
   | 2018 |        0 |      0 |      0 |       0 |       0 |       0 |       0 |
@@ -156,18 +188,26 @@ CO2 emissions (kt)
 
 ### EN.ATM.METH.KT.CE
 
-Methane emissions (kt of CO2 equivalent)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Methane emissions (kt of CO2 equivalent))
+
+##### Filter definition
+  - indicator: Methane emissions (kt of CO2 equivalent)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN     | DEU   | GBR   | IND    | JPN   | RUS    | USA    |
+  | year | CHN     | DEU   | GBR   | IND    | JPN   | RUS    | USA    |
   | ---- | ------- | ----- | ----- | ------ | ----- | ------ | ------ |
   | 2019 |       0 |     0 |     0 |      0 |     0 |      0 |      0 |
   | 2018 |       0 |     0 |     0 |      0 |     0 |      0 |      0 |
@@ -194,18 +234,26 @@ Methane emissions (kt of CO2 equivalent)
 
 ### EN.ATM.NOXE.KT.CE
 
-Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Nitrous oxide emissions (thousand metric tons of CO2 equivalent))
+
+##### Filter definition
+  - indicator: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN    | DEU   | GBR   | IND    | JPN   | RUS    | USA    |
+  | year | CHN    | DEU   | GBR   | IND    | JPN   | RUS    | USA    |
   | ---- | ------ | ----- | ----- | ------ | ----- | ------ | ------ |
   | 2019 |      0 |     0 |     0 |      0 |     0 |      0 |      0 |
   | 2018 |      0 |     0 |     0 |      0 |     0 |      0 |      0 |

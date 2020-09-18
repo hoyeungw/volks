@@ -4,18 +4,26 @@
 
 ### SP.POP.TOTL
 
-Population, total (million people)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Population, total (million people))
+
+##### Filter definition
+  - indicator: Population, total (million people)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU | GBR | IND  | JPN | RUS | USA |
+  | year | CHN  | DEU | GBR | IND  | JPN | RUS | USA |
   | ---- | ---- | --- | --- | ---- | --- | --- | --- |
   | 2019 | 1398 |  83 |  67 | 1366 | 126 | 144 | 328 |
   | 2018 | 1393 |  83 |  66 | 1353 | 127 | 144 | 327 |
@@ -42,18 +50,26 @@ Population, total (million people)
 
 ### SP.URB.TOTL
 
-Urban population (million people)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Urban population (million people))
+
+##### Filter definition
+  - indicator: Urban population (million people)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS | USA |
   | ---- | --- | --- | --- | --- | --- | --- | --- |
   | 2019 | 843 |  64 |  56 | 471 | 116 | 108 | 271 |
   | 2018 | 824 |  64 |  55 | 460 | 116 | 108 | 269 |
@@ -80,18 +96,26 @@ Urban population (million people)
 
 ### SP.RUR.TOTL
 
-Rural population (million people)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Rural population (million people))
+
+##### Filter definition
+  - indicator: Rural population (million people)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS | USA |
   | ---- | --- | --- | --- | --- | --- | --- | --- |
   | 2019 | 555 |  19 |  11 | 895 |  10 |  37 |  58 |
   | 2018 | 569 |  19 |  11 | 892 |  11 |  37 |  58 |
@@ -118,18 +142,26 @@ Rural population (million people)
 
 ### SP.POP.0014.TO.ZS
 
-Population ages 0-14 (% of total population)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Population ages 0-14 (% of total population))
+
+##### Filter definition
+  - indicator: Population ages 0-14 (% of total population)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 | 17.8 | 13.8 | 17.7 | 26.6 | 12.6 | 18.2 | 18.5 |
   | 2018 | 17.9 | 13.6 | 17.7 | 27.1 | 12.7 | 17.9 | 18.7 |
@@ -156,18 +188,26 @@ Population ages 0-14 (% of total population)
 
 ### SP.POP.1564.TO.ZS
 
-Population ages 15-64 (% of total population)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Population ages 15-64 (% of total population))
+
+##### Filter definition
+  - indicator: Population ages 15-64 (% of total population)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 | 70.7 | 64.6 | 63.8 |   67 | 59.4 | 66.8 | 65.2 |
   | 2018 | 71.2 | 64.9 | 63.9 | 66.8 | 59.7 | 67.4 | 65.5 |
@@ -194,18 +234,26 @@ Population ages 15-64 (% of total population)
 
 ### SP.POP.65UP.TO.ZS
 
-Population ages 65 and above (% of total population)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Population ages 65 and above (% of total population))
+
+##### Filter definition
+  - indicator: Population ages 65 and above (% of total population)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | --- | ---- | ---- | ---- |
   | 2019 | 11.5 | 21.6 | 18.5 | 6.4 |   28 | 15.1 | 16.2 |
   | 2018 | 10.9 | 21.5 | 18.4 | 6.2 | 27.6 | 14.7 | 15.8 |
@@ -232,18 +280,26 @@ Population ages 65 and above (% of total population)
 
 ### SL.EMP.1524.SP.ZS
 
-Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate))
+
+##### Filter definition
+  - indicator: Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 | 40.5 | 47.5 | 50.1 |   21 | 45.6 | 26.8 | 47.1 |
   | 2018 | 40.8 | 47.1 | 50.3 | 21.3 | 45.7 | 27.5 | 47.4 |
@@ -270,18 +326,26 @@ Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate)
 
 ### SL.IND.EMPL.ZS
 
-Employment in industry (% of total employment) (modeled ILO estimate)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Employment in industry (% of total employment) (modeled ILO estimate))
+
+##### Filter definition
+  - indicator: Employment in industry (% of total employment) (modeled ILO estimate)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 | 28.2 |   27 | 17.9 | 25.6 | 24.3 | 26.7 | 19.8 |
   | 2018 | 28.2 | 27.3 | 18.1 | 24.9 | 24.4 | 26.8 | 19.9 |
@@ -308,18 +372,26 @@ Employment in industry (% of total employment) (modeled ILO estimate)
 
 ### SL.AGR.EMPL.ZS
 
-Employment in agriculture (% of total employment) (modeled ILO estimate)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Employment in agriculture (% of total employment) (modeled ILO estimate))
+
+##### Filter definition
+  - indicator: Employment in agriculture (% of total employment) (modeled ILO estimate)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU | GBR | IND  | JPN | RUS  | USA |
+  | year | CHN  | DEU | GBR | IND  | JPN | RUS  | USA |
   | ---- | ---- | --- | --- | ---- | --- | ---- | --- |
   | 2019 | 25.4 | 1.2 |   1 | 42.4 | 3.4 |  5.8 | 1.3 |
   | 2018 | 26.1 | 1.2 | 1.1 | 43.3 | 3.5 |  5.9 | 1.4 |
@@ -346,18 +418,26 @@ Employment in agriculture (% of total employment) (modeled ILO estimate)
 
 ### SL.SRV.EMPL.ZS
 
-Employment in services (% of total employment) (modeled ILO estimate)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Employment in services (% of total employment) (modeled ILO estimate))
+
+##### Filter definition
+  - indicator: Employment in services (% of total employment) (modeled ILO estimate)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 | 46.4 | 71.7 | 81.1 |   32 | 72.3 | 67.6 | 78.9 |
   | 2018 | 45.7 | 71.4 | 80.8 | 31.7 | 72.1 | 67.3 | 78.8 |

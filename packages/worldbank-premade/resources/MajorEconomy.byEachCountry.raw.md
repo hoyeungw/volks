@@ -4,12 +4,15 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -20,7 +23,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |          14343 |              0 |           1020 |           5590 |           2641 |           2476 |           3223 |
   | 2018 |          13895 |           6191 |            979 |           5514 |           2656 |           2549 |           3168 |
@@ -47,12 +50,15 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -63,7 +69,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |           3846 |           1112 |             31 |           1031 |           1806 |           1582 |            224 |
   | 2018 |           3950 |           1158 |             30 |           1085 |           1873 |           1629 |            198 |
@@ -90,12 +96,15 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -106,7 +115,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |           2827 |            384 |             17 |            492 |            892 |            925 |            174 |
   | 2018 |           2861 |            381 |             18 |            501 |            876 |            916 |            173 |
@@ -133,12 +142,15 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -149,7 +161,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |           2875 |            847 |            459 |            715 |            537 |            614 |            463 |
   | 2018 |           2713 |            844 |            418 |            709 |            539 |            639 |            399 |
@@ -176,12 +188,15 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -192,7 +207,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |           5082 |              0 |              0 |              0 |              0 |              0 |           1322 |
   | 2018 |           4955 |           1379 |             61 |           1440 |            918 |            906 |           1270 |
@@ -219,12 +234,15 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -235,7 +253,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |           1700 |            469 |             59 |            547 |            481 |            353 |            555 |
   | 2018 |           1670 |            500 |             56 |            548 |            510 |            344 |            469 |
@@ -262,12 +280,15 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - NY.GDP.MKTP.CD: GDP (current billion US$)
@@ -278,7 +299,7 @@
   - NE.IMP.GNFS.CD: Imports of goods and services (current billion US$)
   - FI.RES.TOTL.CD: Total reserves (includes gold, current billion US$)
 
-  | date | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
+  | year | NY.GDP.MKTP.CD | NY.GNS.ICTR.CD | NV.AGR.TOTL.CD | NV.IND.TOTL.CD | NE.EXP.GNFS.CD | NE.IMP.GNFS.CD | FI.RES.TOTL.CD |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |          21374 |              0 |              0 |              0 |           2504 |           3136 |            517 |
   | 2018 |          20529 |           3817 |              0 |              0 |           2510 |           3148 |            450 |

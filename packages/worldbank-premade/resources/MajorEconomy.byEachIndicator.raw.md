@@ -4,18 +4,26 @@
 
 ### NY.GDP.MKTP.CD
 
-GDP (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (GDP (current billion US$))
+
+##### Filter definition
+  - indicator: GDP (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN   | DEU  | GBR  | IND  | JPN  | RUS  | USA   |
+  | year | CHN   | DEU  | GBR  | IND  | JPN  | RUS  | USA   |
   | ---- | ----- | ---- | ---- | ---- | ---- | ---- | ----- |
   | 2019 | 14343 | 3846 | 2827 | 2875 | 5082 | 1700 | 21374 |
   | 2018 | 13895 | 3950 | 2861 | 2713 | 4955 | 1670 | 20529 |
@@ -42,18 +50,26 @@ GDP (current billion US$)
 
 ### NY.GNS.ICTR.CD
 
-Gross savings (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Gross savings (current billion US$))
+
+##### Filter definition
+  - indicator: Gross savings (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND | JPN  | RUS | USA  |
+  | year | CHN  | DEU  | GBR | IND | JPN  | RUS | USA  |
   | ---- | ---- | ---- | --- | --- | ---- | --- | ---- |
   | 2019 |    0 | 1112 | 384 | 847 |    0 | 469 |    0 |
   | 2018 | 6191 | 1158 | 381 | 844 | 1379 | 500 | 3817 |
@@ -80,18 +96,26 @@ Gross savings (current billion US$)
 
 ### NV.AGR.TOTL.CD
 
-Agriculture, forestry, and fishing, value added (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Agriculture, forestry, and fishing, value added (current billion US$))
+
+##### Filter definition
+  - indicator: Agriculture, forestry, and fishing, value added (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU | GBR | IND | JPN | RUS | USA |
+  | year | CHN  | DEU | GBR | IND | JPN | RUS | USA |
   | ---- | ---- | --- | --- | --- | --- | --- | --- |
   | 2019 | 1020 |  31 |  17 | 459 |   0 |  59 |   0 |
   | 2018 |  979 |  30 |  18 | 418 |  61 |  56 |   0 |
@@ -118,18 +142,26 @@ Agriculture, forestry, and fishing, value added (current billion US$)
 
 ### NV.IND.TOTL.CD
 
-Industry (including construction), value added (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Industry (including construction), value added (current billion US$))
+
+##### Filter definition
+  - indicator: Industry (including construction), value added (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND | JPN  | RUS | USA  |
+  | year | CHN  | DEU  | GBR | IND | JPN  | RUS | USA  |
   | ---- | ---- | ---- | --- | --- | ---- | --- | ---- |
   | 2019 | 5590 | 1031 | 492 | 715 |    0 | 547 |    0 |
   | 2018 | 5514 | 1085 | 501 | 709 | 1440 | 548 |    0 |
@@ -156,18 +188,26 @@ Industry (including construction), value added (current billion US$)
 
 ### NE.EXP.GNFS.CD
 
-Exports of goods and services (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Exports of goods and services (current billion US$))
+
+##### Filter definition
+  - indicator: Exports of goods and services (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND | JPN | RUS | USA  |
+  | year | CHN  | DEU  | GBR | IND | JPN | RUS | USA  |
   | ---- | ---- | ---- | --- | --- | --- | --- | ---- |
   | 2019 | 2641 | 1806 | 892 | 537 |   0 | 481 | 2504 |
   | 2018 | 2656 | 1873 | 876 | 539 | 918 | 510 | 2510 |
@@ -194,18 +234,26 @@ Exports of goods and services (current billion US$)
 
 ### NE.IMP.GNFS.CD
 
-Imports of goods and services (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Imports of goods and services (current billion US$))
+
+##### Filter definition
+  - indicator: Imports of goods and services (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND | JPN | RUS | USA  |
+  | year | CHN  | DEU  | GBR | IND | JPN | RUS | USA  |
   | ---- | ---- | ---- | --- | --- | --- | --- | ---- |
   | 2019 | 2476 | 1582 | 925 | 614 |   0 | 353 | 3136 |
   | 2018 | 2549 | 1629 | 916 | 639 | 906 | 344 | 3148 |
@@ -232,18 +280,26 @@ Imports of goods and services (current billion US$)
 
 ### FI.RES.TOTL.CD
 
-Total reserves (includes gold, current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Total reserves (includes gold, current billion US$))
+
+##### Filter definition
+  - indicator: Total reserves (includes gold, current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU | GBR | IND | JPN  | RUS | USA |
+  | year | CHN  | DEU | GBR | IND | JPN  | RUS | USA |
   | ---- | ---- | --- | --- | --- | ---- | --- | --- |
   | 2019 | 3223 | 224 | 174 | 463 | 1322 | 555 | 517 |
   | 2018 | 3168 | 198 | 173 | 399 | 1270 | 469 | 450 |

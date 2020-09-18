@@ -4,12 +4,15 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -23,7 +26,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |        1398 |         843 |         555 |              17.8 |              70.7 |              11.5 |              40.5 |           28.2 |           25.4 |           46.4 |
   | 2018 |        1393 |         824 |         569 |              17.9 |              71.2 |              10.9 |              40.8 |           28.2 |           26.1 |           45.7 |
@@ -50,12 +53,15 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -69,7 +75,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |          83 |          64 |          19 |              13.8 |              64.6 |              21.6 |              47.5 |             27 |            1.2 |           71.7 |
   | 2018 |          83 |          64 |          19 |              13.6 |              64.9 |              21.5 |              47.1 |           27.3 |            1.2 |           71.4 |
@@ -96,12 +102,15 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -115,7 +124,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |          67 |          56 |          11 |              17.7 |              63.8 |              18.5 |              50.1 |           17.9 |              1 |           81.1 |
   | 2018 |          66 |          55 |          11 |              17.7 |              63.9 |              18.4 |              50.3 |           18.1 |            1.1 |           80.8 |
@@ -142,12 +151,15 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -161,7 +173,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |        1366 |         471 |         895 |              26.6 |                67 |               6.4 |                21 |           25.6 |           42.4 |             32 |
   | 2018 |        1353 |         460 |         892 |              27.1 |              66.8 |               6.2 |              21.3 |           24.9 |           43.3 |           31.7 |
@@ -188,12 +200,15 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -207,7 +222,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |         126 |         116 |          10 |              12.6 |              59.4 |                28 |              45.6 |           24.3 |            3.4 |           72.3 |
   | 2018 |         127 |         116 |          11 |              12.7 |              59.7 |              27.6 |              45.7 |           24.4 |            3.5 |           72.1 |
@@ -234,12 +249,15 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -253,7 +271,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |         144 |         108 |          37 |              18.2 |              66.8 |              15.1 |              26.8 |           26.7 |            5.8 |           67.6 |
   | 2018 |         144 |         108 |          37 |              17.9 |              67.4 |              14.7 |              27.5 |           26.8 |            5.9 |           67.3 |
@@ -280,12 +298,15 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - SP.POP.TOTL: Population, total (million people)
@@ -299,7 +320,7 @@
   - SL.AGR.EMPL.ZS: Employment in agriculture (% of total employment) (modeled ILO estimate)
   - SL.SRV.EMPL.ZS: Employment in services (% of total employment) (modeled ILO estimate)
 
-  | date | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
+  | year | SP.POP.TOTL | SP.URB.TOTL | SP.RUR.TOTL | SP.POP.0014.TO.ZS | SP.POP.1564.TO.ZS | SP.POP.65UP.TO.ZS | SL.EMP.1524.SP.ZS | SL.IND.EMPL.ZS | SL.AGR.EMPL.ZS | SL.SRV.EMPL.ZS |
   | ---- | ----------- | ----------- | ----------- | ----------------- | ----------------- | ----------------- | ----------------- | -------------- | -------------- | -------------- |
   | 2019 |         328 |         271 |          58 |              18.5 |              65.2 |              16.2 |              47.1 |           19.8 |            1.3 |           78.9 |
   | 2018 |         327 |         269 |          58 |              18.7 |              65.5 |              15.8 |              47.4 |           19.9 |            1.4 |           78.8 |

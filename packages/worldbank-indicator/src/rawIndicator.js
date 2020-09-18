@@ -1,7 +1,10 @@
 import { Acq }                                  from '@acq/acq'
 import { samplesToTable }                       from '@analys/convert'
 import { bound }                                from '@aryth/bound-vector'
+import { says }                                 from '@palett/says'
+import { deco }                                 from '@spare/deco'
 import { COSP, RT, SC }                         from '@spare/enum-chars'
+import { DecoSamples }                          from '@spare/logger'
 import { init }                                 from '@vect/object-init'
 import { BASE, COUNTRIES, GDP, WITHIN_5_YEARS } from './helpers/constants'
 import { parseLabel, parseYear }                from './helpers/parsers'
@@ -46,8 +49,9 @@ export const rawIndicator = async function (
  * @return {Table}
  */
 export const worldbankSamplesToTable = (samples) => {
-  const table = samples |> samplesToTable
-  if (!table?.head?.length || !table?.rows?.length) return table
+  samples |> DecoSamples({ top: 3, bottom: 1 }) |> says['worldbankSamplesToTable']
+  /** @type {Table}  */const table = samples |> samplesToTable
+  // if (!table?.head?.length || !table?.rows?.length) return table
   const indicatorDefs = init(table.column('indicator').map(({ id, value }) => [id, value]))
   table
     .mutateColumn('indicator', ({ id }) => id)
@@ -58,9 +62,10 @@ export const worldbankSamplesToTable = (samples) => {
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
-    year: table.column('year') |> bound,
-    value: table.column('value')|> bound
+    year: table.coin('year') >= 0 ? (bound(table.column('year'))) : {},
+    value: table.coin('year') >= 0 ? (table.column('value')|> bound) : {}
   }
+  table.meta |> deco |> says['worldbankSamplesToTable']
   table.title = Object.keys(table.meta.indicator).join(COSP)
   return table
 }

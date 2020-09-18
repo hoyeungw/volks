@@ -4,18 +4,26 @@
 
 ### IT.CEL.SETS
 
-Mobile cellular subscriptions
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Mobile cellular subscriptions)
+
+##### Filter definition
+  - indicator: Mobile cellular subscriptions
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN        | DEU       | GBR      | IND        | JPN       | RUS       | USA       |
+  | year | CHN        | DEU       | GBR      | IND        | JPN       | RUS       | USA       |
   | ---- | ---------- | --------- | -------- | ---------- | --------- | --------- | --------- |
   | 2019 | 1725695000 | 107200000 |        0 | 1151480361 |         0 | 239795946 |         0 |
   | 2018 | 1649301700 | 107500000 | 79472341 | 1176021869 | 179872794 | 229431008 | 422000000 |
@@ -42,18 +50,26 @@ Mobile cellular subscriptions
 
 ### IS.RRS.TOTL.KM
 
-Rail lines (total route-km)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Rail lines (total route-km))
+
+##### Filter definition
+  - indicator: Rail lines (total route-km)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN   | DEU   | GBR   | IND   | JPN   | RUS   | USA    |
+  | year | CHN   | DEU   | GBR   | IND   | JPN   | RUS   | USA    |
   | ---- | ----- | ----- | ----- | ----- | ----- | ----- | ------ |
   | 2019 |     0 |     0 |     0 |     0 |     0 |     0 |      0 |
   | 2018 | 67515 | 33440 | 15961 | 68443 | 16852 | 85626 | 150462 |
@@ -80,18 +96,26 @@ Rail lines (total route-km)
 
 ### IS.SHP.GOOD.TU
 
-Container port traffic (TEU: 20 foot equivalent units)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Container port traffic (TEU: 20 foot equivalent units))
+
+##### Filter definition
+  - indicator: Container port traffic (TEU: 20 foot equivalent units)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN       | DEU      | GBR      | IND      | JPN      | RUS     | USA      |
+  | year | CHN       | DEU      | GBR      | IND      | JPN      | RUS     | USA      |
   | ---- | --------- | -------- | -------- | -------- | -------- | ------- | -------- |
   | 2019 |         0 |        0 |        0 |        0 |        0 |       0 |        0 |
   | 2018 | 225828900 | 19597633 | 11695222 | 16382600 | 22433824 | 6335300 | 54688353 |
@@ -118,18 +142,26 @@ Container port traffic (TEU: 20 foot equivalent units)
 
 ### IS.RRS.PASG.KM
 
-Railways, passengers carried (million passenger-km)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Railways, passengers carried (million passenger-km))
+
+##### Filter definition
+  - indicator: Railways, passengers carried (million passenger-km)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN    | DEU   | GBR   | IND     | JPN    | RUS    | USA   |
+  | year | CHN    | DEU   | GBR   | IND     | JPN    | RUS    | USA   |
   | ---- | ------ | ----- | ----- | ------- | ------ | ------ | ----- |
   | 2019 |      0 |     0 |     0 |       0 |      0 |      0 |     0 |
   | 2018 | 681203 | 79456 |     0 |       0 |   1410 | 129371 | 10239 |
@@ -156,18 +188,26 @@ Railways, passengers carried (million passenger-km)
 
 ### IS.RRS.GOOD.MT.K6
 
-Railways, goods transported (million ton-km)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Railways, goods transported (million ton-km))
+
+##### Filter definition
+  - indicator: Railways, goods transported (million ton-km)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN     | DEU    | GBR    | IND    | JPN   | RUS     | USA     |
+  | year | CHN     | DEU    | GBR    | IND    | JPN   | RUS     | USA     |
   | ---- | ------- | ------ | ------ | ------ | ----- | ------- | ------- |
   | 2019 |       0 |      0 |      0 |      0 |     0 |       0 |       0 |
   | 2018 | 2238435 |      0 |      0 |      0 |     0 |       0 | 2525217 |

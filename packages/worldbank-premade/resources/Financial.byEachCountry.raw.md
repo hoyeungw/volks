@@ -4,12 +4,15 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -24,7 +27,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |         4.4 |         224 |           8516 |                59 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |         4.4 |         207 |           6325 |                46 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -51,12 +54,15 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -71,7 +77,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |           0 |          64 |           2098 |              54.6 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |           0 |          92 |           1755 |              44.4 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -98,12 +104,15 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -118,7 +127,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |           0 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |           0 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -145,12 +154,15 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -165,7 +177,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |         9.5 |          29 |           2180 |                76 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |         9.5 |          58 |           2083 |                77 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -192,12 +204,15 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -212,7 +227,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |           0 |          82 |           6191 |             121.8 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |           0 |         119 |           5297 |             106.9 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -239,12 +254,15 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -259,7 +277,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |         8.8 |        22.8 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |         8.9 |        25.5 |            576 |              34.5 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
@@ -286,12 +304,15 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - FR.INR.LEND: Lending interest rate (%)
@@ -306,7 +327,7 @@
   - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
 
-  | date | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
+  | year | FR.INR.LEND | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 |
   | ---- | ----------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |         5.3 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |         4.9 |         109 |          30436 |               148 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |

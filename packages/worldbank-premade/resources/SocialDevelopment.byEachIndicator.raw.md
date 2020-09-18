@@ -4,18 +4,26 @@
 
 ### SI.POV.GINI
 
-Gini index (World Bank estimate)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Gini index (World Bank estimate))
+
+##### Filter definition
+  - indicator: Gini index (World Bank estimate)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
   | 2018 |    0 |    0 |    0 |    0 |    0 | 37.5 |    0 |
@@ -42,18 +50,26 @@ Gini index (World Bank estimate)
 
 ### SE.XPD.TOTL.GD.ZS
 
-Government expenditure on education, total (% of GDP)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Government expenditure on education, total (% of GDP))
+
+##### Filter definition
+  - indicator: Government expenditure on education, total (% of GDP)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS | USA |
   | ---- | --- | --- | --- | --- | --- | --- | --- |
   | 2019 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
   | 2018 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
@@ -78,20 +94,166 @@ Government expenditure on education, total (% of GDP)
   | 1999 | 1.9 |   0 |   4 | 4.4 |   0 |   0 |   0 |
 ---
 
-### SE.SEC.PROG.ZS
+### SE.PRM.ENRR
 
-Progression to secondary school (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (School enrollment, primary (% gross))
+
+##### Filter definition
+  - indicator: School enrollment, primary (% gross)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND  | JPN | RUS  | USA  |
+  | year | CHN | DEU | GBR | IND | JPN | RUS | USA |
+  | ---- | --- | --- | --- | --- | --- | --- | --- |
+  | 2019 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
+  | 2018 | 100 |   0 |   0 |   0 |   0 |   0 |   0 |
+  | 2017 |  99 | 104 | 101 | 113 |   0 | 103 | 102 |
+  | 2016 |  98 | 103 | 101 | 115 |   0 | 100 | 101 |
+  | 2015 |  96 | 102 | 102 | 109 |   0 |  99 | 100 |
+  | 2014 |  96 | 101 | 102 | 108 |   0 |  98 | 100 |
+  | 2013 | 100 | 101 | 107 | 111 |   0 | 100 | 100 |
+  | 2012 | 100 | 102 | 106 | 110 |   0 | 101 |  99 |
+  | 2011 |  99 | 103 | 104 | 108 |   0 | 101 |  99 |
+  | 2010 |  99 | 103 | 105 | 109 |   0 |   0 | 100 |
+  | 2009 | 100 | 103 | 104 | 110 |   0 |  99 |   0 |
+  | 2008 | 101 | 104 | 105 | 111 |   0 |  98 |   0 |
+  | 2007 | 101 | 105 | 103 | 110 |   0 |  96 |   0 |
+  | 2006 | 101 | 104 | 105 |   0 |   0 |  95 |   0 |
+  | 2005 |   0 | 103 | 106 |   0 |   0 |  95 | 102 |
+  | 2004 |   0 | 103 | 106 |   0 |   0 |   0 |   0 |
+  | 2003 |   0 | 102 | 100 | 103 |   0 | 121 |   0 |
+  | 2002 |   0 | 103 | 100 |  95 |   0 | 114 |   0 |
+  | 2001 | 112 | 104 | 100 |  94 |   0 | 106 |   0 |
+  | 2000 |   0 | 105 | 100 |  94 |   0 | 103 |   0 |
+  | 1999 |   0 | 105 | 101 |  93 |   0 | 103 |   0 |
+---
+
+### SE.SEC.ENRR
+
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (School enrollment, secondary (% gross))
+
+##### Filter definition
+  - indicator: School enrollment, secondary (% gross)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
+
+##### Banners definition
+  - CHN: China
+  - DEU: Germany
+  - GBR: United Kingdom
+  - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
+
+  | year | CHN  | DEU | GBR | IND  | JPN | RUS | USA  |
+  | ---- | ---- | --- | --- | ---- | --- | --- | ---- |
+  | 2019 |    0 |   0 |   0 |    0 |   0 |   0 |    0 |
+  | 2018 |    0 |   0 |   0 | 75.2 |   0 |   0 |    0 |
+  | 2017 |    0 |  98 | 126 | 73.5 |   0 | 103 |   99 |
+  | 2016 |    0 |  99 |   0 | 75.1 |   0 | 102 | 98.8 |
+  | 2015 |    0 |  99 | 125 | 73.9 |   0 | 102 | 97.7 |
+  | 2014 |    0 | 100 | 126 | 74.1 |   0 |  99 | 96.9 |
+  | 2013 |    0 | 101 | 124 | 68.8 |   0 |  98 | 96.2 |
+  | 2012 |    0 | 102 |  92 |   69 |   0 |  96 | 96.3 |
+  | 2011 |    0 | 104 |  94 | 66.3 |   0 |  92 |   96 |
+  | 2010 | 88.2 | 104 | 103 | 63.1 |   0 |   0 | 94.8 |
+  | 2009 | 85.5 | 103 | 100 | 59.6 |   0 |  85 |    0 |
+  | 2008 | 81.7 | 103 |  98 | 60.4 |   0 |  83 |    0 |
+  | 2007 | 76.8 | 102 |  97 | 57.3 |   0 |  83 |    0 |
+  | 2006 | 71.3 | 103 |  98 | 54.9 |   0 |  83 |    0 |
+  | 2005 |    0 | 102 | 105 |   54 |   0 |  83 | 95.1 |
+  | 2004 |    0 | 102 | 105 | 51.4 |   0 |  85 |    0 |
+  | 2003 | 62.1 | 102 | 102 | 49.6 |   0 |  92 |    0 |
+  | 2002 | 60.3 | 102 | 103 | 47.1 |   0 |   0 |    0 |
+  | 2001 | 60.1 | 101 | 102 | 45.2 |   0 |   0 |    0 |
+  | 2000 | 60.3 | 100 | 102 | 44.9 |   0 |   0 |    0 |
+  | 1999 | 60.5 |  99 | 101 |   43 |   0 |  92 |    0 |
+---
+
+### SE.TER.ENRR
+
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (School enrollment, tertiary (% gross))
+
+##### Filter definition
+  - indicator: School enrollment, tertiary (% gross)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
+
+##### Banners definition
+  - CHN: China
+  - DEU: Germany
+  - GBR: United Kingdom
+  - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
+
+  | year | CHN  | DEU  | GBR  | IND  | JPN | RUS  | USA  |
+  | ---- | ---- | ---- | ---- | ---- | --- | ---- | ---- |
+  | 2019 |    0 |    0 |    0 |    0 |   0 |    0 |    0 |
+  | 2018 | 50.6 |    0 |    0 | 28.1 |   0 |    0 |    0 |
+  | 2017 | 49.1 | 70.2 |   60 | 27.4 |   0 | 81.9 | 88.2 |
+  | 2016 |   48 | 69.6 | 58.4 | 26.8 |   0 | 80.6 | 88.8 |
+  | 2015 |   46 | 67.7 | 56.5 | 26.8 |   0 | 79.9 | 88.9 |
+  | 2014 | 42.4 | 65.5 | 56.6 | 25.4 |   0 | 78.5 | 88.6 |
+  | 2013 | 32.4 | 61.4 |   57 | 23.8 |   0 | 77.9 | 88.7 |
+  | 2012 | 28.7 |    0 | 59.4 | 24.3 |   0 | 75.9 | 93.2 |
+  | 2011 | 25.6 |    0 | 59.1 | 22.8 |   0 | 76.2 | 93.9 |
+  | 2010 | 24.2 |    0 | 58.9 | 17.8 |   0 |    0 | 92.6 |
+  | 2009 | 22.4 |    0 | 57.9 |   16 |   0 | 75.3 |    0 |
+  | 2008 | 20.7 |    0 | 56.6 |   15 |   0 | 74.9 |    0 |
+  | 2007 | 20.5 |    0 | 58.5 | 13.1 |   0 |   74 |    0 |
+  | 2006 | 20.2 |    0 |   59 | 11.5 |   0 | 72.8 |    0 |
+  | 2005 | 19.1 |    0 |   59 | 10.7 |   0 | 72.6 | 80.6 |
+  | 2004 | 17.7 |    0 | 59.4 | 10.9 |   0 | 70.6 |    0 |
+  | 2003 | 15.5 |    0 | 62.1 | 10.6 |   0 | 70.7 |    0 |
+  | 2002 | 12.6 |    0 | 62.6 | 10.2 |   0 | 66.9 |    0 |
+  | 2001 |  9.8 |    0 | 59.3 |  9.7 |   0 | 61.6 |    0 |
+  | 2000 |  7.6 |    0 | 58.5 |  9.5 |   0 | 55.8 |    0 |
+  | 1999 |  6.4 |    0 | 60.1 |    0 |   0 | 51.9 |    0 |
+---
+
+### SE.SEC.PROG.ZS
+
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Progression to secondary school (%))
+
+##### Filter definition
+  - indicator: Progression to secondary school (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
+
+##### Banners definition
+  - CHN: China
+  - DEU: Germany
+  - GBR: United Kingdom
+  - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
+
+  | year | CHN  | DEU  | GBR | IND  | JPN | RUS  | USA  |
   | ---- | ---- | ---- | --- | ---- | --- | ---- | ---- |
   | 2019 |    0 |    0 |   0 |    0 |   0 |    0 |    0 |
   | 2018 |    0 |    0 |   0 |    0 |   0 |    0 |    0 |
@@ -118,18 +280,26 @@ Progression to secondary school (%)
 
 ### SH.XPD.CHEX.GD.ZS
 
-Current health expenditure (% of GDP)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Current health expenditure (% of GDP))
+
+##### Filter definition
+  - indicator: Current health expenditure (% of GDP)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU  | GBR | IND | JPN  | RUS | USA  |
+  | year | CHN | DEU  | GBR | IND | JPN  | RUS | USA  |
   | ---- | --- | ---- | --- | --- | ---- | --- | ---- |
   | 2019 |   0 |    0 |   0 |   0 |    0 |   0 |    0 |
   | 2018 |   0 |    0 |   0 |   0 |    0 |   0 |    0 |
@@ -156,18 +326,26 @@ Current health expenditure (% of GDP)
 
 ### SP.DYN.LE00.IN
 
-Life expectancy at birth, total (years)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Life expectancy at birth, total (years))
+
+##### Filter definition
+  - indicator: Life expectancy at birth, total (years)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
   | 2018 | 76.7 | 80.9 | 81.3 | 69.4 | 84.2 | 72.7 | 78.5 |
@@ -194,18 +372,26 @@ Life expectancy at birth, total (years)
 
 ### SI.POV.NAHC
 
-Poverty headcount ratio at national poverty lines (% of population)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Poverty headcount ratio at national poverty lines (% of population))
+
+##### Filter definition
+  - indicator: Poverty headcount ratio at national poverty lines (% of population)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND  | JPN | RUS  | USA |
+  | year | CHN | DEU | GBR | IND  | JPN | RUS  | USA |
   | ---- | --- | --- | --- | ---- | --- | ---- | --- |
   | 2019 |   0 |   0 |   0 |    0 |   0 |    0 |   0 |
   | 2018 | 1.7 |   0 |   0 |    0 |   0 | 12.9 |   0 |

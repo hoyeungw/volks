@@ -1,4 +1,4 @@
-# @volks/worldbank-countries
+# @volks/worldbank-country
 
 [![npm version][badge-npm-version]][url-npm]
 [![npm download monthly][badge-npm-download-monthly]][url-npm]
@@ -10,18 +10,18 @@
 [![github commit total][badge-github-commit-count]][url-github]
 
 [//]: <> (Shields)
-[badge-npm-version]: https://flat.badgen.net/npm/v/@volks/worldbank-countries
-[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@volks/worldbank-countries
-[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@volks/worldbank-countries
-[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@volks/worldbank-countries
-[badge-npm-license]: https://flat.badgen.net/npm/license/@volks/worldbank-countries
-[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@volks/worldbank-countries
+[badge-npm-version]: https://flat.badgen.net/npm/v/@volks/worldbank-country
+[badge-npm-download-monthly]: https://flat.badgen.net/npm/dm/@volks/worldbank-country
+[badge-npm-download-total]:https://flat.badgen.net/npm/dt/@volks/worldbank-country
+[badge-npm-dependents]: https://flat.badgen.net/npm/dependents/@volks/worldbank-country
+[badge-npm-license]: https://flat.badgen.net/npm/license/@volks/worldbank-country
+[badge-pp-install-size]: https://flat.badgen.net/packagephobia/install/@volks/worldbank-country
 [badge-github-last-commit]: https://flat.badgen.net/github/last-commit/hoyeungw/volks
 [badge-github-commit-count]: https://flat.badgen.net/github/commits/hoyeungw/volks
 
 [//]: <> (Link)
-[url-npm]: https://npmjs.org/package/@volks/worldbank-countries
-[url-pp]: https://packagephobia.now.sh/result?p=@volks/worldbank-countries
+[url-npm]: https://npmjs.org/package/@volks/worldbank-country
+[url-pp]: https://packagephobia.now.sh/result?p=@volks/worldbank-country
 [url-github]: https://github.com/hoyeungw/volks
 
 ##### A function that return the sole parameter itself
@@ -33,9 +33,9 @@ $ npm install @volks/oneself
 
 #### Usage
 ```js
-import { worldbank-countries } from '@volks/worldbank-countries'
+import { worldbank-country } from '@volks/worldbank-country'
 
-worldbank-countries() // undefined
+worldbank-country() // undefined
 ```
 
 #### Meta

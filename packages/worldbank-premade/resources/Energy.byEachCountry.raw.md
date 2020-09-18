@@ -4,12 +4,15 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -19,7 +22,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -46,12 +49,15 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -61,7 +67,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -88,12 +94,15 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -103,7 +112,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -130,12 +139,15 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -145,7 +157,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -172,12 +184,15 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -187,7 +202,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -214,12 +229,15 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -229,7 +247,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
@@ -256,12 +274,15 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
@@ -271,7 +292,7 @@
   - EN.ATM.METH.KT.CE: Methane emissions (kt of CO2 equivalent)
   - EN.ATM.NOXE.KT.CE: Nitrous oxide emissions (thousand metric tons of CO2 equivalent)
 
-  | date | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
+  | year | EG.USE.ELEC.KH.PC | EG.USE.PCAP.KG.OE | EN.ATM.CO2E.PC | EN.ATM.CO2E.KT | EN.ATM.METH.KT.CE | EN.ATM.NOXE.KT.CE |
   | ---- | ----------------- | ----------------- | -------------- | -------------- | ----------------- | ----------------- |
   | 2019 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |
   | 2018 |                 0 |                 0 |              0 |              0 |                 0 |                 0 |

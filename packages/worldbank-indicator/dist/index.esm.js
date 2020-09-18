@@ -1,21 +1,21 @@
 import { Acq } from '@acq/acq';
 import { samplesToTable, toTable } from '@analys/convert';
 import { bound } from '@aryth/bound-vector';
+import { says } from '@palett/says';
+import { deco } from '@spare/deco';
 import { SC, RT, COSP } from '@spare/enum-chars';
+import { DecoSamples, Xr, DecoTable, logger as logger$1 } from '@spare/logger';
 import { init, pair } from '@vect/object-init';
 import { isNumeric } from '@typen/num-strict';
 import { Table } from '@analys/table';
 import { parseField } from '@analys/tablespec';
-import { deco } from '@spare/deco';
-import { logger as logger$1, Xr } from '@spare/logger';
 import { FUN } from '@typen/enum-data-types';
 import { acquire } from '@vect/vector-merge';
 import { round, roundD1 } from '@aryth/math';
 import { trim } from '@spare/string';
 import { makeReplaceable } from '@spare/translator';
-import { INCRE } from '@analys/enum-pivot-mode';
-import { says } from '@palett/says';
 import { time } from '@valjoux/timestamp-pretty';
+import { INCRE } from '@analys/enum-pivot-mode';
 
 const BASE = 'http://api.worldbank.org/v2';
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
@@ -89,10 +89,16 @@ const rawIndicator = async function ({
  */
 
 const worldbankSamplesToTable = samples => {
-  var _samples, _table$head, _table$rows, _table$column, _table$column2;
+  var _ref, _samples, _samples2, _table$column, _ref2, _table$meta;
 
-  const table = (_samples = samples, samplesToTable(_samples));
-  if (!(table === null || table === void 0 ? void 0 : (_table$head = table.head) === null || _table$head === void 0 ? void 0 : _table$head.length) || !(table === null || table === void 0 ? void 0 : (_table$rows = table.rows) === null || _table$rows === void 0 ? void 0 : _table$rows.length)) return table;
+  _ref = (_samples = samples, DecoSamples({
+    top: 3,
+    bottom: 1
+  })(_samples)), says['worldbankSamplesToTable'](_ref);
+  /** @type {Table}  */
+
+  const table = (_samples2 = samples, samplesToTable(_samples2)); // if (!table?.head?.length || !table?.rows?.length) return table
+
   const indicatorDefs = init(table.column('indicator').map(({
     id,
     value
@@ -105,9 +111,10 @@ const worldbankSamplesToTable = samples => {
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
-    year: (_table$column = table.column('year'), bound(_table$column)),
-    value: (_table$column2 = table.column('value'), bound(_table$column2))
+    year: table.coin('year') >= 0 ? bound(table.column('year')) : {},
+    value: table.coin('year') >= 0 ? (_table$column = table.column('value'), bound(_table$column)) : {}
   };
+  _ref2 = (_table$meta = table.meta, deco(_table$meta)), says['worldbankSamplesToTable'](_ref2);
   table.title = Object.keys(table.meta.indicator).join(COSP);
   return table;
 };
@@ -206,7 +213,7 @@ const refineTable = (table, indicators) => {
  * @param {number|number[]} [year]
  * @param {number} [format]
  * @param {boolean} [spin]
- * @return {{head: *[], rows: *[][]}|Table|Object[]}
+ * @return {{head: *[], rows: *[][]}|Table}
  */
 
 const rawIndicators = async function ({
@@ -216,7 +223,7 @@ const rawIndicators = async function ({
   autoRefine = false,
   spin = false
 } = {}) {
-  var _ref, _table$meta;
+  var _ref2, _table$meta;
 
   const indicators = parseField(indicator);
   const tables = [];
@@ -225,20 +232,85 @@ const rawIndicators = async function ({
     key: indicator,
     to
   } of indicators) {
+    var _Xr$country$indicator, _ref, _table;
+
     const table = await rawIndicator({
       country,
       indicator,
       year,
       spin
     });
+    _Xr$country$indicator = Xr().country(country).indicator(indicator).year(year), says['rawIndicators'](_Xr$country$indicator);
+    _ref = (_table = table, DecoTable({
+      top: 3,
+      bottom: 1
+    })(_table)), says['rawIndicators'](_ref);
     if (autoRefine) refineTable(table, table.meta.indicator);
     if (to && typeof to === FUN) table.mutateColumn('value', to);
     tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT));
   }
 
   const table = linkTables(...tables);
-  _ref = (_table$meta = table.meta, deco(_table$meta)), logger$1(_ref);
+  _ref2 = (_table$meta = table.meta, deco(_table$meta)), logger$1(_ref2);
   return table;
+};
+
+/**
+ *
+ * @param {Table} rawTable
+ * @param {Object} rawTable.meta
+ * @param {string} side
+ * @param {string} banner
+ * @param {string} sumBy
+ * @param {string} distinctBy
+ * @return {Object<string,Table>}}
+ */
+
+const seriesCrostab = (rawTable, {
+  side,
+  banner,
+  sumBy,
+  distinctBy
+}) => {
+  const {
+    meta
+  } = rawTable;
+  const tables = {}; // rawTable |> decoTable |> logger
+
+  for (let topic of rawTable.distinctOnColumn(distinctBy)) {
+    var _meta$distinctBy$topi, _crosTab$toTable, _Xr$filter, _filter;
+
+    const topicName = (_meta$distinctBy$topi = meta[distinctBy][topic]) !== null && _meta$distinctBy$topi !== void 0 ? _meta$distinctBy$topi : topic;
+    const field = pair(sumBy, INCRE);
+    const filter = pair(distinctBy, new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
+    const crosTab = rawTable.crosTab({
+      side,
+      banner,
+      field,
+      filter
+    });
+    const subTable = (_crosTab$toTable = crosTab.toTable(side), toTable(_crosTab$toTable));
+
+    for (let key of crosTab.head) {
+      const {
+        max,
+        dif
+      } = bound(subTable.column(key));
+      const round = max < 1000 && dif <= 100 ? roundD1 : Math.round;
+      subTable.mutateColumn(key, round);
+    }
+
+    subTable.title = `(${side}) cross (${banner}) sum by (${sumBy}) when (${distinctBy}) is (${topicName})`;
+    subTable.meta = {
+      side: meta[side],
+      banner: meta[banner],
+      filter: pair(distinctBy, topicName)
+    };
+    tables[topic] = subTable;
+    _Xr$filter = Xr('add table').filter((_filter = filter, deco(_filter))), logger(_Xr$filter);
+  }
+
+  return tables;
 };
 
 const logger = says['seriesIndicators'].attach(time);
@@ -261,42 +333,12 @@ const seriesIndicators = async function ({
     autoRefine,
     spin
   });
-  const rawMeta = rawTable.meta;
-  const tables = {}; // rawTable |> decoTable |> logger
-
-  for (let topic of rawTable.distinctOnColumn(distinctBy)) {
-    var _crosTab$toTable, _Xr$filter, _filter;
-
-    const field = pair(sumBy, INCRE);
-    const filter = pair(distinctBy, new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
-    const crosTab = rawTable.crosTab({
-      side,
-      banner,
-      field,
-      filter
-    });
-    const subTable = (_crosTab$toTable = crosTab.toTable(side), toTable(_crosTab$toTable));
-
-    for (let key of crosTab.head) {
-      const {
-        max,
-        dif
-      } = bound(subTable.column(key));
-      const round = max < 1000 && dif <= 100 ? roundD1 : Math.round;
-      subTable.mutateColumn(key, round);
-    }
-
-    subTable.title = `(${side}) cross (${banner}) sum by (${sumBy}) when (${distinctBy}) is (${topic})`;
-    subTable.meta = {
-      side: rawMeta[side],
-      banner: rawMeta[banner],
-      filter: pair(distinctBy, topic)
-    };
-    tables[topic] = subTable;
-    _Xr$filter = Xr('add table').filter((_filter = filter, deco(_filter))), logger(_Xr$filter);
-  }
-
-  return tables;
+  return seriesCrostab(rawTable, {
+    side,
+    banner,
+    sumBy,
+    distinctBy
+  });
 };
 
-export { rawIndicator, rawIndicators, seriesIndicators };
+export { rawIndicator, rawIndicators, seriesCrostab, seriesIndicators };

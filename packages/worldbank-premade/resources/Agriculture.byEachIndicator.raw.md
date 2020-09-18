@@ -4,18 +4,26 @@
 
 ### AG.LND.AGRI.K2
 
-Agricultural land (sq. km)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Agricultural land (sq. km))
+
+##### Filter definition
+  - indicator: Agricultural land (sq. km)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN     | DEU    | GBR    | IND     | JPN   | RUS     | USA     |
+  | year | CHN     | DEU    | GBR    | IND     | JPN   | RUS     | USA     |
   | ---- | ------- | ------ | ------ | ------- | ----- | ------- | ------- |
   | 2019 |       0 |      0 |      0 |       0 |     0 |       0 |       0 |
   | 2018 |       0 |      0 |      0 |       0 |     0 |       0 |       0 |
@@ -42,18 +50,26 @@ Agricultural land (sq. km)
 
 ### AG.LND.AGRI.ZS
 
-Agricultural land (% of land area)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Agricultural land (% of land area))
+
+##### Filter definition
+  - indicator: Agricultural land (% of land area)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
   | 2018 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
@@ -80,18 +96,26 @@ Agricultural land (% of land area)
 
 ### AG.LND.ARBL.ZS
 
-Arable land (% of land area)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Arable land (% of land area))
+
+##### Filter definition
+  - indicator: Arable land (% of land area)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | --- | ---- |
   | 2019 |    0 |    0 |    0 |    0 |    0 |   0 |    0 |
   | 2018 |    0 |    0 |    0 |    0 |    0 |   0 |    0 |
@@ -118,18 +142,26 @@ Arable land (% of land area)
 
 ### AG.LND.CROP.ZS
 
-Permanent cropland (% of land area)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Permanent cropland (% of land area))
+
+##### Filter definition
+  - indicator: Permanent cropland (% of land area)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS | USA |
   | ---- | --- | --- | --- | --- | --- | --- | --- |
   | 2019 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
   | 2018 |   0 |   0 |   0 |   0 |   0 |   0 |   0 |
@@ -156,18 +188,26 @@ Permanent cropland (% of land area)
 
 ### AG.LND.FRST.ZS
 
-Forest area (% of land area)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Forest area (% of land area))
+
+##### Filter definition
+  - indicator: Forest area (% of land area)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2019 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
   | 2018 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
@@ -194,18 +234,26 @@ Forest area (% of land area)
 
 ### ER.PTD.TOTL.ZS
 
-Terrestrial and marine protected areas (% of total territorial area)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Terrestrial and marine protected areas (% of total territorial area))
+
+##### Filter definition
+  - indicator: Terrestrial and marine protected areas (% of total territorial area)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND | JPN | RUS | USA  |
+  | year | CHN  | DEU  | GBR  | IND | JPN | RUS | USA  |
   | ---- | ---- | ---- | ---- | --- | --- | --- | ---- |
   | 2019 |    0 |    0 |    0 |   0 |   0 |   0 |    0 |
   | 2018 | 14.6 | 38.8 | 28.8 | 3.5 |  10 | 7.6 | 26.3 |

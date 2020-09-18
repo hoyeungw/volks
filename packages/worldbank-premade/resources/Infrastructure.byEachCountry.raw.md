@@ -4,24 +4,24 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |  1725695000 |              0 |              0 |              0 |                 0 |
   | 2018 |  1649301700 |          67515 |      225828900 |         681203 |           2238435 |
@@ -48,24 +48,24 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |   107200000 |              0 |              0 |              0 |                 0 |
   | 2018 |   107500000 |          33440 |       19597633 |          79456 |                 0 |
@@ -92,24 +92,24 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |           0 |              0 |              0 |              0 |                 0 |
   | 2018 |    79472341 |          15961 |       11695222 |              0 |                 0 |
@@ -136,24 +136,24 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |  1151480361 |              0 |              0 |              0 |                 0 |
   | 2018 |  1176021869 |          68443 |       16382600 |              0 |                 0 |
@@ -180,24 +180,24 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |           0 |              0 |              0 |              0 |                 0 |
   | 2018 |   179872794 |          16852 |       22433824 |           1410 |                 0 |
@@ -224,24 +224,24 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |   239795946 |              0 |              0 |              0 |                 0 |
   | 2018 |   229431008 |          85626 |        6335300 |         129371 |                 0 |
@@ -268,24 +268,24 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
   - IT.CEL.SETS: Mobile cellular subscriptions
   - IS.RRS.TOTL.KM: Rail lines (total route-km)
   - IS.SHP.GOOD.TU: Container port traffic (TEU: 20 foot equivalent units)
-  - IS.ROD.PSGR.K6: Roads, passengers carried (million passenger-km)
   - IS.RRS.PASG.KM: Railways, passengers carried (million passenger-km)
-  - IS.ROD.GOOD.MT.K6: Roads, goods transported (million ton-km)
   - IS.RRS.GOOD.MT.K6: Railways, goods transported (million ton-km)
-  - IS.VEH.PCAR.P3: Passenger cars (per 1,000 people)
 
-  | date | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
+  | year | IT.CEL.SETS | IS.RRS.TOTL.KM | IS.SHP.GOOD.TU | IS.RRS.PASG.KM | IS.RRS.GOOD.MT.K6 |
   | ---- | ----------- | -------------- | -------------- | -------------- | ----------------- |
   | 2019 |           0 |              0 |              0 |              0 |                 0 |
   | 2018 |   422000000 |         150462 |       54688353 |          10239 |           2525217 |

@@ -1,8 +1,9 @@
 import { MUT }                                   from '@analys/enum-mutabilities'
 import { Table }                                 from '@analys/table'
 import { parseField }                            from '@analys/tablespec'
+import { says }                                  from '@palett/says'
 import { deco }                                  from '@spare/deco'
-import { logger }                                from '@spare/logger'
+import { DecoTable, logger, Xr }                 from '@spare/logger'
 import { FUN }                                   from '@typen/enum-data-types'
 import { COUNTRIES, INDICATORS, WITHIN_5_YEARS } from './helpers/constants'
 import { linkTables }                            from './helpers/linkTables'
@@ -16,7 +17,7 @@ import { rawIndicator }                          from './rawIndicator'
  * @param {number|number[]} [year]
  * @param {number} [format]
  * @param {boolean} [spin]
- * @return {{head: *[], rows: *[][]}|Table|Object[]}
+ * @return {{head: *[], rows: *[][]}|Table}
  */
 export const rawIndicators = async function (
   {
@@ -31,6 +32,8 @@ export const rawIndicators = async function (
   const tables = []
   for (let { key: indicator, to } of indicators) {
     const table = await rawIndicator({ country, indicator, year, spin })
+    Xr().country(country).indicator(indicator).year(year) |> says['rawIndicators']
+    table |> DecoTable({ top: 3, bottom: 1 }) |> says['rawIndicators']
     if (autoRefine) refineTable(table, table.meta.indicator)
     if (to && typeof to === FUN) table.mutateColumn('value', to)
     tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT))

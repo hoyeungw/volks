@@ -5,21 +5,21 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var acq = require('@acq/acq');
 var convert = require('@analys/convert');
 var boundVector = require('@aryth/bound-vector');
+var says = require('@palett/says');
+var deco = require('@spare/deco');
 var enumChars = require('@spare/enum-chars');
+var logger$1 = require('@spare/logger');
 var objectInit = require('@vect/object-init');
 var numStrict = require('@typen/num-strict');
 var table = require('@analys/table');
 var tablespec = require('@analys/tablespec');
-var deco = require('@spare/deco');
-var logger$1 = require('@spare/logger');
 var enumDataTypes = require('@typen/enum-data-types');
 var vectorMerge = require('@vect/vector-merge');
 var math = require('@aryth/math');
 var string = require('@spare/string');
 var translator = require('@spare/translator');
-var enumPivotMode = require('@analys/enum-pivot-mode');
-var says = require('@palett/says');
 var timestampPretty = require('@valjoux/timestamp-pretty');
+var enumPivotMode = require('@analys/enum-pivot-mode');
 
 const BASE = 'http://api.worldbank.org/v2';
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
@@ -93,10 +93,16 @@ const rawIndicator = async function ({
  */
 
 const worldbankSamplesToTable = samples => {
-  var _samples, _table$head, _table$rows, _table$column, _table$column2;
+  var _ref, _samples, _samples2, _table$column, _ref2, _table$meta;
 
-  const table = (_samples = samples, convert.samplesToTable(_samples));
-  if (!(table === null || table === void 0 ? void 0 : (_table$head = table.head) === null || _table$head === void 0 ? void 0 : _table$head.length) || !(table === null || table === void 0 ? void 0 : (_table$rows = table.rows) === null || _table$rows === void 0 ? void 0 : _table$rows.length)) return table;
+  _ref = (_samples = samples, logger$1.DecoSamples({
+    top: 3,
+    bottom: 1
+  })(_samples)), says.says['worldbankSamplesToTable'](_ref);
+  /** @type {Table}  */
+
+  const table = (_samples2 = samples, convert.samplesToTable(_samples2)); // if (!table?.head?.length || !table?.rows?.length) return table
+
   const indicatorDefs = objectInit.init(table.column('indicator').map(({
     id,
     value
@@ -109,9 +115,10 @@ const worldbankSamplesToTable = samples => {
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
-    year: (_table$column = table.column('year'), boundVector.bound(_table$column)),
-    value: (_table$column2 = table.column('value'), boundVector.bound(_table$column2))
+    year: table.coin('year') >= 0 ? boundVector.bound(table.column('year')) : {},
+    value: table.coin('year') >= 0 ? (_table$column = table.column('value'), boundVector.bound(_table$column)) : {}
   };
+  _ref2 = (_table$meta = table.meta, deco.deco(_table$meta)), says.says['worldbankSamplesToTable'](_ref2);
   table.title = Object.keys(table.meta.indicator).join(enumChars.COSP);
   return table;
 };
@@ -210,7 +217,7 @@ const refineTable = (table, indicators) => {
  * @param {number|number[]} [year]
  * @param {number} [format]
  * @param {boolean} [spin]
- * @return {{head: *[], rows: *[][]}|Table|Object[]}
+ * @return {{head: *[], rows: *[][]}|Table}
  */
 
 const rawIndicators = async function ({
@@ -220,7 +227,7 @@ const rawIndicators = async function ({
   autoRefine = false,
   spin = false
 } = {}) {
-  var _ref, _table$meta;
+  var _ref2, _table$meta;
 
   const indicators = tablespec.parseField(indicator);
   const tables = [];
@@ -229,20 +236,85 @@ const rawIndicators = async function ({
     key: indicator,
     to
   } of indicators) {
+    var _Xr$country$indicator, _ref, _table;
+
     const table = await rawIndicator({
       country,
       indicator,
       year,
       spin
     });
+    _Xr$country$indicator = logger$1.Xr().country(country).indicator(indicator).year(year), says.says['rawIndicators'](_Xr$country$indicator);
+    _ref = (_table = table, logger$1.DecoTable({
+      top: 3,
+      bottom: 1
+    })(_table)), says.says['rawIndicators'](_ref);
     if (autoRefine) refineTable(table, table.meta.indicator);
     if (to && typeof to === enumDataTypes.FUN) table.mutateColumn('value', to);
     tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT));
   }
 
   const table = linkTables(...tables);
-  _ref = (_table$meta = table.meta, deco.deco(_table$meta)), logger$1.logger(_ref);
+  _ref2 = (_table$meta = table.meta, deco.deco(_table$meta)), logger$1.logger(_ref2);
   return table;
+};
+
+/**
+ *
+ * @param {Table} rawTable
+ * @param {Object} rawTable.meta
+ * @param {string} side
+ * @param {string} banner
+ * @param {string} sumBy
+ * @param {string} distinctBy
+ * @return {Object<string,Table>}}
+ */
+
+const seriesCrostab = (rawTable, {
+  side,
+  banner,
+  sumBy,
+  distinctBy
+}) => {
+  const {
+    meta
+  } = rawTable;
+  const tables = {}; // rawTable |> decoTable |> logger
+
+  for (let topic of rawTable.distinctOnColumn(distinctBy)) {
+    var _meta$distinctBy$topi, _crosTab$toTable, _Xr$filter, _filter;
+
+    const topicName = (_meta$distinctBy$topi = meta[distinctBy][topic]) !== null && _meta$distinctBy$topi !== void 0 ? _meta$distinctBy$topi : topic;
+    const field = objectInit.pair(sumBy, enumPivotMode.INCRE);
+    const filter = objectInit.pair(distinctBy, new Function('x', `return ${numStrict.isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
+    const crosTab = rawTable.crosTab({
+      side,
+      banner,
+      field,
+      filter
+    });
+    const subTable = (_crosTab$toTable = crosTab.toTable(side), convert.toTable(_crosTab$toTable));
+
+    for (let key of crosTab.head) {
+      const {
+        max,
+        dif
+      } = boundVector.bound(subTable.column(key));
+      const round = max < 1000 && dif <= 100 ? math.roundD1 : Math.round;
+      subTable.mutateColumn(key, round);
+    }
+
+    subTable.title = `(${side}) cross (${banner}) sum by (${sumBy}) when (${distinctBy}) is (${topicName})`;
+    subTable.meta = {
+      side: meta[side],
+      banner: meta[banner],
+      filter: objectInit.pair(distinctBy, topicName)
+    };
+    tables[topic] = subTable;
+    _Xr$filter = logger$1.Xr('add table').filter((_filter = filter, deco.deco(_filter))), logger(_Xr$filter);
+  }
+
+  return tables;
 };
 
 const logger = says.says['seriesIndicators'].attach(timestampPretty.time);
@@ -265,44 +337,15 @@ const seriesIndicators = async function ({
     autoRefine,
     spin
   });
-  const rawMeta = rawTable.meta;
-  const tables = {}; // rawTable |> decoTable |> logger
-
-  for (let topic of rawTable.distinctOnColumn(distinctBy)) {
-    var _crosTab$toTable, _Xr$filter, _filter;
-
-    const field = objectInit.pair(sumBy, enumPivotMode.INCRE);
-    const filter = objectInit.pair(distinctBy, new Function('x', `return ${numStrict.isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
-    const crosTab = rawTable.crosTab({
-      side,
-      banner,
-      field,
-      filter
-    });
-    const subTable = (_crosTab$toTable = crosTab.toTable(side), convert.toTable(_crosTab$toTable));
-
-    for (let key of crosTab.head) {
-      const {
-        max,
-        dif
-      } = boundVector.bound(subTable.column(key));
-      const round = max < 1000 && dif <= 100 ? math.roundD1 : Math.round;
-      subTable.mutateColumn(key, round);
-    }
-
-    subTable.title = `(${side}) cross (${banner}) sum by (${sumBy}) when (${distinctBy}) is (${topic})`;
-    subTable.meta = {
-      side: rawMeta[side],
-      banner: rawMeta[banner],
-      filter: objectInit.pair(distinctBy, topic)
-    };
-    tables[topic] = subTable;
-    _Xr$filter = logger$1.Xr('add table').filter((_filter = filter, deco.deco(_filter))), logger(_Xr$filter);
-  }
-
-  return tables;
+  return seriesCrostab(rawTable, {
+    side,
+    banner,
+    sumBy,
+    distinctBy
+  });
 };
 
 exports.rawIndicator = rawIndicator;
 exports.rawIndicators = rawIndicators;
+exports.seriesCrostab = seriesCrostab;
 exports.seriesIndicators = seriesIndicators;

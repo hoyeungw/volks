@@ -4,15 +4,17 @@
 
 ### CHN
 
-  - name: China
-  - region: East Asia & Pacific
-  - incomeLevel: Upper middle income
-  - capitalCity: Beijing
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
 
+##### Filter definition
+  - country: China
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -20,7 +22,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |           14.6 |
@@ -47,15 +49,17 @@
 
 ### DEU
 
-  - name: Germany
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: Berlin
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
 
+##### Filter definition
+  - country: Germany
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -63,7 +67,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |           38.8 |
@@ -90,15 +94,17 @@
 
 ### GBR
 
-  - name: United Kingdom
-  - region: Europe & Central Asia
-  - incomeLevel: High income
-  - capitalCity: London
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
 
+##### Filter definition
+  - country: United Kingdom
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -106,7 +112,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |           28.8 |
@@ -133,15 +139,17 @@
 
 ### IND
 
-  - name: India
-  - region: South Asia
-  - incomeLevel: Lower middle income
-  - capitalCity: New Delhi
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
+##### Filter definition
+  - country: India
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -149,7 +157,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |            3.5 |
@@ -176,15 +184,17 @@
 
 ### JPN
 
-  - name: Japan
-  - region: East Asia & Pacific
-  - incomeLevel: High income
-  - capitalCity: Tokyo
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Japan)
 
+##### Filter definition
+  - country: Japan
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -192,7 +202,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |             10 |
@@ -219,15 +229,17 @@
 
 ### RUS
 
-  - name: Russian Federation
-  - region: Europe & Central Asia
-  - incomeLevel: Upper middle income
-  - capitalCity: Moscow
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Russian Federation)
 
+##### Filter definition
+  - country: Russian Federation
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -235,7 +247,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |            7.6 |
@@ -262,15 +274,17 @@
 
 ### USA
 
-  - name: United States
-  - region: North America
-  - incomeLevel: High income
-  - capitalCity: Washington D.C.
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
 
+##### Filter definition
+  - country: United States
 
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - EN.AGR.EMPL: Economically active population in agriculture  (million people)
   - AG.LND.AGRI.K2: Agricultural land (sq. km)
   - AG.LND.AGRI.ZS: Agricultural land (% of land area)
   - AG.LND.ARBL.ZS: Arable land (% of land area)
@@ -278,7 +292,7 @@
   - AG.LND.FRST.ZS: Forest area (% of land area)
   - ER.PTD.TOTL.ZS: Terrestrial and marine protected areas (% of total territorial area)
 
-  | date | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
+  | year | AG.LND.AGRI.K2 | AG.LND.AGRI.ZS | AG.LND.ARBL.ZS | AG.LND.CROP.ZS | AG.LND.FRST.ZS | ER.PTD.TOTL.ZS |
   | ---- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
   | 2019 |              0 |              0 |              0 |              0 |              0 |              0 |
   | 2018 |              0 |              0 |              0 |              0 |              0 |           26.3 |

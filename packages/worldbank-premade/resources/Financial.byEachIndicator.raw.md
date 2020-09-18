@@ -4,18 +4,26 @@
 
 ### FR.INR.LEND
 
-Lending interest rate (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Lending interest rate (%))
+
+##### Filter definition
+  - indicator: Lending interest rate (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND  | JPN | RUS  | USA |
+  | year | CHN | DEU | GBR | IND  | JPN | RUS  | USA |
   | ---- | --- | --- | --- | ---- | --- | ---- | --- |
   | 2019 | 4.4 |   0 |   0 |  9.5 |   0 |  8.8 | 5.3 |
   | 2018 | 4.4 |   0 |   0 |  9.5 |   0 |  8.9 | 4.9 |
@@ -42,18 +50,26 @@ Lending interest rate (%)
 
 ### CM.MKT.TRNR
 
-Stocks traded, turnover ratio of domestic shares (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stocks traded, turnover ratio of domestic shares (%))
+
+##### Filter definition
+  - indicator: Stocks traded, turnover ratio of domestic shares (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS  | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS  | USA |
   | ---- | --- | --- | --- | --- | --- | ---- | --- |
   | 2019 | 224 |  64 |   0 |  29 |  82 | 22.8 |   0 |
   | 2018 | 207 |  92 |   0 |  58 | 119 | 25.5 | 109 |
@@ -80,18 +96,26 @@ Stocks traded, turnover ratio of domestic shares (%)
 
 ### CM.MKT.LCAP.CD
 
-Market capitalization of listed domestic companies (current billion US$)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Market capitalization of listed domestic companies (current billion US$))
+
+##### Filter definition
+  - indicator: Market capitalization of listed domestic companies (current billion US$)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS | USA   |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS | USA   |
   | ---- | ---- | ---- | ---- | ---- | ---- | --- | ----- |
   | 2019 | 8516 | 2098 |    0 | 2180 | 6191 |   0 |     0 |
   | 2018 | 6325 | 1755 |    0 | 2083 | 5297 | 576 | 30436 |
@@ -118,18 +142,26 @@ Market capitalization of listed domestic companies (current billion US$)
 
 ### CM.MKT.LCAP.GD.ZS
 
-Market capitalization of listed domestic companies (% of GDP)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Market capitalization of listed domestic companies (% of GDP))
+
+##### Filter definition
+  - indicator: Market capitalization of listed domestic companies (% of GDP)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU  | GBR | IND | JPN   | RUS  | USA |
+  | year | CHN | DEU  | GBR | IND | JPN   | RUS  | USA |
   | ---- | --- | ---- | --- | --- | ----- | ---- | --- |
   | 2019 |  59 | 54.6 |   0 |  76 | 121.8 |    0 |   0 |
   | 2018 |  46 | 44.4 |   0 |  77 | 106.9 | 34.5 | 148 |
@@ -156,18 +188,26 @@ Market capitalization of listed domestic companies (% of GDP)
 
 ### GFDD.DI.11
 
-Insurance company assets to GDP (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Insurance company assets to GDP (%))
+
+##### Filter definition
+  - indicator: Insurance company assets to GDP (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND  | JPN  | RUS | USA  |
+  | year | CHN  | DEU  | GBR | IND  | JPN  | RUS | USA  |
   | ---- | ---- | ---- | --- | ---- | ---- | --- | ---- |
   | 2017 | 20.2 | 47.5 |   0 |    0 |    0 | 2.4 |    0 |
   | 2016 | 20.3 | 47.8 | 119 |    0 | 75.5 | 2.2 | 30.8 |
@@ -192,18 +232,26 @@ Insurance company assets to GDP (%)
 
 ### GFDD.DM.01
 
-Stock market capitalization to GDP (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stock market capitalization to GDP (%))
+
+##### Filter definition
+  - indicator: Stock market capitalization to GDP (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR | IND   | JPN   | RUS   | USA   |
+  | year | CHN  | DEU  | GBR | IND   | JPN   | RUS   | USA   |
   | ---- | ---- | ---- | --- | ----- | ----- | ----- | ----- |
   | 2017 | 65.5 | 54.3 |   0 |  74.6 | 113.1 |  42.6 | 153.2 |
   | 2016 | 67.6 |   49 |   0 |  67.1 | 105.5 |  38.2 | 140.7 |
@@ -228,18 +276,26 @@ Stock market capitalization to GDP (%)
 
 ### GFDD.DM.02
 
-Stock market total value traded to GDP (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stock market total value traded to GDP (%))
+
+##### Filter definition
+  - indicator: Stock market total value traded to GDP (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU   | GBR | IND  | JPN | RUS  | USA |
+  | year | CHN | DEU   | GBR | IND  | JPN | RUS  | USA |
   | ---- | --- | ----- | --- | ---- | --- | ---- | --- |
   | 2017 | 145 |  36.6 |   0 | 38.1 | 111 |  9.7 | 211 |
   | 2016 | 249 |  36.7 |   0 | 34.2 | 116 |  9.6 | 224 |
@@ -264,18 +320,26 @@ Stock market total value traded to GDP (%)
 
 ### GFDD.EM.01
 
-Stock market turnover ratio (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stock market turnover ratio (%))
+
+##### Filter definition
+  - indicator: Stock market turnover ratio (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU | GBR | IND | JPN | RUS  | USA |
+  | year | CHN | DEU | GBR | IND | JPN | RUS  | USA |
   | ---- | --- | --- | --- | --- | --- | ---- | --- |
   | 2017 | 216 |  78 |   0 |  60 | 105 | 21.6 | 133 |
   | 2016 | 242 |  66 |   0 |  52 | 101 | 28.5 | 160 |
@@ -300,18 +364,26 @@ Stock market turnover ratio (%)
 
 ### GFDD.OM.02
 
-Stock market return (%, year-on-year)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stock market return (%, year-on-year))
+
+##### Filter definition
+  - indicator: Stock market return (%, year-on-year)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN | DEU   | GBR   | IND   | JPN   | RUS | USA   |
+  | year | CHN | DEU   | GBR   | IND   | JPN   | RUS | USA   |
   | ---- | --- | ----- | ----- | ----- | ----- | --- | ----- |
   | 2017 |   8 |  22.4 |  14.1 |    17 |  19.7 |   5 |  16.8 |
   | 2016 | -19 |  -5.5 |  -1.4 |  -3.5 | -12.8 |  15 |   1.7 |
@@ -336,18 +408,26 @@ Stock market return (%, year-on-year)
 
 ### GFDD.SM.01
 
-Stock price volatility
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Stock price volatility)
+
+##### Filter definition
+  - indicator: Stock price volatility
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2017 | 17.8 | 16.8 | 13.4 | 12.8 | 21.1 | 14.9 |   11 |
   | 2016 | 36.4 | 23.4 | 17.4 | 16.2 | 24.9 | 19.2 | 15.7 |
@@ -372,18 +452,26 @@ Stock price volatility
 
 ### GFDD.AM.02
 
-Market capitalization excluding top 10 companies to total market capitalization (%)
+##### Table-spec:(year) cross (country) sum by (value) when (indicator) is (Market capitalization excluding top 10 companies to total market capitalization (%))
+
+##### Filter definition
+  - indicator: Market capitalization excluding top 10 companies to total market capitalization (%)
+
+##### Sides definition
+  - min: 1999
+  - dif: 20
+  - max: 2019
 
 ##### Banners definition
-  - USA: United States
   - CHN: China
-  - JPN: Japan
-  - GBR: United Kingdom
   - DEU: Germany
-  - RUS: Russian Federation
+  - GBR: United Kingdom
   - IND: India
+  - JPN: Japan
+  - RUS: Russian Federation
+  - USA: United States
 
-  | date | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
+  | year | CHN  | DEU  | GBR  | IND  | JPN  | RUS  | USA  |
   | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
   | 2017 |   91 | 59.6 |    0 |   76 |   86 |   37 |    0 |
   | 2016 | 80.7 |    0 |    0 | 74.5 | 84.4 | 40.3 | 76.6 |
