@@ -2,11 +2,14 @@ import { toTable }              from '@analys/convert'
 import { INCRE }                from '@analys/enum-pivot-mode'
 import { bound as boundVector } from '@aryth/bound-vector'
 import { roundD1 }              from '@aryth/math'
+import { says }                 from '@palett/says'
 import { deco }                 from '@spare/deco'
 import { Xr }                   from '@spare/logger'
 import { isNumeric }            from '@typen/num-strict'
+import { time }                 from '@valjoux/timestamp-pretty'
 import { pair }                 from '@vect/object-init'
-import { logger }               from './seriesIndicators'
+
+export const logger = says['seriesIndicators'].attach(time)
 
 /**
  *
