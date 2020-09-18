@@ -1,26 +1,25 @@
-import { toTable }              from '@analys/convert'
-import { MUT }                  from '@analys/enum-mutabilities'
-import { INCRE }                from '@analys/enum-pivot-mode'
-import { Table }                from '@analys/table'
-import { bound }                from '@aryth/bound-vector'
-import { NUM_DESC }             from '@aryth/comparer'
-import { round, roundD1 }       from '@aryth/math'
-import { Vinylize }             from '@flua/vinylize'
-import { says }                 from '@palett/says'
-import { deco }                 from '@spare/deco'
-import { LF }                   from '@spare/enum-chars'
-import { DecoTable, Xr }        from '@spare/logger'
-import { Markdown }             from '@spare/markdown'
-import { makeReplaceable }      from '@spare/translator'
-import { OBJ }                  from '@typen/enum-data-types'
-import { isNumeric }            from '@typen/num-strict'
-import { time }                 from '@valjoux/timestamp-pretty'
-import { init, pair }           from '@vect/object-init'
-import { rawIndicators }        from '@volks/worldbank-indicator'
-import gulp                     from 'gulp'
-import { IndicatorsCollection } from '../src/IndicatorsCollection'
-import { countryTable }         from './counryTable'
-import { refineIndicatorDefs }  from './refineIndicatorDefs'
+import { toTable }                    from '@analys/convert'
+import { MUT }                        from '@analys/enum-mutabilities'
+import { INCRE }                      from '@analys/enum-pivot-mode'
+import { Table }                      from '@analys/table'
+import { bound }                      from '@aryth/bound-vector'
+import { NUM_DESC }                   from '@aryth/comparer'
+import { roundD1 }                    from '@aryth/math'
+import { Vinylize }                   from '@flua/vinylize'
+import { says }                       from '@palett/says'
+import { deco }                       from '@spare/deco'
+import { LF }                         from '@spare/enum-chars'
+import { DecoTable, Xr }              from '@spare/logger'
+import { Markdown }                   from '@spare/markdown'
+import { OBJ }                        from '@typen/enum-data-types'
+import { isNumeric }                  from '@typen/num-strict'
+import { time }                       from '@valjoux/timestamp-pretty'
+import { init, pair }                 from '@vect/object-init'
+import { rawIndicators }              from '@volks/worldbank-indicator'
+import gulp                           from 'gulp'
+import { IndicatorsCollection }       from '../src/IndicatorsCollection'
+import { countryTable }     from './counryTable'
+import { refineIndicators } from './refineIndicators'
 
 const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
@@ -32,7 +31,7 @@ const saveTopic = async (topic, countries, yearRange) => {
   Xr().start(topic).countries(countries |> deco).year(yearRange |> deco) |> logger
   const indicatorDefs = IndicatorsCollection[topic]
   const countryDefs = countries.map(iso => [iso, countryTable.lookupOne(iso, 'id', 'name')]) |> init
-  const indicatorsSpec = refineIndicatorDefs(indicatorDefs)
+  const indicatorsSpec = refineIndicators(indicatorDefs)
   // try {
   const table = Table
     .from(await rawIndicators({

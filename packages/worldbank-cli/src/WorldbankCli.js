@@ -1,14 +1,13 @@
-import { TABLE }                           from '@analys/enum-tabular-types'
 import { Cards }                           from '@palett/cards'
 import { HexDye }                          from '@palett/dye'
 import { BOLD, UNDERLINE }                 from '@palett/enum-font-effects'
 import { says }                            from '@palett/says'
-import { Deco }                            from '@spare/deco'
-import { SP }                              from '@spare/enum-chars'
-import { decoObject, decoPale, decoTable } from '@spare/logger'
+import { deco, Deco }                      from '@spare/deco'
+import { LF, SP }                          from '@spare/enum-chars'
+import { decoPale, decoString, decoTable } from '@spare/logger'
 import { time }                            from '@valjoux/timestamp-pretty'
 import { range }                           from '@vect/vector-init'
-import { getIndicators }                   from '@volks/worldbank-indicator'
+import { seriesIndicators }                from '@volks/worldbank-indicator'
 import inquirer                            from 'inquirer'
 import searchableList                      from 'inquirer-autocomplete-prompt'
 import searchableCheckbox                  from 'inquirer-checkbox-plus-prompt'
@@ -72,21 +71,38 @@ export class WorldbankCli {
       message: 'Please select start year',
       choices: range(2020, 1990).map(n => ({ name: n, value: n })),
     })
-
-    spinner.start(time() + ' querying data ' + ({ indicators, countries, start } |> Deco({ hi: 1 })))
-    const table = await getIndicators({
+    const INDICATOR = 'indicator', COUNTRY = 'country', VALUE = 'value', YEAR = 'year'
+    const { spec } = await inquirer.prompt({
+      name: 'spec',
+      type: LIST,
+      default: 0,
+      message: 'Please select table spec',
+      choices: [
+        { side: INDICATOR, banner: COUNTRY, sumBy: VALUE, distinctBy: YEAR },
+        { side: COUNTRY, banner: INDICATOR, sumBy: VALUE, distinctBy: YEAR },
+        { side: INDICATOR, banner: YEAR, sumBy: VALUE, distinctBy: COUNTRY },
+        { side: YEAR, banner: INDICATOR, sumBy: VALUE, distinctBy: COUNTRY },
+        { side: COUNTRY, banner: YEAR, sumBy: VALUE, distinctBy: INDICATOR },
+        { side: YEAR, banner: COUNTRY, sumBy: VALUE, distinctBy: INDICATOR },
+      ].map(({ side, banner, sumBy, distinctBy }) => ({
+        name: decoString(`(${ side }) cross (${ banner }) sum by (${ sumBy }) distinct by (${ distinctBy })`),
+        value: { side, banner, sumBy, distinctBy }
+      })),
+    })
+    spinner.start(time() + ' querying data ' + ({ indicators, countries, start, spec } |> Deco({ hi: 1 })))
+    const tableSeries = await seriesIndicators({
       country: countries,
       indicator: indicators,
       year: [start, 2020],
-      format: TABLE,
+      autoRefine: true,
       spin: false
-    })
+    }, spec)
     spinner.succeed(time() + ' queried from worldbank')
-
-    if (table.wd) {
-      table.indicators |> decoObject |> says['indicators']
-      table.countries |> decoObject |> says['countries']
-      table |> decoTable |> logger
+    for (let [key, table] of Object.entries(tableSeries)) {
+      table.title |> deco |> says[key]
+      table.meta |> Deco({ unit: 16 }) |> says[key]
+      table |> decoTable |> says[key]
+      LF |> console.log
     }
   }
 }

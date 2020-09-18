@@ -15,18 +15,18 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.2.14",
-    "@aryth/distinct-vector": "^0.2.14",
-    "@aryth/math": "^0.2.14",
-    "@spare/markdown": "^0.9.6",
+    "@aryth/comparer": "^0.3.0",
+    "@aryth/distinct-vector": "^0.3.0",
+    "@aryth/math": "^0.3.0",
+    "@spare/markdown": "^0.9.8",
     "@volks/worldbank-indicator": "^0.1.3"
   },
   "devDependencies": {
-    "@analys/enum-pivot-mode": "^0.4.10",
-    "@aryth/bound-vector": "^0.2.14",
-    "@typen/enum-data-types": "^0.1.9",
-    "@typen/num-strict": "^0.1.9",
-    "@vect/column-mapper": "^0.2.9",
+    "@analys/enum-pivot-mode": "^0.4.11",
+    "@aryth/bound-vector": "^0.3.0",
+    "@typen/enum-data-types": "^0.1.10",
+    "@typen/num-strict": "^0.1.10",
+    "@vect/column-mapper": "^0.2.10",
     "ora": "^5.1.0"
   },
   "repository": {

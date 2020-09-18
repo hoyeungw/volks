@@ -1,25 +1,21 @@
 import { Acq } from '@acq/acq';
-import { SAMPLES, TABLE } from '@analys/enum-tabular-types';
-import { Table } from '@analys/table';
-import { SC, RT, SP } from '@spare/enum-chars';
-import { isNumeric } from '@typen/num-strict';
-import { pair, init } from '@vect/object-init';
+import { samplesToTable, toTable } from '@analys/convert';
 import { bound } from '@aryth/bound-vector';
-import { UNION } from '@analys/enum-join-modes';
-import '@vect/vector-zipper';
+import { SC, RT, COSP } from '@spare/enum-chars';
+import { init, pair } from '@vect/object-init';
+import { isNumeric } from '@typen/num-strict';
+import { Table } from '@analys/table';
 import { parseField } from '@analys/tablespec';
+import { deco } from '@spare/deco';
+import { logger as logger$1, Xr } from '@spare/logger';
+import { FUN } from '@typen/enum-data-types';
 import { acquire } from '@vect/vector-merge';
-
-const distinctIdValue = idValueList => {
-  const o = {};
-
-  for (let {
-    id,
-    value
-  } of idValueList) o[id] = value;
-
-  return o;
-};
+import { round, roundD1 } from '@aryth/math';
+import { trim } from '@spare/string';
+import { makeReplaceable } from '@spare/translator';
+import { INCRE } from '@analys/enum-pivot-mode';
+import { says } from '@palett/says';
+import { time } from '@valjoux/timestamp-pretty';
 
 const BASE = 'http://api.worldbank.org/v2';
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
@@ -43,274 +39,6 @@ const parseYear = year => {
   return WITHIN_5_YEARS;
 };
 
-const getIndicator = async function ({
-  country = COUNTRIES,
-  indicator = GDP,
-  year = WITHIN_5_YEARS,
-  easy = false,
-  spin = false
-} = {}) {
-  const countries = parseLabel(country);
-  const yearEntry = parseYear(year);
-  const per_page = countries.length * (yearEntry[1] - yearEntry[0] + 1);
-  const table = await Acq.tabular({
-    title: indicator,
-    url: `${BASE}/country/${countries.join(SC)}/indicator/${indicator}`,
-    params: {
-      date: yearEntry.join(RT),
-      format: 'json',
-      per_page: per_page
-    },
-    prep: ([message, samples]) => samples,
-    from: SAMPLES,
-    to: TABLE,
-    easy,
-    spin
-  });
-  return leanTable(table);
-};
-const leanTable = table => {
-  var _table, _table$head, _table2, _table2$rows, _table$select$rows$ma;
-
-  if (!((_table = table) === null || _table === void 0 ? void 0 : (_table$head = _table.head) === null || _table$head === void 0 ? void 0 : _table$head.length) || !((_table2 = table) === null || _table2 === void 0 ? void 0 : (_table2$rows = _table2.rows) === null || _table2$rows === void 0 ? void 0 : _table2$rows.length)) return table;
-  table = Table.from(table);
-  const [{
-    id: indicatorId,
-    value: indicatorName
-  }] = table.column('indicator');
-  const countries = (_table$select$rows$ma = table.select(['country', 'countryiso3code']).rows.map(([{
-    value
-  }, iso]) => ({
-    id: iso,
-    value
-  })), distinctIdValue(_table$select$rows$ma));
-  table = table.renameColumn('countryiso3code', 'iso').renameColumn('value', indicatorId).mutateColumn(indicatorId, x => isNumeric(x) ? parseInt(x) : x).mutateColumn('indicator', ({
-    id
-  }) => id);
-  table.title = indicatorId !== null && indicatorId !== void 0 ? indicatorId : '';
-  table.indicators = pair(indicatorId, indicatorName);
-  table.countries = countries;
-  return table;
-};
-
-/**
- *
- * @param {string|string[]} [country]
- * @param {string|string[]} [indicator]
- * @param {number|number[]} [year]
- * @param {number} [format]
- * @param {boolean} [easy]
- * @param {boolean} [spin]
- * @return {Promise<{head: *[], rows: *[][]}|Table|Object[]>}
- */
-
-const getIndicators = async function ({
-  country = COUNTRIES,
-  indicator = INDICATORS,
-  year = WITHIN_5_YEARS,
-  easy = false,
-  spin = false
-} = {}) {
-  const indicators = parseLabel(indicator);
-  const tables = {};
-
-  for (let indicator of indicators) {
-    const table = await getIndicator({
-      country,
-      indicator,
-      year,
-      format: TABLE,
-      spin,
-      easy
-    });
-    tables[table.title] = {
-      table: Table.from(table),
-      indicators: table.indicators,
-      countries: table.countries
-    }; // table |> deco |> says[table.title]
-  }
-
-  let table = Table.from({
-    head: [],
-    rows: []
-  });
-  const indicatorCollection = {},
-        countryCollection = {};
-
-  for (let [key, {
-    table: another,
-    indicators,
-    countries
-  }] of Object.entries(tables)) {
-    Object.assign(indicatorCollection, indicators);
-    Object.assign(countryCollection, countries); // another.select(['iso', 'date', key]) |>deco |> logger;
-
-    table = table.join(another.select(['iso', 'date', key]), ['iso', 'date'], UNION);
-  }
-
-  table.indicators = indicatorCollection;
-  table.countries = countryCollection;
-  return table;
-};
-
-const iterate = function (vec, fn, l) {
-  l = l || (vec === null || vec === void 0 ? void 0 : vec.length);
-
-  for (let i = 0; i < l; i++) fn.call(this, vec[i], i);
-};
-
-const mapper = function (vec, fn, l) {
-  l = l || (vec === null || vec === void 0 ? void 0 : vec.length);
-  const ar = Array(l);
-
-  for (--l; l >= 0; l--) ar[l] = fn.call(this, vec[l], l);
-
-  return ar;
-};
-
-const select = (vec, indexes, hi) => {
-  hi = hi || indexes.length;
-  const vc = Array(hi);
-
-  for (--hi; hi >= 0; hi--) vc[hi] = vec[indexes[hi]];
-
-  return vc;
-};
-
-const unwind = (entries, h) => {
-  h = h || (entries === null || entries === void 0 ? void 0 : entries.length);
-  let keys = Array(h),
-      values = Array(h);
-
-  for (let r; --h >= 0 && (r = entries[h]);) {
-    keys[h] = r[0];
-    values[h] = r[1];
-  }
-
-  return [keys, values];
-};
-
-const voidTabular = () => ({
-  head: [],
-  rows: []
-});
-
-/**
- * Take the first "n" elements from an array.
- * @param len. The number denote the first "n" elements in an array.
- * @returns {*[]}. A new array length at "len".
- */
-
-
-Array.prototype.take = function (len) {
-  return this.slice(0, len);
-};
-
-Array.prototype.zip = function (another, zipper) {
-  const {
-    length
-  } = this,
-        arr = Array(length);
-
-  for (let i = 0; i < length; i++) arr[i] = zipper(this[i], another[i], i);
-
-  return arr; // return Array.from({ length: size }, (v, i) => zipper(this[i], another[i], i))
-  // return this.map((x, i) => zipper(x, another[i]))
-};
-
-/**
- *
- * @param {Object} o
- * @returns {Table}
- */
-
-
-const toTable = o => new Table(o.head || o.banner, o.rows || o.matrix, o.title, o.types);
-/**
- *
- * @param {Object[]} samples
- * @param {(str|[str,str])[]} [fields]
- * @returns {Table}
- */
-
-
-const samplesToTable = (samples, fields) => {
-  var _samplesToTabular;
-
-  return _samplesToTabular = samplesToTabular(samples, fields), toTable(_samplesToTabular);
-};
-/**
- *
- * @param {Object[]} samples
- * @param {(str|[str,str])[]} [fields]
- * @returns {TableObject}
- */
-
-
-function samplesToTabular(samples, fields) {
-  var _selectFieldMapping$c;
-
-  let h, w;
-  if (!(h = samples === null || samples === void 0 ? void 0 : samples.length)) return voidTabular();
-  if (!(fields === null || fields === void 0 ? void 0 : fields.length)) return convertSamplesToTabular(samples);
-  const [keys, head] = (_selectFieldMapping$c = selectFieldMapping.call(samples[0], fields), unwind(_selectFieldMapping$c));
-  if (!(w = keys === null || keys === void 0 ? void 0 : keys.length)) return voidTabular();
-  const rows = mapper(samples, sample => select(sample, keys, w), h);
-  return {
-    head,
-    rows
-  };
-}
-
-const selectFieldMapping = function (fields) {
-  const sample = this,
-        mapping = [],
-        fieldMapper = fieldMapping.bind(sample);
-  let kvp;
-  iterate(fields, field => {
-    if (kvp = fieldMapper(field)) mapping.push(kvp);
-  });
-  return mapping;
-};
-/**
- *
- * @param {str|[*,*]} [field]
- * @returns {[str,number]}
- */
-
-
-const fieldMapping = function (field) {
-  const sample = this;
-
-  if (Array.isArray(field)) {
-    const [current, projected] = field;
-    return current in sample ? [current, projected] : null;
-  }
-
-  return field in sample ? [field, field] : null;
-};
-
-function convertSamplesToTabular(samples) {
-  var _Object$entries;
-
-  const height = samples === null || samples === void 0 ? void 0 : samples.length;
-  if (!height) return voidTabular();
-  const rows = Array(height);
-  let head;
-  [head, rows[0]] = (_Object$entries = Object.entries(samples[0]), unwind(_Object$entries));
-
-  for (let i = 1, w = (_head = head) === null || _head === void 0 ? void 0 : _head.length; i < height; i++) {
-    var _head;
-
-    rows[i] = select(samples[i], head, w);
-  }
-
-  return {
-    head,
-    rows
-  };
-}
-
 /**
  *
  * @param {string|string[]} [country]
@@ -325,11 +53,9 @@ const rawIndicator = async function ({
   country = COUNTRIES,
   indicator = GDP,
   year = WITHIN_5_YEARS,
-  easy = false,
+  autoRefine,
   spin = false
 } = {}) {
-  var _samples;
-
   const countries = parseLabel(country);
   const yearEntry = parseYear(year);
   const per_page = countries.length * (yearEntry[1] - yearEntry[0] + 1);
@@ -348,38 +74,41 @@ const rawIndicator = async function ({
       message,
       samples
     }),
-    easy,
     spin
   });
-  /** @type {Table}  */
+  /** @type {Table|Object} */
 
-  const table = leanTable$1((_samples = samples, samplesToTable(_samples)));
+  const table = worldbankSamplesToTable(samples);
   table.message = message;
   return table;
 };
 /**
  *
- * @param {Table} table
+ * @param {Object[]} samples
  * @return {Table}
  */
 
-const leanTable$1 = table => {
-  var _table, _table$head, _table2, _table2$rows, _table$column$map;
+const worldbankSamplesToTable = samples => {
+  var _samples, _table$head, _table$rows, _table$column, _table$column2;
 
-  if (!((_table = table) === null || _table === void 0 ? void 0 : (_table$head = _table.head) === null || _table$head === void 0 ? void 0 : _table$head.length) || !((_table2 = table) === null || _table2 === void 0 ? void 0 : (_table2$rows = _table2.rows) === null || _table2$rows === void 0 ? void 0 : _table2$rows.length)) return table;
-  const indicators = (_table$column$map = table.column('indicator').map(({
+  const table = (_samples = samples, samplesToTable(_samples));
+  if (!(table === null || table === void 0 ? void 0 : (_table$head = table.head) === null || _table$head === void 0 ? void 0 : _table$head.length) || !(table === null || table === void 0 ? void 0 : (_table$rows = table.rows) === null || _table$rows === void 0 ? void 0 : _table$rows.length)) return table;
+  const indicatorDefs = init(table.column('indicator').map(({
     id,
     value
-  }) => [id, value]), init(_table$column$map));
-  table = table.renameColumn('countryiso3code', 'iso').mutateColumn('indicator', ({
+  }) => [id, value]));
+  table.mutateColumn('indicator', ({
     id
   }) => id).mutateColumn('country', ({
     value
-  }) => value);
-  const countries = table.lookupTable('iso', 'country');
-  table.title = indicators ? Object.keys(indicators).join(',') : '';
-  table.indicators = indicators;
-  table.countries = countries;
+  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country');
+  table.meta = {
+    indicator: indicatorDefs,
+    country: table.lookupTable('country', 'countryName'),
+    year: (_table$column = table.column('year'), bound(_table$column)),
+    value: (_table$column2 = table.column('value'), bound(_table$column2))
+  };
+  table.title = Object.keys(table.meta.indicator).join(COSP);
   return table;
 };
 
@@ -389,58 +118,185 @@ const MUTABLE = {
 };
 const MUT = MUTABLE;
 
+const linkTables = (...tables) => {
+  const table = new Table([], [], '');
+  const meta = {};
+
+  for (let another of tables) {
+    for (let field in another.meta) Object.assign(field in meta ? meta[field] : meta[field] = {}, another.meta[field]);
+
+    if (!table.head.length) table.head = acquire(table.head, another.head);
+    table.rows = acquire(table.rows, another.rows);
+  }
+
+  table.title = tables.map(({
+    title
+  }) => title);
+  table.meta = meta;
+  return table;
+};
+
+var _ref;
+const cleanerDictionary = (_ref = [[/\(number\)$/g, ''], [/volatility$/g, 'volatility (ratio)']], makeReplaceable(_ref));
+/**
+ *
+ * @param {Object<string,string>} indicatorDefs
+ * @return {{}}
+ */
+
+const refineIndicators = indicatorDefs => {
+  const spec = {};
+
+  for (let field in indicatorDefs) {
+    const definition = indicatorDefs[field].replace(cleanerDictionary, trim);
+
+    if (/current\sUS\$/i.test(definition)) {
+      indicatorDefs[field] = definition.replace(/current US\$/gi, 'current billion US\$');
+
+      spec[field] = x => {
+        var _;
+
+        return isNumeric(x) ? round(+x / 1E+9) : (_ = 0) !== null && _ !== void 0 ? _ : 0;
+      };
+
+      continue;
+    }
+
+    if (/%/.test(definition)) {
+      spec[field] = x => {
+        var _2;
+
+        return isNumeric(x) ? roundD1(+x) : (_2 = 0) !== null && _2 !== void 0 ? _2 : 0;
+      };
+
+      continue;
+    }
+
+    if (/population/i.test(definition) && !/\(.*\)/.test(definition)) {
+      indicatorDefs[field] = definition + ' (million people)';
+
+      spec[field] = x => {
+        var _3;
+
+        return isNumeric(x) ? round(+x / 1E+6) : (_3 = 0) !== null && _3 !== void 0 ? _3 : 0;
+      };
+
+      continue;
+    }
+
+    spec[field] = null;
+  }
+
+  return spec;
+};
+
+const refineTable = (table, indicators) => {
+  const indicatorColumn = table.column('indicator');
+  const indicatorMappers = refineIndicators(indicators); // indicatorMappers |> deco |> logger
+
+  for (let [indicator, mapper] of Object.entries(indicatorMappers)) if (mapper) table.mutateColumn('value', (x, i) => indicatorColumn[i] === indicator ? mapper(x) : x);
+
+  return table;
+};
+
 /**
  *
  * @param {string|string[]} [country]
  * @param {string[]|Object<string,Function>} [indicator]
  * @param {number|number[]} [year]
  * @param {number} [format]
- * @param {boolean} [easy]
  * @param {boolean} [spin]
- * @return {Promise<{head: *[], rows: *[][]}|Table|Object[]>}
+ * @return {{head: *[], rows: *[][]}|Table|Object[]}
  */
 
 const rawIndicators = async function ({
   country = COUNTRIES,
   indicator = INDICATORS,
   year = WITHIN_5_YEARS,
-  easy = false,
+  autoRefine = false,
   spin = false
 } = {}) {
+  var _ref, _table$meta;
+
   const indicators = parseField(indicator);
   const tables = [];
 
   for (let {
-    key,
+    key: indicator,
     to
   } of indicators) {
     const table = await rawIndicator({
       country,
-      indicator: key,
+      indicator,
       year,
-      format: TABLE,
-      spin,
-      easy
+      spin
     });
-    if (to) table.mutateColumn('value', to);
-    tables.push(table.select(['indicator', 'iso', 'date', 'value'], MUT));
+    if (autoRefine) refineTable(table, table.meta.indicator);
+    if (to && typeof to === FUN) table.mutateColumn('value', to);
+    tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT));
   }
 
-  let table = new Table([], [], '');
-  const indicatorCollection = {},
-        countryCollection = {};
-
-  for (let another of tables) {
-    Object.assign(indicatorCollection, another.indicators);
-    Object.assign(countryCollection, another.countries);
-    if (!table.head.length) table.head = acquire(table.head, another.head);
-    table.title = table.title + SP + another.title;
-    table.rows = acquire(table.rows, another.rows);
-  }
-
-  table.indicators = indicatorCollection;
-  table.countries = countryCollection;
+  const table = linkTables(...tables);
+  _ref = (_table$meta = table.meta, deco(_table$meta)), logger$1(_ref);
   return table;
 };
 
-export { getIndicator, getIndicators, rawIndicator, rawIndicators };
+const logger = says['seriesIndicators'].attach(time);
+const seriesIndicators = async function ({
+  country = COUNTRIES,
+  indicator = INDICATORS,
+  year = WITHIN_5_YEARS,
+  autoRefine = false,
+  spin = false
+}, {
+  side,
+  banner,
+  sumBy,
+  distinctBy
+}) {
+  const rawTable = await rawIndicators({
+    indicator,
+    country,
+    year,
+    autoRefine,
+    spin
+  });
+  const rawMeta = rawTable.meta;
+  const tables = {}; // rawTable |> decoTable |> logger
+
+  for (let topic of rawTable.distinctOnColumn(distinctBy)) {
+    var _crosTab$toTable, _Xr$filter, _filter;
+
+    const field = pair(sumBy, INCRE);
+    const filter = pair(distinctBy, new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
+    const crosTab = rawTable.crosTab({
+      side,
+      banner,
+      field,
+      filter
+    });
+    const subTable = (_crosTab$toTable = crosTab.toTable(side), toTable(_crosTab$toTable));
+
+    for (let key of crosTab.head) {
+      const {
+        max,
+        dif
+      } = bound(subTable.column(key));
+      const round = max < 1000 && dif <= 100 ? roundD1 : Math.round;
+      subTable.mutateColumn(key, round);
+    }
+
+    subTable.title = `(${side}) cross (${banner}) sum by (${sumBy}) when (${distinctBy}) is (${topic})`;
+    subTable.meta = {
+      side: rawMeta[side],
+      banner: rawMeta[banner],
+      filter: pair(distinctBy, topic)
+    };
+    tables[topic] = subTable;
+    _Xr$filter = Xr('add table').filter((_filter = filter, deco(_filter))), logger(_Xr$filter);
+  }
+
+  return tables;
+};
+
+export { rawIndicator, rawIndicators, seriesIndicators };

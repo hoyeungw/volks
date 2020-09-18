@@ -2,7 +2,6 @@ import { INCRE }                         from '@analys/enum-pivot-mode'
 import { says }                          from '@palett/says'
 import { deco }                          from '@spare/deco'
 import { decoObject, decoTable, logger } from '@spare/logger'
-import { mapper }                        from '@vect/object-mapper'
 import { rawIndicators }                 from '../src/rawIndicators'
 
 const indicators = {
@@ -20,8 +19,9 @@ const indicators = {
 }
 const test = async () => {
   const table = await rawIndicators({
-    indicator: mapper(indicators, () => (v => Math.round(+v / 1E+6))),
+    indicator: indicators, //mapper(indicators, () => (v => Math.round(+v / 1E+6))),
     country: ['CHN', 'IND', 'RUS', 'GBR'],
+    autoRefine: true,
     spin: true
   })
   table |>  deco |> says['table in object']

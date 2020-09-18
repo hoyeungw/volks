@@ -1,9 +1,11 @@
 import { Acq }                                  from '@acq/acq'
 import { samplesToTable }                       from '@analys/convert'
-import { RT, SC }                               from '@spare/enum-chars'
+import { bound }                                from '@aryth/bound-vector'
+import { COSP, RT, SC }                         from '@spare/enum-chars'
 import { init }                                 from '@vect/object-init'
-import { BASE, COUNTRIES, GDP, WITHIN_5_YEARS } from './constants'
-import { parseLabel, parseYear }                from './parsers'
+import { BASE, COUNTRIES, GDP, WITHIN_5_YEARS } from './helpers/constants'
+import { parseLabel, parseYear }                from './helpers/parsers'
+
 
 /**
  *
@@ -19,7 +21,8 @@ export const rawIndicator = async function (
     country = COUNTRIES,
     indicator = GDP,
     year = WITHIN_5_YEARS,
-    easy = false, spin = false
+    autoRefine,
+    spin = false
   } = {}
 ) {
   const countries = parseLabel(country)
@@ -30,30 +33,35 @@ export const rawIndicator = async function (
     url: `${ BASE }/country/${ countries.join(SC) }/indicator/${ indicator }`,
     params: ({ date: yearEntry.join(RT), format: 'json', per_page: per_page }),
     prep: ([message, samples]) => ({ message, samples }),
-    easy,
     spin
   })
-  /** @type {Table}  */const table = leanTable(samples |> samplesToTable)
+  /** @type {Table|Object} */const table = worldbankSamplesToTable(samples)
   table.message = message
   return table
 }
 
 /**
  *
- * @param {Table} table
+ * @param {Object[]} samples
  * @return {Table}
  */
-export const leanTable = table => {
+export const worldbankSamplesToTable = (samples) => {
+  const table = samples |> samplesToTable
   if (!table?.head?.length || !table?.rows?.length) return table
-  const indicators = table.column('indicator').map(({ id, value }) => [id, value]) |> init
-  table = table
-    .renameColumn('countryiso3code', 'iso')
+  const indicatorDefs = init(table.column('indicator').map(({ id, value }) => [id, value]))
+  table
     .mutateColumn('indicator', ({ id }) => id)
     .mutateColumn('country', ({ value }) => value)
-  const countries = table.lookupTable('iso', 'country',)
-  table.title = indicators ? Object.keys(indicators).join(',') : ''
-  table.indicators = indicators
-  table.countries = countries
+    .renameColumn('date', 'year')
+    .renameColumn('country', 'countryName')
+    .renameColumn('countryiso3code', 'country')
+  table.meta = {
+    indicator: indicatorDefs,
+    country: table.lookupTable('country', 'countryName'),
+    year: table.column('year') |> bound,
+    value: table.column('value')|> bound
+  }
+  table.title = Object.keys(table.meta.indicator).join(COSP)
   return table
 }
 

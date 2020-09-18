@@ -31,7 +31,7 @@
   "homepage": "https://github.com/hoyeungw/volks#readme",
   "dependencies": {
     "@acq/acq": "^0.2.11",
-    "@analys/enum-tabular-types": "^0.4.10",
-    "@spare/cite": "^0.9.6"
+    "@analys/enum-tabular-types": "^0.4.11",
+    "@spare/cite": "^0.9.8"
   }
 }

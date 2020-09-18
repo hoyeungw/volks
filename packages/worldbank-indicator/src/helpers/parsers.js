@@ -2,6 +2,7 @@ import { bound }          from '@aryth/bound-vector'
 import { isNumeric }      from '@typen/num-strict'
 import { WITHIN_5_YEARS } from './constants'
 
+
 export const parseLabel = label => Array.isArray(label) ? label : [label]
 
 export const parseYear = year => {
