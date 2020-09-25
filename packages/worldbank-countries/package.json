@@ -1,6 +1,6 @@
 {
   "name": "@volks/worldbank-countries",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A worldbank-countries",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -18,7 +18,7 @@
     "@acq/acq": "^0.2.12",
     "@analys/enum-tabular-types": "^0.4.11",
     "@spare/cite": "^0.9.9",
-    "@volks/worldbank-indicator": "^0.1.6"
+    "@volks/worldbank-indicator": "^0.1.7"
   },
   "repository": {
     "type": "git",
