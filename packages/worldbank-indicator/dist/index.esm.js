@@ -1,10 +1,10 @@
 import { Acq } from '@acq/acq';
 import { samplesToTable, toTable } from '@analys/convert';
 import { bound } from '@aryth/bound-vector';
+import { NUM_ASC, STR_DESC } from '@aryth/comparer';
 import { SC, RT, COSP } from '@spare/enum-chars';
 import { init, pair } from '@vect/object-init';
 import { last, first } from '@vect/vector-index';
-import { NUM_ASC } from '@aryth/comparer';
 import { isNumeric } from '@typen/num-strict';
 import { round, roundD1 } from '@aryth/math';
 import { trim } from '@spare/string';
@@ -15,9 +15,9 @@ import { deco } from '@spare/deco';
 import { logger as logger$1, Xr } from '@spare/logger';
 import { FUN } from '@typen/enum-data-types';
 import { acquire } from '@vect/vector-merge';
+import { INCRE } from '@analys/enum-pivot-mode';
 import { says } from '@palett/says';
 import { time } from '@valjoux/timestamp-pretty';
-import { INCRE } from '@analys/enum-pivot-mode';
 
 /** @type {{mutate: boolean}} */
 const MUTABLE = {
@@ -140,23 +140,20 @@ const rawIndicator = async function ({
     }),
     spin
   });
-  /** @type {Table|Object} */
-
-  const table = worldbankSamplesToTable(samples, autoRefine);
-  if (years.length > 2) table.find({
-    year: y => years.includes(+y)
-  }, MUT);
+  const table = worldbankSamplesToTable(samples, countries, years, autoRefine);
   table.message = message;
   return table;
 };
 /**
  *
  * @param {Object[]} samples
+ * @param {string[]} countries
+ * @param {number[]} years
  * @param {boolean} autoRefine
  * @return {Table}
  */
 
-const worldbankSamplesToTable = (samples, autoRefine) => {
+const worldbankSamplesToTable = (samples, countries, years, autoRefine) => {
   var _samples;
 
   // samples |> DecoSamples({ top: 3, bottom: 1 }) |> says['worldbankSamplesToTable']
@@ -172,7 +169,14 @@ const worldbankSamplesToTable = (samples, autoRefine) => {
     id
   }) => id).mutateColumn('country', ({
     value
-  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country');
+  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country').proliferateColumn({
+    key: 'country',
+    to: countries.indexOf.bind(countries),
+    as: 'countryIndex'
+  }, MUT).sort('year', STR_DESC).sort('countryIndex', NUM_ASC);
+  if (years.length > 2) table.find({
+    year: y => years.includes(+y)
+  }, MUT);
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
@@ -267,6 +271,7 @@ const logger = says['seriesIndicators'].attach(time);
  * @param {string} banner
  * @param {string} sumBy
  * @param {string} distinctBy
+ * @param {boolean} spin
  * @return {Object<string,Table>}}
  */
 
@@ -274,7 +279,8 @@ const seriesCrostab = (rawTable, {
   side,
   banner,
   sumBy,
-  distinctBy
+  distinctBy,
+  spin
 }) => {
   const {
     meta
@@ -286,7 +292,7 @@ const seriesCrostab = (rawTable, {
 
     const topicName = (_meta$distinctBy$topi = meta[distinctBy][topic]) !== null && _meta$distinctBy$topi !== void 0 ? _meta$distinctBy$topi : topic;
     const field = pair(sumBy, INCRE);
-    const filter = pair(distinctBy, (_Function = new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`), Rename('is' + topic)(_Function)));
+    const filter = pair(distinctBy, (_Function = new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`), Rename('f')(_Function)));
     const crosTab = rawTable.crosTab({
       side,
       banner,
@@ -311,7 +317,7 @@ const seriesCrostab = (rawTable, {
       filter: pair(distinctBy, topicName)
     };
     tables[topic] = subTable;
-    _Xr$filter = Xr('add table').filter((_filter = filter, deco(_filter))), logger(_Xr$filter);
+    if (spin) _Xr$filter = Xr('add table').filter((_filter = filter, deco(_filter))), logger(_Xr$filter);
   }
 
   return tables;
@@ -340,7 +346,8 @@ const seriesIndicators = async function ({
     side,
     banner,
     sumBy,
-    distinctBy
+    distinctBy,
+    spin
   });
 };
 

@@ -18,22 +18,23 @@ import { IndicatorsCollection }         from '../src/IndicatorsCollection'
 
 const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
-const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND']
-const YEARS = [1999, 2019]
+const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF', 'SAS']
+const YEARS = [2019, 2018, 2014, 2007, 2000, 1993, 1986, 1979]
 const red = HexDye(Cards.red.base, BOLD, ITALIC)
 
 export const saveWorldbankPremadeTableCollection = async () => {
   for (let key in IndicatorsCollection)
-    if (key === 'Education') {
-      await saveGroup({
-        topic: key,
-        indicator: IndicatorsCollection[key],
-        country: COUNTRIES,
-        year: YEARS
-      }).then(() => {
-        Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
-      })
-    }
+    // if (key === 'Education')
+  {
+    await saveGroup({
+      topic: key,
+      indicator: IndicatorsCollection[key],
+      country: COUNTRIES,
+      year: YEARS
+    }).then(() => {
+      Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
+    })
+  }
 }
 
 const saveGroup = async ({ topic, indicator, country, year }) => {

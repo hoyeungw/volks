@@ -2,6 +2,7 @@ import { Acq }                                  from '@acq/acq'
 import { samplesToTable }                       from '@analys/convert'
 import { MUT }                                  from '@analys/enum-mutabilities'
 import { bound }                                from '@aryth/bound-vector'
+import { NUM_ASC, STR_DESC }                    from '@aryth/comparer'
 import { COSP, RT, SC }                         from '@spare/enum-chars'
 import { init }                                 from '@vect/object-init'
 import { first, last }                          from '@vect/vector-index'
@@ -38,8 +39,7 @@ export const rawIndicator = async function (
     prep: ([message, samples]) => ({ message, samples }),
     spin
   })
-  /** @type {Table|Object} */const table = worldbankSamplesToTable(samples, autoRefine)
-  if (years.length > 2) table.find({ year: y => years.includes(+y) }, MUT)
+  const table = worldbankSamplesToTable(samples, countries, years, autoRefine)
   table.message = message
   return table
 }
@@ -47,10 +47,12 @@ export const rawIndicator = async function (
 /**
  *
  * @param {Object[]} samples
+ * @param {string[]} countries
+ * @param {number[]} years
  * @param {boolean} autoRefine
  * @return {Table}
  */
-export const worldbankSamplesToTable = (samples, autoRefine) => {
+export const worldbankSamplesToTable = (samples, countries, years, autoRefine) => {
   // samples |> DecoSamples({ top: 3, bottom: 1 }) |> says['worldbankSamplesToTable']
   /** @type {Table}  */const table = samples |> samplesToTable
   // if (!table?.head?.length || !table?.rows?.length) return table
@@ -61,6 +63,10 @@ export const worldbankSamplesToTable = (samples, autoRefine) => {
     .renameColumn('date', 'year')
     .renameColumn('country', 'countryName')
     .renameColumn('countryiso3code', 'country')
+    .proliferateColumn({ key: 'country', to: countries.indexOf.bind(countries), as: 'countryIndex' }, MUT)
+    .sort('year', STR_DESC)
+    .sort('countryIndex', NUM_ASC)
+  if (years.length > 2) table.find({ year: y => years.includes(+y) }, MUT)
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
@@ -70,6 +76,7 @@ export const worldbankSamplesToTable = (samples, autoRefine) => {
   // table.meta |> deco |> says['worldbankSamplesToTable']
   table.title = Object.keys(table.meta.indicator).join(COSP)
   if (autoRefine) refineTable(table, table.meta.indicator)
+
   return table
 }
 

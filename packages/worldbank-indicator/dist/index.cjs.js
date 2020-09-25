@@ -5,10 +5,10 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var acq = require('@acq/acq');
 var convert = require('@analys/convert');
 var boundVector = require('@aryth/bound-vector');
+var comparer = require('@aryth/comparer');
 var enumChars = require('@spare/enum-chars');
 var objectInit = require('@vect/object-init');
 var vectorIndex = require('@vect/vector-index');
-var comparer = require('@aryth/comparer');
 var numStrict = require('@typen/num-strict');
 var math = require('@aryth/math');
 var string = require('@spare/string');
@@ -19,9 +19,9 @@ var deco = require('@spare/deco');
 var logger$1 = require('@spare/logger');
 var enumDataTypes = require('@typen/enum-data-types');
 var vectorMerge = require('@vect/vector-merge');
+var enumPivotMode = require('@analys/enum-pivot-mode');
 var says = require('@palett/says');
 var timestampPretty = require('@valjoux/timestamp-pretty');
-var enumPivotMode = require('@analys/enum-pivot-mode');
 
 /** @type {{mutate: boolean}} */
 const MUTABLE = {
@@ -144,23 +144,20 @@ const rawIndicator = async function ({
     }),
     spin
   });
-  /** @type {Table|Object} */
-
-  const table = worldbankSamplesToTable(samples, autoRefine);
-  if (years.length > 2) table.find({
-    year: y => years.includes(+y)
-  }, MUT);
+  const table = worldbankSamplesToTable(samples, countries, years, autoRefine);
   table.message = message;
   return table;
 };
 /**
  *
  * @param {Object[]} samples
+ * @param {string[]} countries
+ * @param {number[]} years
  * @param {boolean} autoRefine
  * @return {Table}
  */
 
-const worldbankSamplesToTable = (samples, autoRefine) => {
+const worldbankSamplesToTable = (samples, countries, years, autoRefine) => {
   var _samples;
 
   // samples |> DecoSamples({ top: 3, bottom: 1 }) |> says['worldbankSamplesToTable']
@@ -176,7 +173,14 @@ const worldbankSamplesToTable = (samples, autoRefine) => {
     id
   }) => id).mutateColumn('country', ({
     value
-  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country');
+  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country').proliferateColumn({
+    key: 'country',
+    to: countries.indexOf.bind(countries),
+    as: 'countryIndex'
+  }, MUT).sort('year', comparer.STR_DESC).sort('countryIndex', comparer.NUM_ASC);
+  if (years.length > 2) table.find({
+    year: y => years.includes(+y)
+  }, MUT);
   table.meta = {
     indicator: indicatorDefs,
     country: table.lookupTable('country', 'countryName'),
@@ -271,6 +275,7 @@ const logger = says.says['seriesIndicators'].attach(timestampPretty.time);
  * @param {string} banner
  * @param {string} sumBy
  * @param {string} distinctBy
+ * @param {boolean} spin
  * @return {Object<string,Table>}}
  */
 
@@ -278,7 +283,8 @@ const seriesCrostab = (rawTable, {
   side,
   banner,
   sumBy,
-  distinctBy
+  distinctBy,
+  spin
 }) => {
   const {
     meta
@@ -290,7 +296,7 @@ const seriesCrostab = (rawTable, {
 
     const topicName = (_meta$distinctBy$topi = meta[distinctBy][topic]) !== null && _meta$distinctBy$topi !== void 0 ? _meta$distinctBy$topi : topic;
     const field = objectInit.pair(sumBy, enumPivotMode.INCRE);
-    const filter = objectInit.pair(distinctBy, (_Function = new Function('x', `return ${numStrict.isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`), Rename('is' + topic)(_Function)));
+    const filter = objectInit.pair(distinctBy, (_Function = new Function('x', `return ${numStrict.isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`), Rename('f')(_Function)));
     const crosTab = rawTable.crosTab({
       side,
       banner,
@@ -315,7 +321,7 @@ const seriesCrostab = (rawTable, {
       filter: objectInit.pair(distinctBy, topicName)
     };
     tables[topic] = subTable;
-    _Xr$filter = logger$1.Xr('add table').filter((_filter = filter, deco.deco(_filter))), logger(_Xr$filter);
+    if (spin) _Xr$filter = logger$1.Xr('add table').filter((_filter = filter, deco.deco(_filter))), logger(_Xr$filter);
   }
 
   return tables;
@@ -344,7 +350,8 @@ const seriesIndicators = async function ({
     side,
     banner,
     sumBy,
-    distinctBy
+    distinctBy,
+    spin
   });
 };
 

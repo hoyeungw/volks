@@ -16,7 +16,7 @@ const indicators = {
 const test = async () => {
   const table = await rawIndicators({
     indicator: indicators, //mapper(indicators, () => (v => Math.round(+v / 1E+6))),
-    country: ['CHN', 'USA', 'JPN', 'ECS', 'SAS', 'SSF', 'LCN'],
+    country: ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF', 'SAS'],
     year: [2019, 2018, 2014, 2007, 2000, 1993, 1986, 1979],
     autoRefine: true,
     spin: true

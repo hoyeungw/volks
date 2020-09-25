@@ -5,7 +5,7 @@ import { rawIndicator } from '../src/rawIndicator'
 
 const test = async () => {
   /** @type {Table}  */const table = await rawIndicator({
-    country: ['CHN', 'USA', 'JPN', 'ECS', 'SAS', 'SSF', 'LCN'],
+    country: ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF', 'SAS'],
     year: [2019, 2014, 2007, 2000, 1993, 1986, 1979],
     autoRefine: true,
     spin: true

@@ -20,9 +20,10 @@ export const logger = says['seriesIndicators'].attach(time)
  * @param {string} banner
  * @param {string} sumBy
  * @param {string} distinctBy
+ * @param {boolean} spin
  * @return {Object<string,Table>}}
  */
-export const seriesCrostab = (rawTable, { side, banner, sumBy, distinctBy }) => {
+export const seriesCrostab = (rawTable, { side, banner, sumBy, distinctBy, spin }) => {
   const { meta } = rawTable
   const tables = {}
   // rawTable |> decoTable |> logger
@@ -30,7 +31,7 @@ export const seriesCrostab = (rawTable, { side, banner, sumBy, distinctBy }) => 
     const topicName = meta[distinctBy][topic] ?? topic
     const field = pair(sumBy, INCRE)
     const filter = pair(distinctBy,
-      (new Function('x', `return ${ isNumeric(topic) ? ('+x === ' + topic) : (`x === '${ topic }'`) }`)) |> Rename('is' + topic)
+      (new Function('x', `return ${ isNumeric(topic) ? ('+x === ' + topic) : (`x === '${ topic }'`) }`)) |> Rename('f')
     )
     const crosTab = rawTable.crosTab({ side, banner, field, filter })
     const subTable = crosTab.toTable(side) |> toTable
@@ -46,7 +47,7 @@ export const seriesCrostab = (rawTable, { side, banner, sumBy, distinctBy }) => 
       filter: pair(distinctBy, topicName)
     }
     tables[topic] = subTable
-    Xr('add table').filter(filter|> deco) |> logger
+    if (spin) Xr('add table').filter(filter|> deco) |> logger
   }
   return tables
 }

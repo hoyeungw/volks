@@ -1,9 +1,6 @@
-import { says }                                  from '@palett/says'
-import { time }                                  from '@valjoux/timestamp-pretty'
 import { COUNTRIES, INDICATORS, WITHIN_5_YEARS } from './helpers/constants'
 import { rawIndicators }                         from './rawIndicators'
 import { seriesCrostab }                         from './seriesCrostab'
-
 
 
 export const seriesIndicators = async function (
@@ -11,5 +8,5 @@ export const seriesIndicators = async function (
   { side, banner, sumBy, distinctBy }
 ) {
   const rawTable = await rawIndicators({ indicator, country, year, autoRefine, spin })
-  return seriesCrostab(rawTable, { side, banner, sumBy, distinctBy })
+  return seriesCrostab(rawTable, { side, banner, sumBy, distinctBy, spin })
 }
