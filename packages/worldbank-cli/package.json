@@ -18,7 +18,7 @@
     "worldbank": "./src/script.js"
   },
   "dependencies": {
-    "@acq/acq": "^0.2.11",
+    "@acq/acq": "^0.2.12",
     "@analys/convert": "^0.4.11",
     "@analys/enum-tabular-types": "^0.4.11",
     "@analys/table": "^0.4.11",
@@ -29,9 +29,9 @@
     "@palett/dye": "^0.4.6",
     "@palett/enum-font-effects": "^0.4.6",
     "@palett/says": "^0.4.6",
-    "@spare/deco": "^0.9.7",
-    "@spare/enum-chars": "^0.9.8",
-    "@spare/logger": "^0.9.7",
+    "@spare/deco": "^0.9.9",
+    "@spare/enum-chars": "^0.9.9",
+    "@spare/logger": "^0.9.9",
     "@typen/num-strict": "^0.1.10",
     "@valjoux/linger": "^0.2.1",
     "@valjoux/timestamp-pretty": "^0.2.1",

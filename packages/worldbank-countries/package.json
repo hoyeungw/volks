@@ -15,9 +15,9 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@acq/acq": "^0.2.11",
+    "@acq/acq": "^0.2.12",
     "@analys/enum-tabular-types": "^0.4.11",
-    "@spare/cite": "^0.9.8",
+    "@spare/cite": "^0.9.9",
     "@volks/worldbank-indicator": "^0.1.5"
   },
   "repository": {

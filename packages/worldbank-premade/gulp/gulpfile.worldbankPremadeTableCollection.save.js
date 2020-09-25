@@ -10,6 +10,7 @@ import { deco }                         from '@spare/deco'
 import { LF }                           from '@spare/enum-chars'
 import { DecoTable, Xr }                from '@spare/logger'
 import { Markdown }                     from '@spare/markdown'
+import { capitalize }                   from '@spare/phrasing'
 import { time }                         from '@valjoux/timestamp-pretty'
 import { rawIndicators, seriesCrostab } from '@volks/worldbank-indicator/index'
 import gulp                             from 'gulp'
@@ -18,34 +19,36 @@ import { IndicatorsCollection }         from '../src/IndicatorsCollection'
 const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND']
-const YEAR_RANGE = [1999, 2019]
+const YEARS = [1999, 2019]
 const red = HexDye(Cards.red.base, BOLD, ITALIC)
 
-const batchSaveReport = async ({ topic, indicator, country, year }) => {
+export const saveWorldbankPremadeTableCollection = async () => {
+  for (let key in IndicatorsCollection)
+    if (key === 'Education') {
+      await saveGroup({
+        topic: key,
+        indicator: IndicatorsCollection[key],
+        country: COUNTRIES,
+        year: YEARS
+      }).then(() => {
+        Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
+      })
+    }
+}
+
+const saveGroup = async ({ topic, indicator, country, year }) => {
   Xr().start(topic).countries(country |> deco).year(year |> deco) |> logger
   try {
-    /** @type {Table}  */const table = (await rawIndicators({
-      indicator: indicator,
-      country: country,
-      year: year,
-      autoRefine: true,
-      spin: true
-    }))
-      .sort('year', NUM_DESC, MUT)
+    /** @type {Table} */
+    const table = await rawIndicators({ indicator, country, year, autoRefine: true, spin: true })
+    table.sort('year', NUM_DESC, MUT)
     table |> DecoTable({ top: 3, bottom: 1 }) |> logger
-    saveSeriesCrostab.call(
-      { dest: DEST, filename: topic + '.byEachCountry.raw', },
-      table,
-      { side: 'year', banner: 'indicator', distinctBy: 'country' }
-    )
-    saveSeriesCrostab.call(
-      { dest: DEST, filename: topic + '.byEachIndicator.raw', },
-      table,
-      { side: 'year', banner: 'country', distinctBy: 'indicator' }
-    )
+    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'indicator', distinctBy: 'country' })
+    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
+    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'country', banner: 'indicator', distinctBy: 'year' })
   }
   catch (e) {
-    Xr()[red('error')](topic).message(e.message).trace(e |> deco) |> logger
+    Xr()[red('error')](topic).trace(e |> deco) |> logger
   }
 }
 
@@ -56,16 +59,18 @@ const batchSaveReport = async ({ topic, indicator, country, year }) => {
  * @param {string} banner
  * @param {string} distinctBy
  */
-const saveSeriesCrostab = function (table, { side, banner, distinctBy }) {
-  const { dest, filename, header, footer } = this
+const scopeAndWriteFile = function (table, { side, banner, distinctBy }) {
+  const { dest, topic, header, footer } = this
   const crostabCollection = seriesCrostab(table, { side, banner, sumBy: 'value', distinctBy })
-  const stream = Vinylize(filename + '.md')
-    .p('## ' + filename + LF + LF)
+  const title = topic + '.byEach' + capitalize(distinctBy)
+  const filename = title + '.md'
+  const stream = Vinylize(filename)
+    .p('## ' + title + LF + LF)
     .p((header ?? '') + LF + LF)
   Xr('writing').file(filename) |> logger
   for (let [key, table] of Object.entries(crostabCollection)) {
     const meta = table.meta
-    Xr('add table')[distinctBy](key).filter(meta.filter |> deco) |> logger
+    // Xr('add file')[distinctBy](key).p(meta.filter |> deco) |> logger
     stream
       .p('### ' + key + LF + LF)
       .p('##### Table-spec:' + table.title + LF + LF)
@@ -81,18 +86,3 @@ const saveSeriesCrostab = function (table, { side, banner, distinctBy }) {
   Xr('written').file(filename) |> logger
 }
 
-const generateReport = async () => {
-  for (let indicatorKey in IndicatorsCollection) {
-    await batchSaveReport({
-      topic: indicatorKey,
-      indicator: IndicatorsCollection[indicatorKey],
-      country: COUNTRIES,
-      year: YEAR_RANGE
-    })
-      .then(() => {
-        Xr().finish(indicatorKey).countries(COUNTRIES |> deco).year(YEAR_RANGE |> deco) |> logger
-      })
-  }
-}
-
-generateReport().then()

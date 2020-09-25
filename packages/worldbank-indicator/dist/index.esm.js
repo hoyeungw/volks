@@ -1,21 +1,29 @@
 import { Acq } from '@acq/acq';
 import { samplesToTable, toTable } from '@analys/convert';
 import { bound } from '@aryth/bound-vector';
-import { says } from '@palett/says';
-import { deco } from '@spare/deco';
 import { SC, RT, COSP } from '@spare/enum-chars';
-import { DecoSamples, Xr, DecoTable, logger as logger$1 } from '@spare/logger';
 import { init, pair } from '@vect/object-init';
+import { last, first } from '@vect/vector-index';
+import { NUM_ASC } from '@aryth/comparer';
 import { isNumeric } from '@typen/num-strict';
-import { Table } from '@analys/table';
-import { parseField } from '@analys/tablespec';
-import { FUN } from '@typen/enum-data-types';
-import { acquire } from '@vect/vector-merge';
 import { round, roundD1 } from '@aryth/math';
 import { trim } from '@spare/string';
 import { makeReplaceable } from '@spare/translator';
+import { Table } from '@analys/table';
+import { parseField } from '@analys/tablespec';
+import { deco } from '@spare/deco';
+import { logger as logger$1, Xr } from '@spare/logger';
+import { FUN } from '@typen/enum-data-types';
+import { acquire } from '@vect/vector-merge';
+import { says } from '@palett/says';
 import { time } from '@valjoux/timestamp-pretty';
 import { INCRE } from '@analys/enum-pivot-mode';
+
+/** @type {{mutate: boolean}} */
+const MUTABLE = {
+  mutate: true
+};
+const MUT = MUTABLE;
 
 const BASE = 'http://api.worldbank.org/v2';
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'ECS']; // 'ECS': Europe & Central Asia
@@ -27,120 +35,9 @@ const WITHIN_5_YEARS = [2015, 2020];
 
 const parseLabel = label => Array.isArray(label) ? label : [label];
 const parseYear = year => {
-  if (Array.isArray(year) && (year === null || year === void 0 ? void 0 : year.length)) {
-    const {
-      max,
-      min
-    } = bound(year);
-    return [min, max];
-  }
-
+  if (Array.isArray(year) && (year === null || year === void 0 ? void 0 : year.length)) return year.sort(NUM_ASC), year;
   if (isNumeric(year)) return [year, year];
   return WITHIN_5_YEARS;
-};
-
-/**
- *
- * @param {string|string[]} [country]
- * @param {string|string[]} [indicator]
- * @param {number|number[]} [year]
- * @param {boolean} [easy]
- * @param {boolean} [spin]
- * @return {Table}
- */
-
-const rawIndicator = async function ({
-  country = COUNTRIES,
-  indicator = GDP,
-  year = WITHIN_5_YEARS,
-  autoRefine,
-  spin = false
-} = {}) {
-  const countries = parseLabel(country);
-  const yearEntry = parseYear(year);
-  const per_page = countries.length * (yearEntry[1] - yearEntry[0] + 1);
-  const {
-    message,
-    samples
-  } = await Acq.fetch({
-    title: indicator,
-    url: `${BASE}/country/${countries.join(SC)}/indicator/${indicator}`,
-    params: {
-      date: yearEntry.join(RT),
-      format: 'json',
-      per_page: per_page
-    },
-    prep: ([message, samples]) => ({
-      message,
-      samples
-    }),
-    spin
-  });
-  /** @type {Table|Object} */
-
-  const table = worldbankSamplesToTable(samples);
-  table.message = message;
-  return table;
-};
-/**
- *
- * @param {Object[]} samples
- * @return {Table}
- */
-
-const worldbankSamplesToTable = samples => {
-  var _ref, _samples, _samples2, _table$column, _ref2, _table$meta;
-
-  _ref = (_samples = samples, DecoSamples({
-    top: 3,
-    bottom: 1
-  })(_samples)), says['worldbankSamplesToTable'](_ref);
-  /** @type {Table}  */
-
-  const table = (_samples2 = samples, samplesToTable(_samples2)); // if (!table?.head?.length || !table?.rows?.length) return table
-
-  const indicatorDefs = init(table.column('indicator').map(({
-    id,
-    value
-  }) => [id, value]));
-  table.mutateColumn('indicator', ({
-    id
-  }) => id).mutateColumn('country', ({
-    value
-  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country');
-  table.meta = {
-    indicator: indicatorDefs,
-    country: table.lookupTable('country', 'countryName'),
-    year: table.coin('year') >= 0 ? bound(table.column('year')) : {},
-    value: table.coin('year') >= 0 ? (_table$column = table.column('value'), bound(_table$column)) : {}
-  };
-  _ref2 = (_table$meta = table.meta, deco(_table$meta)), says['worldbankSamplesToTable'](_ref2);
-  table.title = Object.keys(table.meta.indicator).join(COSP);
-  return table;
-};
-
-/** @type {{mutate: boolean}} */
-const MUTABLE = {
-  mutate: true
-};
-const MUT = MUTABLE;
-
-const linkTables = (...tables) => {
-  const table = new Table([], [], '');
-  const meta = {};
-
-  for (let another of tables) {
-    for (let field in another.meta) Object.assign(field in meta ? meta[field] : meta[field] = {}, another.meta[field]);
-
-    if (!table.head.length) table.head = acquire(table.head, another.head);
-    table.rows = acquire(table.rows, another.rows);
-  }
-
-  table.title = tables.map(({
-    title
-  }) => title);
-  table.meta = meta;
-  return table;
 };
 
 var _ref;
@@ -209,6 +106,106 @@ const refineTable = (table, indicators) => {
 /**
  *
  * @param {string|string[]} [country]
+ * @param {string} [indicator]
+ * @param {number|number[]} [year]
+ * @param {boolean} [autoRefine]
+ * @param {boolean} [spin]
+ * @return {Table}
+ */
+
+const rawIndicator = async function ({
+  country = COUNTRIES,
+  indicator = GDP,
+  year = WITHIN_5_YEARS,
+  autoRefine,
+  spin = false
+} = {}) {
+  const countries = parseLabel(country);
+  const years = parseYear(year);
+  const per_page = countries.length * (last(years) - first(years) + 1);
+  const {
+    message,
+    samples
+  } = await Acq.fetch({
+    title: indicator,
+    url: `${BASE}/country/${countries.join(SC)}/indicator/${indicator}`,
+    params: {
+      date: first(years) + RT + last(years),
+      format: 'json',
+      per_page: per_page
+    },
+    prep: ([message, samples]) => ({
+      message,
+      samples
+    }),
+    spin
+  });
+  /** @type {Table|Object} */
+
+  const table = worldbankSamplesToTable(samples, autoRefine);
+  if (years.length > 2) table.find({
+    year: y => years.includes(+y)
+  }, MUT);
+  table.message = message;
+  return table;
+};
+/**
+ *
+ * @param {Object[]} samples
+ * @param {boolean} autoRefine
+ * @return {Table}
+ */
+
+const worldbankSamplesToTable = (samples, autoRefine) => {
+  var _samples;
+
+  // samples |> DecoSamples({ top: 3, bottom: 1 }) |> says['worldbankSamplesToTable']
+
+  /** @type {Table}  */
+  const table = (_samples = samples, samplesToTable(_samples)); // if (!table?.head?.length || !table?.rows?.length) return table
+
+  const indicatorDefs = init(table.column('indicator').map(({
+    id,
+    value
+  }) => [id, value]));
+  table.mutateColumn('indicator', ({
+    id
+  }) => id).mutateColumn('country', ({
+    value
+  }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country');
+  table.meta = {
+    indicator: indicatorDefs,
+    country: table.lookupTable('country', 'countryName'),
+    year: table.coin('year') >= 0 ? bound(table.column('year')) : {},
+    value: table.coin('value') >= 0 ? bound(table.column('value')) : {}
+  }; // table.meta |> deco |> says['worldbankSamplesToTable']
+
+  table.title = Object.keys(table.meta.indicator).join(COSP);
+  if (autoRefine) refineTable(table, table.meta.indicator);
+  return table;
+};
+
+const linkTables = (...tables) => {
+  const table = new Table([], [], '');
+  const meta = {};
+
+  for (let another of tables) {
+    for (let field in another.meta) Object.assign(field in meta ? meta[field] : meta[field] = {}, another.meta[field]);
+
+    if (!table.head.length) table.head = acquire(table.head, another.head);
+    table.rows = acquire(table.rows, another.rows);
+  }
+
+  table.title = tables.map(({
+    title
+  }) => title);
+  table.meta = meta;
+  return table;
+};
+
+/**
+ *
+ * @param {string|string[]} [country]
  * @param {string[]|Object<string,Function>} [indicator]
  * @param {number|number[]} [year]
  * @param {number} [format]
@@ -223,7 +220,7 @@ const rawIndicators = async function ({
   autoRefine = false,
   spin = false
 } = {}) {
-  var _ref2, _table$meta;
+  var _ref, _table$meta;
 
   const indicators = parseField(indicator);
   const tables = [];
@@ -232,29 +229,36 @@ const rawIndicators = async function ({
     key: indicator,
     to
   } of indicators) {
-    var _Xr$country$indicator, _ref, _table;
-
     const table = await rawIndicator({
       country,
       indicator,
       year,
+      autoRefine,
       spin
-    });
-    _Xr$country$indicator = Xr().country(country).indicator(indicator).year(year), says['rawIndicators'](_Xr$country$indicator);
-    _ref = (_table = table, DecoTable({
-      top: 3,
-      bottom: 1
-    })(_table)), says['rawIndicators'](_ref);
-    if (autoRefine) refineTable(table, table.meta.indicator);
+    }); // Xr().country(country).indicator(indicator).year(year) |> says['rawIndicators']
+    // table |> DecoTable({ top: 3, bottom: 1 }) |> says['rawIndicators']
+
     if (to && typeof to === FUN) table.mutateColumn('value', to);
     tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT));
   }
 
   const table = linkTables(...tables);
-  _ref2 = (_table$meta = table.meta, deco(_table$meta)), logger$1(_ref2);
+  _ref = (_table$meta = table.meta, deco(_table$meta)), logger$1(_ref);
   return table;
 };
 
+const NAME = 'name';
+
+const Rename = name => renamer.bind({
+  value: name
+});
+
+const renamer = function (t) {
+  const attributes = this;
+  return Object.defineProperty(t, NAME, attributes);
+}; // configurable, default: false
+
+const logger = says['seriesIndicators'].attach(time);
 /**
  *
  * @param {Table} rawTable
@@ -278,11 +282,11 @@ const seriesCrostab = (rawTable, {
   const tables = {}; // rawTable |> decoTable |> logger
 
   for (let topic of rawTable.distinctOnColumn(distinctBy)) {
-    var _meta$distinctBy$topi, _crosTab$toTable, _Xr$filter, _filter;
+    var _meta$distinctBy$topi, _Function, _crosTab$toTable, _Xr$filter, _filter;
 
     const topicName = (_meta$distinctBy$topi = meta[distinctBy][topic]) !== null && _meta$distinctBy$topi !== void 0 ? _meta$distinctBy$topi : topic;
     const field = pair(sumBy, INCRE);
-    const filter = pair(distinctBy, new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`));
+    const filter = pair(distinctBy, (_Function = new Function('x', `return ${isNumeric(topic) ? '+x === ' + topic : `x === '${topic}'`}`), Rename('is' + topic)(_Function)));
     const crosTab = rawTable.crosTab({
       side,
       banner,
@@ -313,7 +317,6 @@ const seriesCrostab = (rawTable, {
   return tables;
 };
 
-const logger = says['seriesIndicators'].attach(time);
 const seriesIndicators = async function ({
   country = COUNTRIES,
   indicator = INDICATORS,

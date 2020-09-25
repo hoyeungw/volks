@@ -6,7 +6,6 @@ import { logger }                                from '@spare/logger'
 import { FUN }                                   from '@typen/enum-data-types'
 import { COUNTRIES, INDICATORS, WITHIN_5_YEARS } from './helpers/constants'
 import { linkTables }                            from './helpers/linkTables'
-import { refineTable }                           from './helpers/refineTable'
 import { rawIndicator }                          from './rawIndicator'
 
 /**
@@ -30,10 +29,9 @@ export const rawIndicators = async function (
   const indicators = parseField(indicator)
   const tables = []
   for (let { key: indicator, to } of indicators) {
-    const table = await rawIndicator({ country, indicator, year, spin })
+    const table = await rawIndicator({ country, indicator, year, autoRefine, spin })
     // Xr().country(country).indicator(indicator).year(year) |> says['rawIndicators']
     // table |> DecoTable({ top: 3, bottom: 1 }) |> says['rawIndicators']
-    if (autoRefine) refineTable(table, table.meta.indicator)
     if (to && typeof to === FUN) table.mutateColumn('value', to)
     tables.push(table.select(['indicator', 'country', 'year', 'value'], MUT))
   }

@@ -10,7 +10,6 @@ var deco = require('@spare/deco');
 var enumChars = require('@spare/enum-chars');
 var logger = require('@spare/logger');
 var timestampPretty = require('@valjoux/timestamp-pretty');
-var vectorInit = require('@vect/vector-init');
 var worldbankIndicator = require('@volks/worldbank-indicator');
 var inquirer = require('inquirer');
 var searchableList = require('inquirer-autocomplete-prompt');
@@ -787,7 +786,7 @@ class WorldbankCli {
       type: LIST,
       default: 5,
       message: 'Please select start year',
-      choices: vectorInit.range(2020, 1990).map(n => ({
+      choices: [2000, 2014, 2007, 2000, 1993, 1986, 1979].map(n => ({
         name: n,
         value: n
       }))

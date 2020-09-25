@@ -2,6 +2,7 @@ import { toTable }              from '@analys/convert'
 import { INCRE }                from '@analys/enum-pivot-mode'
 import { bound as boundVector } from '@aryth/bound-vector'
 import { roundD1 }              from '@aryth/math'
+import { Rename }               from '@ject/rename'
 import { says }                 from '@palett/says'
 import { deco }                 from '@spare/deco'
 import { Xr }                   from '@spare/logger'
@@ -29,7 +30,7 @@ export const seriesCrostab = (rawTable, { side, banner, sumBy, distinctBy }) => 
     const topicName = meta[distinctBy][topic] ?? topic
     const field = pair(sumBy, INCRE)
     const filter = pair(distinctBy,
-      new Function('x', `return ${ isNumeric(topic) ? ('+x === ' + topic) : (`x === '${ topic }'`) }`)
+      (new Function('x', `return ${ isNumeric(topic) ? ('+x === ' + topic) : (`x === '${ topic }'`) }`)) |> Rename('is' + topic)
     )
     const crosTab = rawTable.crosTab({ side, banner, field, filter })
     const subTable = crosTab.toTable(side) |> toTable

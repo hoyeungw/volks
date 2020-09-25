@@ -1,16 +1,19 @@
-import { TABLE }        from '@analys/enum-tabular-types'
 import { says }         from '@palett/says'
 import { deco }         from '@spare/deco'
 import { decoTable }    from '@spare/logger'
 import { rawIndicator } from '../src/rawIndicator'
 
 const test = async () => {
-  /** @type {Table}  */const table = await rawIndicator({ format: TABLE, spin: true })
+  /** @type {Table}  */const table = await rawIndicator({
+    country: ['CHN', 'USA', 'JPN', 'ECS', 'SAS', 'SSF', 'LCN'],
+    year: [2019, 2014, 2007, 2000, 1993, 1986, 1979],
+    autoRefine: true,
+    spin: true
+  })
   table |> decoTable |> says[table.title]
-  const { message, indicators, countries } = table
+  const { message, meta } = table
   message |> deco |> says['message']
-  indicators |> deco |> says['indicators']
-  countries |> deco |> says['countries']
+  meta |> deco |> says['meta']
 }
 
 test()

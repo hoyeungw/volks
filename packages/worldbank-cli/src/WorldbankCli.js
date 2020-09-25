@@ -6,7 +6,6 @@ import { deco, Deco }                      from '@spare/deco'
 import { LF, SP }                          from '@spare/enum-chars'
 import { decoPale, decoString, decoTable } from '@spare/logger'
 import { time }                            from '@valjoux/timestamp-pretty'
-import { range }                           from '@vect/vector-init'
 import { seriesIndicators }                from '@volks/worldbank-indicator'
 import inquirer                            from 'inquirer'
 import searchableList                      from 'inquirer-autocomplete-prompt'
@@ -69,7 +68,7 @@ export class WorldbankCli {
       type: LIST,
       default: 5,
       message: 'Please select start year',
-      choices: range(2020, 1990).map(n => ({ name: n, value: n })),
+      choices: [2000, 2014, 2007, 2000, 1993, 1986, 1979].map(n => ({ name: n, value: n })),
     })
     const INDICATOR = 'indicator', COUNTRY = 'country', VALUE = 'value', YEAR = 'year'
     const { spec } = await inquirer.prompt({
