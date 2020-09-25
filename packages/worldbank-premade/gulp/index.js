@@ -1,10 +1,10 @@
-import { Clean }                                            from '@flua/clean'
-import gulp                                                 from 'gulp'
-import { saveWorldbankPremadeTableCollection as saveBatch } from './gulpfile.worldbankPremadeTableCollection.save'
+import { Clean }                  from '@flua/clean'
+import gulp                       from 'gulp'
+import { bulkSavePremadeReports } from './gulpfile.premadeReports.bulksave'
 
 const DEST = 'packages/worldbank-premade/resources'
 
-export const saveWorldbankPremadeTableCollection = gulp.series(
+export const saveWorldbankPremadeReports = gulp.series(
   // Clean(DEST),
-  saveBatch
+  bulkSavePremadeReports
 )

@@ -1,6 +1,5 @@
-import { MUT }                          from '@analys/enum-mutabilities'
 import { Table }                        from '@analys/table'
-import { NUM_DESC }                     from '@aryth/comparer'
+import { esvar }                        from '@flua/utils'
 import { Vinylize }                     from '@flua/vinylize'
 import { Cards }                        from '@palett/cards'
 import { HexDye }                       from '@palett/dye'
@@ -11,6 +10,7 @@ import { LF }                           from '@spare/enum-chars'
 import { DecoTable, Xr }                from '@spare/logger'
 import { Markdown }                     from '@spare/markdown'
 import { capitalize }                   from '@spare/phrasing'
+import { Verse }                        from '@spare/verse'
 import { time }                         from '@valjoux/timestamp-pretty'
 import { rawIndicators, seriesCrostab } from '@volks/worldbank-indicator/index'
 import gulp                             from 'gulp'
@@ -18,23 +18,22 @@ import { IndicatorsCollection }         from '../src/IndicatorsCollection'
 
 const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
-const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF', 'SAS']
-const YEARS = [2019, 2018, 2014, 2007, 2000, 1993, 1986, 1979]
+const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF']
+const YEARS = [2019, 1993] // 2018, 2014, 2007, 2000, 1993, 1986,
 const red = HexDye(Cards.red.base, BOLD, ITALIC)
 
-export const saveWorldbankPremadeTableCollection = async () => {
+export const bulkSavePremadeReports = async () => {
   for (let key in IndicatorsCollection)
-    // if (key === 'Education')
-  {
-    await saveGroup({
-      topic: key,
-      indicator: IndicatorsCollection[key],
-      country: COUNTRIES,
-      year: YEARS
-    }).then(() => {
-      Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
-    })
-  }
+    if (key === 'Agriculture') {
+      await saveGroup({
+        topic: key,
+        indicator: IndicatorsCollection[key],
+        country: COUNTRIES,
+        year: YEARS
+      }).then(() => {
+        Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
+      })
+    }
 }
 
 const saveGroup = async ({ topic, indicator, country, year }) => {
@@ -42,7 +41,10 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
   try {
     /** @type {Table} */
     const table = await rawIndicators({ indicator, country, year, autoRefine: true, spin: true })
-    table.sort('year', NUM_DESC, MUT)
+    await Vinylize(topic + '.table.js')
+      .p(esvar(topic))
+      .p(Verse.table(table))
+      .asyncPipe(gulp.dest(DEST))
     table |> DecoTable({ top: 3, bottom: 1 }) |> logger
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'indicator', distinctBy: 'country' })
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
@@ -62,7 +64,7 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
  */
 const scopeAndWriteFile = function (table, { side, banner, distinctBy }) {
   const { dest, topic, header, footer } = this
-  const crostabCollection = seriesCrostab(table, { side, banner, sumBy: 'value', distinctBy })
+  const crostabCollection = seriesCrostab(table, { side, banner, sumBy: 'value', distinctBy, spin: true })
   const title = topic + '.byEach' + capitalize(distinctBy)
   const filename = title + '.md'
   const stream = Vinylize(filename)

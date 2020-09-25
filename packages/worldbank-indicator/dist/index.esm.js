@@ -167,7 +167,11 @@ const worldbankSamplesToTable = (samples, countries, years, autoRefine) => {
   }) => [id, value]));
   table.mutateColumn('indicator', ({
     id
-  }) => id).mutateColumn('country', ({
+  }) => id).mutateColumn('countryiso3code', (x, i) => {
+    var _table$cell;
+
+    return (x === null || x === void 0 ? void 0 : x.length) ? x : (_table$cell = table.cell(i, 'country')) === null || _table$cell === void 0 ? void 0 : _table$cell.id;
+  }).mutateColumn('country', ({
     value
   }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country').proliferateColumn({
     key: 'country',

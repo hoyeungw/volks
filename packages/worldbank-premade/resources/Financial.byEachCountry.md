@@ -2,6 +2,64 @@
 
 
 
+### USA
+
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
+
+##### Filter definition
+  - country: United States
+
+##### Sides definition
+  - min: 1993
+  - dif: 24
+  - max: 2017
+
+##### Banners definition
+  - FR.INR.LEND: Lending interest rate (%)
+  - GFDD.DI.11: Insurance company assets to GDP (%)
+  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
+  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
+  - GFDD.DM.01: Stock market capitalization to GDP (%)
+  - GFDD.DM.02: Stock market total value traded to GDP (%)
+  - GFDD.EM.01: Stock market turnover ratio (%)
+  - GFDD.OM.02: Stock market return (%, year-on-year)
+  - GFDD.SM.01: Stock price volatility
+  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
+  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
+  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
+  - GFDD.OI.04: Lerner index
+
+  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
+  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+  | 2019 |         5.3 |             192.6 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2018 |         4.9 |               180 |         109 |          30436 |               148 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2017 |         4.1 |               191 |         116 |          32121 |               165 |          0 |        153 |        211 |        133 |       16.8 |         11 |          0 |          0 |
+  | 2016 |         3.5 |             182.8 |          95 |          27352 |               146 |       30.8 |        141 |        224 |        160 |        1.7 |       15.7 |       76.6 |          0 |
+  | 2015 |         3.3 |             179.5 |         165 |          25068 |               138 |       30.4 |        142 |        222 |        160 |        6.7 |       12.6 |       73.2 |          0 |
+  | 2014 |         3.3 |             184.7 |         148 |          26331 |               150 |       31.4 |        145 |        209 |        153 |       17.5 |       11.3 |       75.1 |        0.3 |
+  | 2013 |         3.3 |             184.7 |         138 |          24035 |               143 |       31.2 |        128 |        197 |        155 |       19.2 |       13.9 |       75.5 |        0.3 |
+  | 2012 |         3.3 |             175.7 |         173 |          18668 |               115 |       31.7 |        107 |        229 |        187 |        8.8 |         21 |       72.9 |        0.3 |
+  | 2011 |         3.3 |             175.1 |         262 |          15641 |               101 |       32.4 |        107 |        251 |        246 |       11.2 |       18.6 |         72 |        0.3 |
+  | 2010 |         3.3 |             182.6 |         208 |          17283 |               115 |       31.9 |        108 |        235 |        222 |       20.2 |       26.3 |       72.5 |        0.3 |
+  | 2009 |         3.3 |             187.9 |         228 |          15077 |               104 |       31.9 |         93 |        285 |        256 |      -22.3 |       39.6 |       73.2 |        0.3 |
+  | 2008 |         5.1 |             185.8 |         408 |          11590 |                79 |       39.6 |        110 |        314 |        293 |      -17.4 |       21.4 |       72.1 |        0.2 |
+  | 2007 |         8.1 |             206.7 |         215 |          19922 |               138 |       43.8 |        138 |        255 |        216 |       12.7 |       11.5 |       73.8 |        0.2 |
+  | 2006 |           8 |             198.3 |         156 |          19569 |               142 |       43.6 |        134 |        206 |        166 |        8.6 |       10.4 |       77.2 |        0.2 |
+  | 2005 |         6.2 |             188.7 |         152 |          17001 |               130 |       42.9 |        129 |        173 |        153 |        6.8 |         11 |       77.4 |        0.3 |
+  | 2004 |         4.3 |             184.9 |         117 |          16324 |               134 |       43.3 |        126 |        145 |        124 |       17.1 |       15.3 |       75.1 |        0.3 |
+  | 2003 |         4.1 |             177.4 |         113 |          14266 |               125 |       42.2 |        111 |        146 |        126 |       -2.9 |       24.7 |       70.8 |        0.3 |
+  | 2002 |         4.7 |             162.3 |         154 |          11054 |               101 |         39 |        115 |        175 |        135 |      -16.8 |       22.4 |       69.5 |        0.3 |
+  | 2001 |         6.9 |             170.9 |         149 |          13984 |               132 |       38.6 |        139 |        242 |        142 |      -16.3 |       22.1 |       69.1 |        0.2 |
+  | 2000 |         9.2 |             162.6 |         197 |          15108 |               147 |         39 |        147 |        238 |        198 |        7.5 |       20.4 |       73.1 |        0.2 |
+  | 1999 |           8 |             171.6 |         127 |          14777 |               153 |       40.9 |        144 |        162 |        136 |       22.3 |       20.9 |       60.7 |        0.2 |
+  | 1998 |         8.4 |             157.8 |          95 |          12923 |               143 |       40.2 |        131 |        119 |        104 |       24.3 |       18.3 |       80.3 |        0.2 |
+  | 1997 |         8.4 |             146.6 |          86 |          10770 |               126 |       39.2 |        113 |         95 |         96 |       30.3 |       13.4 |          0 |        0.2 |
+  | 1996 |         8.3 |             137.7 |          82 |           8480 |               105 |       37.4 |         96 |         75 |         90 |       23.8 |        9.9 |          0 |        0.2 |
+  | 1995 |         8.8 |             130.2 |          75 |           6952 |                91 |       36.7 |         79 |         58 |         85 |       17.7 |          9 |          0 |          0 |
+  | 1994 |         7.1 |             120.2 |          71 |           5138 |                71 |       34.8 |         72 |         49 |         70 |        1.9 |          9 |          0 |          0 |
+  | 1993 |           6 |               121 |          65 |           5251 |                77 |       34.9 |         72 |         44 |         70 |        8.6 |        9.9 |          0 |          0 |
+---
+
 ### CHN
 
 ##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (China)
@@ -10,8 +68,8 @@
   - country: China
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -31,131 +89,33 @@
 
   | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
   | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-  | 2019 |         4.4 |               165 |         224 |           8516 |                59 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2018 |         4.4 |               158 |         207 |           6325 |                46 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |         5.6 |               140 |         199 |           6005 |                57 |       15.7 |       47.9 |         95 |        239 |          2 |       17.3 |       79.8 |        0.3 |
-  | 2007 |         7.5 |               106 |         141 |           4479 |               126 |       10.7 |       78.4 |        104 |        226 |        160 |       27.7 |       64.5 |        0.4 |
-  | 2000 |         5.9 |               111 |           0 |              0 |                 0 |          0 |       38.1 |         62 |        158 |         37 |       27.8 |          0 |        0.3 |
-  | 1993 |          11 |                97 |           0 |              0 |                 0 |          0 |        6.6 |          8 |        150 |         52 |       85.7 |          0 |          0 |
-  | 1986 |         7.9 |                76 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 1979 |           0 |                50 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
----
-
-### DEU
-
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
-
-##### Filter definition
-  - country: Germany
-
-##### Sides definition
-  - min: 1979
-  - dif: 38
-  - max: 2017
-
-##### Banners definition
-  - FR.INR.LEND: Lending interest rate (%)
-  - GFDD.DI.11: Insurance company assets to GDP (%)
-  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
-  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
-  - GFDD.DM.01: Stock market capitalization to GDP (%)
-  - GFDD.DM.02: Stock market total value traded to GDP (%)
-  - GFDD.EM.01: Stock market turnover ratio (%)
-  - GFDD.OM.02: Stock market return (%, year-on-year)
-  - GFDD.SM.01: Stock price volatility
-  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
-  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
-  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
-  - GFDD.OI.04: Lerner index
-
-  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
-  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-  | 2019 |           0 |              80.5 |          64 |           2098 |              54.6 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2018 |           0 |              78.7 |          92 |           1755 |              44.4 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |           0 |              79.3 |          73 |           1739 |              44.8 |       47.5 |       47.1 |       33.1 |         69 |       15.2 |       14.4 |       54.7 |        0.1 |
-  | 2007 |           0 |              97.1 |         155 |           2105 |              61.5 |       57.4 |       56.4 |       77.9 |        168 |       26.5 |       15.5 |       55.7 |          0 |
-  | 2000 |           0 |                 0 |         144 |           1270 |              65.4 |       52.5 |       64.2 |       75.6 |        146 |         31 |       22.6 |       55.7 |          0 |
-  | 1993 |           0 |                 0 |         120 |            442 |              21.3 |          0 |       18.3 |       22.8 |        140 |        9.6 |       13.2 |          0 |          0 |
-  | 1986 |           0 |                 0 |          59 |            258 |              24.6 |          0 |         24 |       12.9 |         61 |          0 |          0 |          0 |          0 |
-  | 1979 |           0 |                 0 |          19 |             79 |                 9 |          0 |        9.8 |          2 |         17 |          0 |          0 |          0 |          0 |
----
-
-### GBR
-
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
-
-##### Filter definition
-  - country: United Kingdom
-
-##### Sides definition
-  - min: 1979
-  - dif: 38
-  - max: 2017
-
-##### Banners definition
-  - FR.INR.LEND: Lending interest rate (%)
-  - GFDD.DI.11: Insurance company assets to GDP (%)
-  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
-  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
-  - GFDD.DM.01: Stock market capitalization to GDP (%)
-  - GFDD.DM.02: Stock market total value traded to GDP (%)
-  - GFDD.EM.01: Stock market turnover ratio (%)
-  - GFDD.OM.02: Stock market return (%, year-on-year)
-  - GFDD.SM.01: Stock price volatility
-  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
-  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
-  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
-  - GFDD.OI.04: Lerner index
-
-  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
-  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-  | 2019 |           0 |               134 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2018 |           0 |               135 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |         0.5 |               136 |           0 |              0 |                 0 |         97 |          0 |         68 |          0 |        4.3 |       11.2 |          0 |        0.3 |
-  | 2007 |         5.5 |               170 |         103 |           3846 |               124 |        102 |        129 |        112 |       99.5 |        9.4 |       13.4 |       61.8 |        0.4 |
-  | 2000 |           6 |               115 |          71 |           2577 |               155 |         90 |        162 |         96 |       68.8 |        4.4 |       17.1 |         56 |        0.3 |
-  | 1993 |           6 |               100 |          36 |           1150 |               108 |         64 |         93 |         33 |       42.4 |       19.2 |       13.2 |          0 |          0 |
-  | 1986 |        10.9 |                78 |          24 |            473 |                79 |         40 |         73 |         17 |       25.8 |       23.8 |       12.6 |          0 |          0 |
-  | 1979 |        13.7 |                26 |          85 |             30 |                 7 |          0 |         21 |          5 |       27.7 |         14 |          0 |          0 |          0 |
----
-
-### IND
-
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
-
-##### Filter definition
-  - country: India
-
-##### Sides definition
-  - min: 1979
-  - dif: 38
-  - max: 2017
-
-##### Banners definition
-  - FR.INR.LEND: Lending interest rate (%)
-  - GFDD.DI.11: Insurance company assets to GDP (%)
-  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
-  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
-  - GFDD.DM.01: Stock market capitalization to GDP (%)
-  - GFDD.DM.02: Stock market total value traded to GDP (%)
-  - GFDD.EM.01: Stock market turnover ratio (%)
-  - GFDD.OM.02: Stock market return (%, year-on-year)
-  - GFDD.SM.01: Stock price volatility
-  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
-  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
-  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
-  - GFDD.OI.04: Lerner index
-
-  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
-  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-  | 2019 |         9.5 |                50 |        28.9 |           2180 |                76 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2018 |         9.5 |              50.1 |        58.1 |           2083 |                77 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |        10.3 |              51.9 |        46.9 |           1558 |                76 |       16.7 |         66 |         31 |         54 |       24.9 |       16.2 |       72.3 |        0.2 |
-  | 2007 |          13 |              45.6 |        62.9 |           1819 |               150 |       15.1 |        112 |       76.8 |         84 |         36 |       25.1 |       76.8 |        0.3 |
-  | 2000 |        12.3 |              28.3 |           0 |              0 |                 0 |          0 |         34 |        2.3 |        313 |       10.5 |       32.6 |          0 |        0.2 |
-  | 1993 |        16.3 |              23.8 |           0 |              0 |                 0 |          0 |         27 |        6.8 |         29 |      -13.4 |          0 |          0 |          0 |
-  | 1986 |        16.5 |              25.8 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |       41.2 |          0 |          0 |          0 |
-  | 1979 |        14.5 |                21 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2019 |         4.4 |             164.7 |         224 |           8516 |                59 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2018 |         4.4 |             157.8 |         207 |           6325 |                46 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2017 |         4.4 |             154.9 |         197 |           8711 |                71 |       20.2 |       65.5 |        145 |        216 |          8 |       17.8 |         91 |          0 |
+  | 2016 |         4.4 |             156.2 |         249 |           7321 |                65 |       20.3 |       67.6 |        249 |        242 |        -19 |       36.4 |       80.7 |          0 |
+  | 2015 |         4.4 |             152.6 |         480 |           8188 |                74 |       17.7 |       64.1 |        232 |        557 |         66 |       26.5 |       84.9 |          0 |
+  | 2014 |         5.6 |             140.2 |         199 |           6005 |                57 |       15.7 |       47.9 |         95 |        239 |          2 |       17.3 |       79.8 |        0.3 |
+  | 2013 |           6 |             134.3 |         195 |           3949 |                41 |       13.9 |       40.4 |         67 |        199 |         -1 |       18.2 |       78.6 |        0.3 |
+  | 2012 |           6 |             128.9 |         136 |           3697 |                43 |       13.6 |       42.2 |         70 |        140 |        -17 |       18.9 |       75.5 |        0.4 |
+  | 2011 |         6.6 |             123.1 |         196 |           3412 |                45 |       12.4 |       51.1 |        103 |        173 |         -6 |       22.1 |       74.7 |        0.4 |
+  | 2010 |         5.8 |             126.6 |         205 |           4028 |                66 |       12.3 |       62.4 |        132 |        217 |          2 |       29.5 |       76.7 |        0.4 |
+  | 2009 |         5.3 |             124.4 |         219 |           3573 |                70 |       11.6 |       52.4 |        115 |        293 |         -9 |         41 |       72.2 |        0.4 |
+  | 2008 |         5.3 |               102 |         220 |           1779 |                39 |       10.4 |       74.3 |        120 |        114 |        -28 |       38.9 |       65.9 |        0.4 |
+  | 2007 |         7.5 |             105.8 |         141 |           4479 |               126 |       10.7 |       78.4 |        104 |        226 |        160 |       27.7 |       64.5 |        0.4 |
+  | 2006 |         6.1 |             109.2 |         101 |           1145 |                42 |        8.9 |       28.1 |         28 |        150 |         41 |       21.6 |       60.6 |        0.4 |
+  | 2005 |         5.6 |             111.8 |          98 |            402 |                18 |          8 |       18.7 |         20 |         92 |        -22 |       21.8 |       74.9 |        0.4 |
+  | 2004 |         5.6 |             118.6 |         114 |            448 |                23 |        7.3 |       24.7 |         23 |        106 |          1 |       18.9 |       78.2 |        0.3 |
+  | 2003 |         5.3 |             125.7 |          76 |            513 |                31 |          0 |       30.2 |         22 |         77 |         -6 |       22.3 |       78.5 |        0.4 |
+  | 2002 |         5.3 |             117.5 |           0 |              0 |                 0 |          0 |       33.9 |         27 |         68 |        -20 |       24.5 |       83.8 |        0.3 |
+  | 2001 |         5.9 |               110 |           0 |              0 |                 0 |          0 |       41.6 |         45 |         81 |          4 |       19.8 |       85.7 |        0.3 |
+  | 2000 |         5.9 |             111.1 |           0 |              0 |                 0 |          0 |       38.1 |         62 |        158 |         37 |       27.8 |          0 |        0.3 |
+  | 1999 |         5.9 |             110.4 |           0 |              0 |                 0 |          0 |       25.8 |         23 |        135 |          9 |       24.5 |          0 |        0.3 |
+  | 1998 |         6.4 |             105.2 |           0 |              0 |                 0 |          0 |       21.4 |         32 |        131 |          7 |         33 |          0 |        0.3 |
+  | 1997 |         8.6 |              96.7 |           0 |              0 |                 0 |          0 |       16.8 |         36 |        230 |         54 |       41.5 |          0 |        0.4 |
+  | 1996 |        10.1 |              89.5 |           0 |              0 |                 0 |          0 |        9.3 |         22 |        322 |         16 |       45.1 |          0 |          0 |
+  | 1995 |        12.1 |              84.2 |           0 |              0 |                 0 |          0 |        6.3 |         10 |        109 |         -2 |         68 |          0 |          0 |
+  | 1994 |          11 |              85.9 |           0 |              0 |                 0 |          0 |        8.1 |          9 |        215 |        -33 |         62 |          0 |          0 |
+  | 1993 |          11 |              96.9 |           0 |              0 |                 0 |          0 |        6.6 |          8 |        150 |         52 |       85.7 |          0 |          0 |
 ---
 
 ### JPN
@@ -166,8 +126,8 @@
   - country: Japan
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -189,12 +149,147 @@
   | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |           0 |             174.9 |          82 |           6191 |             121.8 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |           0 |             169.4 |         119 |           5297 |             106.9 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |         1.2 |               163 |         111 |           4378 |              90.3 |       77.3 |       88.9 |        109 |        112 |       12.2 |       22.3 |       83.6 |        0.4 |
-  | 2007 |         1.9 |             161.7 |         152 |           4331 |              95.9 |       72.3 |       98.2 |        133 |        149 |        2.3 |       18.4 |         57 |        0.3 |
-  | 2000 |         2.1 |             212.3 |          79 |           3157 |              64.6 |       65.9 |       80.4 |         47 |         63 |       11.3 |       21.6 |       76.8 |        0.2 |
-  | 1993 |           5 |             197.4 |          31 |           2906 |              65.2 |       38.1 |       61.7 |         18 |         33 |       12.2 |       22.1 |          0 |          0 |
-  | 1986 |           6 |             151.9 |          65 |           1784 |              85.8 |         33 |       75.5 |         44 |         74 |       32.9 |       11.3 |          0 |          0 |
-  | 1979 |         6.4 |             125.2 |          58 |            289 |              27.4 |          0 |         15 |         17 |        105 |        8.3 |        6.8 |          0 |          0 |
+  | 2017 |           1 |             168.7 |          93 |           6223 |             127.9 |          0 |        113 |        111 |        105 |       19.7 |       21.1 |         86 |          0 |
+  | 2016 |           1 |             163.8 |         105 |           4955 |             100.7 |       75.5 |        106 |        116 |        101 |      -12.8 |       24.9 |       84.4 |          0 |
+  | 2015 |         1.1 |             162.2 |         114 |           4895 |             111.5 |       74.7 |        100 |        112 |        127 |         23 |       18.2 |       83.8 |          0 |
+  | 2014 |         1.2 |               163 |         111 |           4378 |              90.3 |       77.3 |         89 |        109 |        112 |       12.2 |       22.3 |       83.6 |        0.4 |
+  | 2013 |         1.3 |             162.4 |         134 |           4543 |              88.1 |       75.3 |         72 |         85 |        165 |       46.5 |       20.2 |       81.8 |        0.4 |
+  | 2012 |         1.4 |             159.6 |          96 |           3479 |              56.1 |       75.3 |         55 |         62 |         98 |       -6.4 |       19.8 |       70.8 |        0.4 |
+  | 2011 |         1.5 |               159 |         130 |           3325 |                54 |       72.2 |         61 |         73 |        114 |       -7.3 |       20.7 |       70.3 |        0.4 |
+  | 2010 |         1.6 |             159.9 |         112 |           3828 |              67.2 |       70.1 |         65 |         74 |        116 |        1.9 |       25.5 |       66.2 |        0.3 |
+  | 2009 |         1.7 |             166.9 |         117 |           3306 |              63.2 |       71.3 |         64 |        102 |        115 |      -26.8 |       38.2 |       66.3 |        0.3 |
+  | 2008 |         1.9 |               160 |         199 |           3116 |              61.8 |       70.7 |         80 |        137 |        153 |      -28.6 |       26.2 |       58.5 |        0.3 |
+  | 2007 |         1.9 |             161.7 |         152 |           4331 |              95.9 |       72.3 |         98 |        133 |        149 |        2.3 |       18.4 |         57 |        0.3 |
+  | 2006 |         1.7 |             168.6 |         119 |           4614 |             101.8 |       73.8 |         99 |        106 |        123 |         28 |       16.3 |       62.5 |        0.4 |
+  | 2005 |         1.7 |             170.7 |          95 |           4573 |              96.2 |       74.3 |         85 |         81 |        108 |       13.4 |       15.6 |       69.9 |        0.4 |
+  | 2004 |         1.8 |             173.5 |          97 |           3558 |              73.9 |       69.4 |         70 |         62 |        103 |       21.9 |       19.8 |       78.4 |        0.4 |
+  | 2003 |         1.8 |             180.5 |          79 |           2953 |              66.4 |       68.5 |         58 |         47 |         90 |       -6.2 |       21.7 |       78.4 |        0.4 |
+  | 2002 |         1.9 |             180.8 |          84 |           2069 |              50.3 |       67.5 |         52 |         41 |         81 |        -18 |       23.5 |         76 |        0.4 |
+  | 2001 |           2 |             183.2 |          75 |           2265 |              52.6 |       66.7 |         59 |         45 |         67 |      -22.7 |       22.3 |       76.6 |        0.3 |
+  | 2000 |         2.1 |             212.3 |          79 |           3157 |              64.6 |       65.9 |         80 |         47 |         63 |       11.3 |       21.6 |       76.8 |        0.2 |
+  | 1999 |         2.2 |             221.3 |          46 |           4455 |              97.7 |       66.9 |         80 |         35 |         56 |       17.9 |       22.1 |       70.7 |        0.2 |
+  | 1998 |         2.3 |             218.1 |          43 |           2440 |              60.5 |       63.1 |         54 |         25 |         48 |      -15.7 |       21.8 |       77.1 |        0.1 |
+  | 1997 |         2.4 |             210.2 |          50 |           2085 |              47.2 |       39.6 |         55 |         24 |         43 |        -13 |       15.2 |          0 |        0.2 |
+  | 1996 |         2.7 |             197.1 |          39 |           3020 |              62.5 |       39.9 |         63 |         23 |         39 |       16.5 |       15.8 |          0 |        0.2 |
+  | 1995 |         3.5 |               197 |          32 |           3545 |              65.1 |         40 |         68 |         21 |         31 |      -13.8 |         17 |          0 |          0 |
+  | 1994 |         4.1 |             199.2 |          30 |           3592 |              73.2 |       37.3 |         69 |         21 |         32 |        4.9 |       18.7 |          0 |          0 |
+  | 1993 |           5 |             197.4 |          31 |           2906 |              65.2 |       38.1 |         62 |         18 |         33 |       12.2 |       22.1 |          0 |          0 |
+---
+
+### GBR
+
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United Kingdom)
+
+##### Filter definition
+  - country: United Kingdom
+
+##### Sides definition
+  - min: 1993
+  - dif: 24
+  - max: 2017
+
+##### Banners definition
+  - FR.INR.LEND: Lending interest rate (%)
+  - GFDD.DI.11: Insurance company assets to GDP (%)
+  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
+  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
+  - GFDD.DM.01: Stock market capitalization to GDP (%)
+  - GFDD.DM.02: Stock market total value traded to GDP (%)
+  - GFDD.EM.01: Stock market turnover ratio (%)
+  - GFDD.OM.02: Stock market return (%, year-on-year)
+  - GFDD.SM.01: Stock price volatility
+  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
+  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
+  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
+  - GFDD.OI.04: Lerner index
+
+  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
+  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+  | 2019 |           0 |             133.7 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2018 |           0 |             134.5 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2017 |           0 |               134 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |       14.1 |       13.4 |          0 |          0 |
+  | 2016 |           0 |             132.1 |           0 |              0 |                 0 |        119 |          0 |          0 |          0 |       -1.4 |       17.4 |          0 |          0 |
+  | 2015 |           0 |             130.8 |           0 |              0 |                 0 |         96 |          0 |          0 |          0 |        0.4 |       12.6 |          0 |          0 |
+  | 2014 |         0.5 |             135.6 |           0 |              0 |                 0 |         97 |          0 |         68 |          0 |        4.3 |       11.2 |          0 |        0.3 |
+  | 2013 |         0.5 |             149.5 |           0 |              0 |                 0 |         96 |          0 |         75 |          0 |       14.8 |       14.1 |          0 |        0.3 |
+  | 2012 |         0.5 |             160.9 |           0 |              0 |                 0 |         97 |        112 |        103 |         85 |        1.3 |       19.5 |         69 |        0.2 |
+  | 2011 |         0.5 |             170.7 |           0 |              0 |                 0 |         96 |        119 |        122 |         97 |        4.6 |       17.7 |       64.9 |        0.2 |
+  | 2010 |         0.5 |             185.4 |           0 |              0 |                 0 |         99 |        122 |        123 |        103 |         21 |       22.8 |       67.1 |        0.3 |
+  | 2009 |         0.6 |             192.6 |           0 |              0 |                 0 |         96 |         94 |        107 |        157 |      -14.5 |       33.6 |       65.7 |        0.3 |
+  | 2008 |         4.7 |             191.6 |         146 |           1868 |                64 |         87 |         94 |        110 |        100 |      -17.6 |       22.2 |       53.7 |        0.4 |
+  | 2007 |         5.5 |             169.8 |         103 |           3846 |               124 |        102 |        129 |        112 |        100 |        9.4 |       13.4 |       61.8 |        0.4 |
+  | 2006 |         4.6 |             153.8 |          73 |           3781 |               139 |        102 |        127 |         83 |         81 |       16.7 |       10.5 |       62.9 |        0.4 |
+  | 2005 |         4.6 |             143.4 |          57 |           3058 |               121 |         86 |        116 |         66 |         59 |         15 |        9.2 |       59.1 |        0.4 |
+  | 2004 |         4.4 |             137.4 |          58 |           2816 |               117 |         80 |        115 |         63 |         59 |       13.7 |         15 |       59.8 |        0.4 |
+  | 2003 |         3.7 |             129.7 |          51 |           2426 |               118 |         77 |        109 |         58 |         56 |      -10.9 |       24.9 |       57.3 |        0.2 |
+  | 2002 |           4 |               125 |          56 |           1856 |               104 |         78 |        116 |         85 |         51 |      -17.1 |       20.9 |       56.4 |        0.1 |
+  | 2001 |         5.1 |             120.5 |          88 |           2150 |               131 |         86 |        142 |        112 |         82 |      -12.1 |       17.3 |       54.3 |        0.1 |
+  | 2000 |           6 |             115.2 |          71 |           2577 |               155 |         90 |        162 |         96 |         69 |        4.4 |       17.1 |         56 |        0.3 |
+  | 1999 |         5.3 |             105.8 |          48 |           2955 |               176 |         95 |        156 |         73 |         55 |       11.2 |       18.5 |       62.5 |        0.1 |
+  | 1998 |         7.2 |             102.7 |          46 |           2298 |               139 |         84 |        134 |         58 |         48 |       17.3 |       14.1 |       65.8 |        0.1 |
+  | 1997 |         6.6 |             102.2 |          41 |           2068 |               133 |         77 |        124 |         47 |         43 |       18.1 |        9.2 |          0 |        0.1 |
+  | 1996 |           6 |             100.5 |          34 |           1711 |               121 |         67 |        107 |         39 |         39 |         15 |        8.3 |          0 |        0.2 |
+  | 1995 |         6.7 |              97.5 |          38 |           1330 |                99 |         62 |         94 |         37 |         40 |        4.7 |       10.5 |          0 |          0 |
+  | 1994 |         5.5 |               100 |          42 |           1143 |               100 |         57 |        102 |         40 |         41 |        7.9 |       10.4 |          0 |          0 |
+  | 1993 |           6 |              99.9 |          36 |           1150 |               108 |         64 |         93 |         33 |         42 |       19.2 |       13.2 |          0 |          0 |
+---
+
+### DEU
+
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (Germany)
+
+##### Filter definition
+  - country: Germany
+
+##### Sides definition
+  - min: 1993
+  - dif: 24
+  - max: 2017
+
+##### Banners definition
+  - FR.INR.LEND: Lending interest rate (%)
+  - GFDD.DI.11: Insurance company assets to GDP (%)
+  - FS.AST.PRVT.GD.ZS: Domestic credit to private sector (% of GDP)
+  - CM.MKT.TRNR: Stocks traded, turnover ratio of domestic shares (%)
+  - GFDD.DM.01: Stock market capitalization to GDP (%)
+  - GFDD.DM.02: Stock market total value traded to GDP (%)
+  - GFDD.EM.01: Stock market turnover ratio (%)
+  - GFDD.OM.02: Stock market return (%, year-on-year)
+  - GFDD.SM.01: Stock price volatility
+  - GFDD.AM.02: Market capitalization excluding top 10 companies to total market capitalization (%)
+  - CM.MKT.LCAP.CD: Market capitalization of listed domestic companies (current billion US$)
+  - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
+  - GFDD.OI.04: Lerner index
+
+  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
+  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+  | 2019 |           0 |                81 |          64 |           2098 |              54.6 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2018 |           0 |                79 |          92 |           1755 |              44.4 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2017 |           0 |                78 |          64 |           2262 |              61.7 |       47.5 |       54.3 |         37 |         78 |       22.4 |       16.8 |       59.6 |          0 |
+  | 2016 |           0 |                78 |          75 |           1716 |              49.5 |       47.8 |         49 |         37 |         66 |       -5.5 |       23.4 |          0 |          0 |
+  | 2015 |           0 |                78 |          84 |           1716 |              51.1 |       47.7 |         47 |         37 |         91 |       16.8 |       18.3 |       54.8 |          0 |
+  | 2014 |           0 |                79 |          73 |           1739 |              44.8 |       47.5 |       47.1 |         33 |         69 |       15.2 |       14.4 |       54.7 |        0.1 |
+  | 2013 |           0 |                82 |          68 |           1936 |              51.9 |       47.3 |       46.2 |         35 |         76 |       22.9 |       18.5 |         54 |        0.1 |
+  | 2012 |           0 |                84 |          84 |           1486 |              42.1 |       46.3 |       36.4 |         38 |         97 |        4.2 |       26.6 |       53.6 |        0.1 |
+  | 2011 |           0 |                85 |         133 |           1185 |              31.6 |       45.1 |       35.8 |         42 |        117 |        7.2 |       20.4 |       54.9 |        0.1 |
+  | 2010 |           0 |                89 |         105 |           1430 |              42.1 |       46.4 |       38.8 |         47 |        113 |       24.6 |       26.7 |       54.4 |        0.1 |
+  | 2009 |           0 |                99 |         138 |           1292 |                38 |       46.8 |       34.2 |         84 |        153 |      -20.5 |       36.1 |       51.8 |        0.1 |
+  | 2008 |           0 |                97 |         377 |           1111 |              29.8 |       54.3 |       45.1 |        103 |        248 |      -17.7 |       21.9 |       48.9 |       -0.1 |
+  | 2007 |           0 |                97 |         155 |           2105 |              61.5 |       57.4 |       56.4 |         78 |        168 |       26.5 |       15.5 |       55.7 |          0 |
+  | 2006 |           0 |               102 |         119 |           1638 |              54.7 |       58.6 |       47.3 |         54 |        137 |       26.3 |       13.6 |       57.4 |        0.1 |
+  | 2005 |           0 |               105 |         107 |           1202 |              42.2 |       59.6 |       41.8 |         43 |        108 |       18.2 |       14.1 |         55 |        0.1 |
+  | 2004 |           0 |               106 |          99 |           1195 |              42.5 |       58.1 |       42.2 |         41 |         99 |       25.9 |       25.2 |       53.9 |          0 |
+  | 2003 |           0 |               110 |          94 |           1079 |              43.2 |       57.7 |       37.9 |         41 |        107 |      -21.7 |       38.1 |       55.6 |          0 |
+  | 2002 |           0 |               111 |         127 |            686 |              33.2 |       53.8 |       43.7 |         54 |         96 |      -24.4 |       28.9 |       57.4 |          0 |
+  | 2001 |           0 |               112 |         121 |           1072 |              55.1 |       53.5 |       59.1 |         79 |        113 |      -19.2 |         23 |       57.3 |          0 |
+  | 2000 |           0 |                 0 |         144 |           1270 |              65.4 |       52.5 |       64.2 |         76 |        146 |         31 |       22.6 |       55.7 |          0 |
+  | 1999 |           0 |                 0 |          91 |           1432 |              65.3 |       51.8 |       56.3 |         62 |        106 |        4.9 |       26.7 |       46.5 |          0 |
+  | 1998 |           0 |                 0 |         134 |           1094 |              48.9 |       45.1 |       42.6 |         55 |        154 |       31.1 |       23.3 |       57.2 |        0.1 |
+  | 1997 |           0 |                 0 |         120 |            825 |              37.3 |       41.9 |       31.7 |         25 |        141 |         43 |       14.8 |          0 |        0.2 |
+  | 1996 |           0 |                 0 |          23 |            665 |              26.6 |       36.8 |       24.3 |         14 |         25 |       17.8 |       11.7 |          0 |        0.2 |
+  | 1995 |           0 |                 0 |         101 |            577 |              22.3 |       33.7 |       22.1 |         25 |        101 |        0.7 |       13.7 |          0 |          0 |
+  | 1994 |           0 |                 0 |         121 |            499 |              22.6 |          0 |       21.6 |         26 |        127 |       18.1 |         14 |          0 |          0 |
+  | 1993 |           0 |                 0 |         120 |            442 |              21.3 |          0 |       18.3 |         23 |        140 |        9.6 |       13.2 |          0 |          0 |
 ---
 
 ### RUS
@@ -205,8 +300,8 @@
   - country: Russian Federation
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -228,24 +323,43 @@
   | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
   | 2019 |         8.8 |              52.4 |        22.8 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
   | 2018 |         8.9 |              50.9 |        25.5 |            576 |              34.5 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |        11.1 |              54.8 |        41.4 |            386 |              18.7 |          2 |         25 |        8.6 |       30.9 |         -1 |       19.8 |       38.9 |        0.1 |
-  | 2007 |          10 |              37.8 |           0 |              0 |                 0 |        2.1 |        101 |         72 |       57.6 |         25 |       33.7 |          0 |        0.3 |
-  | 2000 |        24.4 |                 0 |           0 |              0 |                 0 |          0 |         20 |        4.1 |       38.5 |        108 |       58.6 |          0 |        0.4 |
+  | 2017 |        10.6 |              52.1 |        23.1 |            623 |              39.6 |        2.4 |         43 |        9.7 |         22 |          5 |       14.9 |         37 |          0 |
+  | 2016 |        12.6 |              53.1 |        25.7 |            622 |              48.7 |        2.2 |         38 |        9.6 |         29 |         15 |       19.2 |       40.3 |          0 |
+  | 2015 |        15.7 |                56 |        29.8 |            393 |              28.8 |          2 |         24 |        8.2 |         36 |         18 |       22.5 |       39.5 |          0 |
+  | 2014 |        11.1 |              54.8 |        41.4 |            386 |              18.7 |          2 |         25 |        8.6 |         31 |         -1 |       19.8 |       38.9 |        0.1 |
+  | 2013 |         9.5 |                48 |        30.6 |            771 |              33.6 |        1.8 |         34 |       12.4 |         30 |         -1 |       19.7 |       37.7 |        0.1 |
+  | 2012 |         9.1 |              43.9 |        41.2 |            825 |              37.4 |        1.6 |         36 |       19.8 |         43 |         -9 |         26 |       38.4 |        0.1 |
+  | 2011 |         8.5 |              41.7 |        70.7 |            784 |              38.3 |        1.6 |         44 |       26.7 |         62 |         12 |       24.5 |       37.9 |        0.1 |
+  | 2010 |        10.8 |              42.8 |        53.3 |            951 |              62.4 |        1.7 |         58 |       34.4 |         58 |         40 |       45.3 |       39.6 |          0 |
+  | 2009 |        15.3 |              45.3 |          67 |            762 |              62.3 |        2.1 |         61 |         60 |         68 |        -24 |         68 |       32.4 |          0 |
+  | 2008 |        12.2 |              41.6 |           0 |              0 |                 0 |        1.9 |         62 |       76.1 |         55 |        -21 |       35.1 |       30.8 |        0.3 |
+  | 2007 |          10 |              37.8 |           0 |              0 |                 0 |        2.1 |        101 |         72 |         58 |         25 |       33.7 |          0 |        0.3 |
+  | 2006 |        10.4 |              30.9 |           0 |              0 |                 0 |        2.3 |         83 |       36.9 |         63 |         91 |       32.8 |          0 |        0.3 |
+  | 2005 |        10.7 |              25.9 |           0 |              0 |                 0 |        2.7 |         54 |       17.9 |         39 |         26 |       31.8 |          0 |        0.3 |
+  | 2004 |        11.4 |              24.3 |           0 |              0 |                 0 |          0 |         44 |       17.2 |         51 |         34 |       32.1 |          0 |        0.3 |
+  | 2003 |          13 |              21.2 |           0 |              0 |                 0 |          0 |         42 |         15 |         45 |         42 |       27.5 |          0 |        0.3 |
+  | 2002 |        15.7 |                18 |           0 |              0 |                 0 |          0 |         28 |       10.7 |         37 |         59 |       33.6 |          0 |        0.3 |
+  | 2001 |        17.9 |              16.8 |           0 |              0 |                 0 |          0 |         19 |        8.7 |         40 |         -9 |       44.2 |          0 |        0.4 |
+  | 2000 |        24.4 |                 0 |           0 |              0 |                 0 |          0 |         20 |        4.1 |         39 |        108 |       58.6 |          0 |        0.4 |
+  | 1999 |        39.7 |                 0 |           0 |              0 |                 0 |          0 |         19 |          2 |          8 |        102 |       89.5 |          0 |        0.4 |
+  | 1998 |        41.8 |                 0 |           0 |              0 |                 0 |          0 |         20 |        3.5 |         19 |        -43 |       95.5 |          0 |        0.1 |
+  | 1997 |          32 |                 0 |           0 |              0 |                 0 |          0 |         20 |        2.3 |         20 |          0 |          0 |          0 |        0.1 |
+  | 1996 |           0 |                 0 |           0 |              0 |                 0 |          0 |          6 |        0.4 |         12 |          0 |          0 |          0 |        0.2 |
+  | 1995 |           0 |                 0 |           0 |              0 |                 0 |          0 |          2 |        0.1 |          8 |          0 |          0 |          0 |          0 |
+  | 1994 |           0 |                 0 |           0 |              0 |                 0 |          0 |          0 |          0 |        538 |          0 |          0 |          0 |          0 |
   | 1993 |           0 |                 0 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 1986 |           0 |                 0 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 1979 |           0 |                 0 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
 ---
 
-### SAS
+### IND
 
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (South Asia)
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (India)
 
 ##### Filter definition
-  - country: South Asia
+  - country: India
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -263,16 +377,35 @@
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
   - GFDD.OI.04: Lerner index
 
-  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS |
-  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- |
-  | 2019 |           0 |              47.2 |          29 |           2196 |                74 |
-  | 2018 |           0 |                47 |          58 |           2176 |                71 |
-  | 2014 |           0 |              47.1 |          44 |           1655 |                70 |
-  | 2007 |           0 |              42.5 |          66 |           1905 |               129 |
-  | 2000 |           0 |              26.7 |         328 |              0 |                 0 |
-  | 1993 |           0 |              22.7 |           0 |              0 |                 0 |
-  | 1986 |           0 |                25 |           0 |              0 |                 0 |
-  | 1979 |           0 |              19.7 |           0 |              0 |                 0 |
+  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
+  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
+  | 2019 |         9.5 |                50 |          29 |           2180 |                76 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2018 |         9.5 |              50.1 |          58 |           2083 |                77 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
+  | 2017 |         9.5 |              48.8 |          51 |           2332 |                88 |          0 |         75 |       38.1 |         60 |         17 |       12.8 |         76 |          0 |
+  | 2016 |         9.7 |              49.1 |          51 |           1567 |                68 |          0 |         67 |       34.2 |         52 |       -3.5 |       16.2 |       74.5 |          0 |
+  | 2015 |          10 |              51.9 |          51 |           1516 |                72 |          0 |         71 |       34.6 |         52 |         11 |       14.7 |       73.6 |          0 |
+  | 2014 |        10.3 |              51.9 |          47 |           1558 |                76 |       16.7 |         66 |         31 |         54 |       24.9 |       16.2 |       72.3 |        0.2 |
+  | 2013 |        10.3 |              52.4 |          47 |           1139 |                61 |       16.5 |         62 |       29.9 |         47 |         12 |       15.8 |         69 |        0.3 |
+  | 2012 |        10.6 |              51.9 |          49 |           1263 |                69 |       18.2 |         59 |       32.6 |         57 |       -0.9 |       19.5 |       72.1 |        0.3 |
+  | 2011 |        10.2 |              51.3 |          64 |           1007 |                55 |       19.1 |         71 |       46.4 |         50 |       -2.4 |       17.9 |       68.9 |        0.3 |
+  | 2010 |         8.3 |              50.6 |          66 |           1632 |                97 |       18.3 |         89 |       65.9 |         73 |       32.9 |       30.4 |       72.4 |        0.3 |
+  | 2009 |        12.2 |              48.1 |          84 |           1307 |                97 |         16 |         70 |       73.5 |        116 |       -5.5 |       43.7 |       69.6 |        0.3 |
+  | 2008 |        13.3 |              49.6 |         143 |            647 |                54 |       17.4 |         96 |       81.3 |         80 |       -6.9 |       31.2 |       74.4 |        0.3 |
+  | 2007 |          13 |              45.6 |          63 |           1819 |               150 |       15.1 |        112 |       76.8 |         84 |         36 |       25.1 |       76.8 |        0.3 |
+  | 2006 |        11.2 |              43.6 |          80 |            819 |                87 |       14.8 |         72 |       58.4 |         97 |       54.7 |       20.8 |       66.8 |        0.3 |
+  | 2005 |        10.8 |              40.1 |          84 |            553 |                67 |         13 |         58 |       52.5 |         98 |       32.9 |       21.9 |       64.7 |        0.3 |
+  | 2004 |        10.9 |              36.2 |         101 |            388 |                55 |         12 |         48 |       47.4 |        116 |       43.6 |       23.2 |         63 |        0.3 |
+  | 2003 |        11.5 |              31.6 |          98 |            279 |                46 |          0 |         45 |       44.2 |         99 |       18.8 |       17.9 |       61.5 |        0.3 |
+  | 2002 |        11.9 |              32.3 |           0 |              0 |                 0 |          0 |         23 |       26.6 |        164 |       -6.5 |       24.4 |       53.1 |        0.2 |
+  | 2001 |        12.1 |              28.6 |           0 |              0 |                 0 |          0 |         26 |       17.2 |        197 |      -24.3 |       31.9 |       58.9 |        0.2 |
+  | 2000 |        12.3 |              28.3 |           0 |              0 |                 0 |          0 |         34 |        2.3 |        313 |       10.5 |       32.6 |          0 |        0.2 |
+  | 1999 |        12.5 |              25.4 |           0 |              0 |                 0 |          0 |         30 |        0.7 |        197 |         25 |       30.5 |          0 |        0.2 |
+  | 1998 |        13.5 |              23.7 |           0 |              0 |                 0 |          0 |         26 |        1.6 |        133 |      -12.3 |       27.2 |          0 |        0.1 |
+  | 1997 |        13.8 |              23.6 |           0 |              0 |                 0 |          0 |         29 |        1.6 |        130 |       12.2 |       25.8 |          0 |        0.2 |
+  | 1996 |          16 |              23.4 |           0 |              0 |                 0 |          0 |         30 |       14.2 |         79 |        0.8 |       21.3 |          0 |        0.1 |
+  | 1995 |        15.5 |              22.5 |           0 |              0 |                 0 |          0 |         34 |        6.6 |         18 |      -17.4 |       20.4 |          0 |          0 |
+  | 1994 |        14.8 |              23.6 |           0 |              0 |                 0 |          0 |         34 |        7.4 |         24 |       61.3 |          0 |          0 |          0 |
+  | 1993 |        16.3 |              23.8 |           0 |              0 |                 0 |          0 |         27 |        6.8 |         29 |      -13.4 |          0 |          0 |          0 |
 ---
 
 ### SSF
@@ -283,8 +416,8 @@
   - country: Sub-Saharan Africa
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -306,24 +439,43 @@
   | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- |
   | 2019 |           0 |                 0 |        31.8 |              0 |                 0 |
   | 2018 |           0 |              45.5 |          33 |              0 |                 0 |
+  | 2017 |           0 |              47.1 |          25 |              0 |                 0 |
+  | 2016 |           0 |              44.1 |        36.6 |              0 |                 0 |
+  | 2015 |           0 |              43.5 |        30.1 |              0 |                 0 |
   | 2014 |           0 |              45.4 |        24.8 |              0 |                 0 |
+  | 2013 |           0 |              46.8 |        24.5 |              0 |                 0 |
+  | 2012 |           0 |              50.7 |        24.8 |              0 |                 0 |
+  | 2011 |           0 |              51.3 |        28.6 |              0 |                 0 |
+  | 2010 |           0 |                57 |        30.4 |              0 |                 0 |
+  | 2009 |           0 |              55.5 |        25.9 |              0 |                 0 |
+  | 2008 |           0 |              49.7 |        40.4 |              0 |                 0 |
   | 2007 |           0 |              60.4 |        29.8 |              0 |                 0 |
+  | 2006 |           0 |              59.8 |        23.5 |              0 |                 0 |
+  | 2005 |           0 |              58.1 |        19.6 |              0 |                 0 |
+  | 2004 |           0 |              55.8 |        18.6 |              0 |                 0 |
+  | 2003 |           0 |              50.1 |        18.5 |              0 |                 0 |
+  | 2002 |           0 |              42.1 |        25.8 |              0 |                 0 |
+  | 2001 |           0 |              55.4 |        23.6 |              0 |                 0 |
   | 2000 |           0 |              54.7 |        34.1 |              0 |                 0 |
+  | 1999 |           0 |              59.6 |        26.7 |              0 |                 0 |
+  | 1998 |           0 |              53.8 |          30 |              0 |                 0 |
+  | 1997 |           0 |              55.9 |        17.6 |            251 |                98 |
+  | 1996 |           0 |              57.1 |        10.6 |            264 |               108 |
+  | 1995 |           0 |              59.8 |         5.6 |            294 |               122 |
+  | 1994 |           0 |              58.9 |         5.1 |            271 |               132 |
   | 1993 |           0 |                54 |         3.6 |              0 |                 0 |
-  | 1986 |           0 |              29.5 |         5.1 |              0 |                 0 |
-  | 1979 |           0 |              27.2 |         4.7 |              0 |                 0 |
 ---
 
-### USA
+### SAS
 
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (United States)
+##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (South Asia)
 
 ##### Filter definition
-  - country: United States
+  - country: South Asia
 
 ##### Sides definition
-  - min: 1979
-  - dif: 38
+  - min: 1993
+  - dif: 24
   - max: 2017
 
 ##### Banners definition
@@ -341,16 +493,35 @@
   - CM.MKT.LCAP.GD.ZS: Market capitalization of listed domestic companies (% of GDP)
   - GFDD.OI.04: Lerner index
 
-  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS | GFDD.DI.11 | GFDD.DM.01 | GFDD.DM.02 | GFDD.EM.01 | GFDD.OM.02 | GFDD.SM.01 | GFDD.AM.02 | GFDD.OI.04 |
-  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-  | 2019 |         5.3 |               193 |           0 |              0 |                 0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2018 |         4.9 |               180 |         109 |          30436 |               148 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |          0 |
-  | 2014 |         3.3 |               185 |         148 |          26331 |               150 |       31.4 |        145 |        209 |        153 |       17.5 |       11.3 |       75.1 |        0.3 |
-  | 2007 |         8.1 |               207 |         215 |          19922 |               138 |       43.8 |        138 |        255 |        216 |       12.7 |       11.5 |       73.8 |        0.2 |
-  | 2000 |         9.2 |               163 |         197 |          15108 |               147 |         39 |        147 |        238 |        198 |        7.5 |       20.4 |       73.1 |        0.2 |
-  | 1993 |           6 |               121 |          65 |           5251 |                77 |       34.9 |         72 |         44 |         70 |        8.6 |        9.9 |          0 |          0 |
-  | 1986 |         8.3 |               110 |          86 |           2538 |                55 |       27.4 |         53 |         40 |         90 |       26.5 |       12.1 |          0 |          0 |
-  | 1979 |        12.7 |                93 |           0 |              0 |                 0 |          0 |         35 |         10 |         29 |        7.2 |       12.1 |          0 |          0 |
+  | year | FR.INR.LEND | FS.AST.PRVT.GD.ZS | CM.MKT.TRNR | CM.MKT.LCAP.CD | CM.MKT.LCAP.GD.ZS |
+  | ---- | ----------- | ----------------- | ----------- | -------------- | ----------------- |
+  | 2019 |           0 |              47.2 |          29 |           2196 |                74 |
+  | 2018 |           0 |                47 |          58 |           2176 |                71 |
+  | 2017 |           0 |              45.7 |          50 |           2437 |                82 |
+  | 2016 |           0 |              45.5 |          50 |           1748 |                61 |
+  | 2015 |           0 |              47.1 |          50 |           1603 |                65 |
+  | 2014 |           0 |              47.1 |          44 |           1655 |                70 |
+  | 2013 |           0 |              47.2 |          45 |           1215 |                56 |
+  | 2012 |           0 |              47.1 |          48 |           1324 |                62 |
+  | 2011 |           0 |              46.8 |          61 |           1107 |                50 |
+  | 2010 |           0 |              46.5 |          64 |           1731 |                86 |
+  | 2009 |           0 |              44.1 |          81 |           1369 |                83 |
+  | 2008 |           0 |              45.5 |         143 |            687 |                46 |
+  | 2007 |           0 |              42.5 |          66 |           1905 |               129 |
+  | 2006 |           0 |              40.4 |          91 |            875 |                74 |
+  | 2005 |           0 |              37.5 |         103 |            607 |                59 |
+  | 2004 |           0 |              34.2 |         118 |            437 |                52 |
+  | 2003 |           0 |                30 |         354 |            298 |                42 |
+  | 2002 |           0 |              30.2 |         112 |              0 |                 0 |
+  | 2001 |           0 |              27.2 |         178 |              0 |                 0 |
+  | 2000 |           0 |              26.7 |         328 |              0 |                 0 |
+  | 1999 |           0 |              25.2 |         244 |              0 |                 0 |
+  | 1998 |           0 |              23.7 |         141 |              0 |                 0 |
+  | 1997 |           0 |              23.5 |          69 |              0 |                 0 |
+  | 1996 |           0 |              23.3 |          37 |              0 |                 0 |
+  | 1995 |           0 |              22.8 |           0 |              0 |                 0 |
+  | 1994 |           0 |              22.7 |           0 |              0 |                 0 |
+  | 1993 |           0 |              22.7 |           0 |              0 |                 0 |
 ---
 
 

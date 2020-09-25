@@ -52,7 +52,7 @@ export const IndicatorsCollection = {
   },
   SocialDevelopment: {
     'SI.POV.GINI': 'Gini index (World Bank estimate)', // ['Poverty']
-    'SE.SEC.PROG.ZS': 'Progression to secondary school (%)', // ['Edu'],
+    'GFDD.OI.04': 'Lerner index', // ['Fin']
     'SH.XPD.CHEX.GD.ZS': 'Current health expenditure (% of GDP)', // ['Health']
     'SP.DYN.LE00.IN': 'Life expectancy at birth, total (years)', // ['Health']
     'SN.ITK.DPTH': 'Depth of hunger (kilocalories per person per day)', // ['Health']
@@ -139,19 +139,16 @@ export const IndicatorsCollection = {
     'SI.DST.FRST.10': 'Income share held by lowest 10%', // ['Poverty']
   },
   Financial: {
-    'FR.INR.LEND': 'Lending interest rate (%)', // ['Fin']
-    'GFDD.DI.11': 'Insurance company assets to GDP (%)', // ['Fin']
-    'FS.AST.PRVT.GD.ZS': 'Domestic credit to private sector (% of GDP)', // ['Fin', 'Private']
-    'CM.MKT.TRNR': 'Stocks traded, turnover ratio of domestic shares (%)', // ['Fin']
-    'GFDD.DM.01': 'Stock market capitalization to GDP (%)', // ['Fin']
-    'GFDD.DM.02': 'Stock market total value traded to GDP (%)', // ['Fin']
-    'GFDD.EM.01': 'Stock market turnover ratio (%)', // ['Fin']
-    'GFDD.OM.02': 'Stock market return (%, year-on-year)', // ['Fin']
-    'GFDD.SM.01': 'Stock price volatility', // ['Fin']
-    'GFDD.AM.02': 'Market capitalization excluding top 10 companies to total market capitalization (%)', // ['Fin']
     'CM.MKT.LCAP.CD': 'Market capitalization of listed domestic companies (current US$)', // ['Fin']
     'CM.MKT.LCAP.GD.ZS': 'Market capitalization of listed domestic companies (% of GDP)', // ['Fin']
-    'GFDD.OI.04': 'Lerner index', // ['Fin']
+    'CM.MKT.TRNR': 'Stocks traded, turnover ratio of domestic shares (%)', // ['Fin']
+    'GFDD.EM.01': 'Stock market turnover ratio (%)', // ['Fin']
+    'GFDD.AM.02': 'Market capitalization excluding top 10 companies to total market capitalization (%)', // ['Fin']
+    'GFDD.DM.01': 'Stock market capitalization to GDP (%)', // ['Fin']
+    'GFDD.DM.02': 'Stock market total value traded to GDP (%)', // ['Fin']
+    'GFDD.DI.11': 'Insurance company assets to GDP (%)', // ['Fin']
+    'FS.AST.PRVT.GD.ZS': 'Domestic credit to private sector (% of GDP)', // ['Fin', 'Private']
+    'FR.INR.LEND': 'Lending interest rate (%)', // ['Fin']
   }
 }
 

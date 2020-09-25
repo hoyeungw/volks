@@ -59,6 +59,7 @@ export const worldbankSamplesToTable = (samples, countries, years, autoRefine) =
   const indicatorDefs = init(table.column('indicator').map(({ id, value }) => [id, value]))
   table
     .mutateColumn('indicator', ({ id }) => id)
+    .mutateColumn('countryiso3code', (x, i) => x?.length ? x : table.cell(i, 'country')?.id)
     .mutateColumn('country', ({ value }) => value)
     .renameColumn('date', 'year')
     .renameColumn('country', 'countryName')
