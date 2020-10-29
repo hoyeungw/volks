@@ -27,6 +27,8 @@ var searchableCheckbox__default = /*#__PURE__*/_interopDefaultLegacy(searchableC
 var ora__default = /*#__PURE__*/_interopDefaultLegacy(ora);
 var fuzzy__default = /*#__PURE__*/_interopDefaultLegacy(fuzzy);
 
+const HEX = 'hex';
+
 const countryList = [{
   name: 'Aruba',
   value: 'ABW'
@@ -700,10 +702,11 @@ const searchList = function (answers, input = '') {
 };
 const searchListLingered = async function (answers, input = '') {
   const conf = this;
-  return await linger.linger(rand.randInt(15, 75), searchList.bind(conf), answers, input);
+  return await linger.linger(rand.randIn(15, 75), searchList.bind(conf), answers, input);
 };
-const lightBlueAccent3 = dye.HexDye(cards.Cards.lightBlue.accent_3, enumFontEffects.BOLD);
-const blueAccent1 = dye.HexDye(cards.Cards.blue.accent_1, enumFontEffects.BOLD);
+const dyeFactory = dye.DyeFactory.prep(HEX, enumFontEffects.BOLD);
+const lightBlueAccent3 = dyeFactory(cards.Cards.lightBlue.accent_3);
+const blueAccent1 = dyeFactory(cards.Cards.blue.accent_1);
 const DE = enumChars.SP + (_ = '|', lightBlueAccent3(_)) + enumChars.SP;
 const LB = blueAccent1('[');
 const RB = blueAccent1(']');
@@ -719,8 +722,8 @@ class WorldbankCli {
     const LIST = 'list';
     inquirer__default['default'].registerPrompt(SEARCHABLE_LIST, searchableList__default['default']);
     inquirer__default['default'].registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox__default['default']);
-    const grey = dye.HexDye(cards.Cards.grey.darken_2, enumFontEffects.UNDERLINE);
-    const DE = enumChars.SP + (_ = '|', dye.HexDye(cards.Cards.lightBlue.accent_4, enumFontEffects.BOLD)(_)) + enumChars.SP;
+    const grey = dye.DyeFactory.prep(HEX, enumFontEffects.UNDERLINE)(cards.Cards.grey.darken_2);
+    const DE = enumChars.SP + (_ = '|', dye.DyeFactory.prep(HEX, enumFontEffects.BOLD)(cards.Cards.lightBlue.accent_4)(_)) + enumChars.SP;
     const logger$1 = says.says['worldbank'].attach(timestampPretty.time);
     const prettyIndicatorList = indicatorList.map(({
       name,

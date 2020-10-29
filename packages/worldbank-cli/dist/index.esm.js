@@ -1,5 +1,5 @@
 import { Cards } from '@palett/cards';
-import { HexDye } from '@palett/dye';
+import { DyeFactory } from '@palett/dye';
 import { BOLD, UNDERLINE } from '@palett/enum-font-effects';
 import { says } from '@palett/says';
 import { Deco, deco } from '@spare/deco';
@@ -11,9 +11,11 @@ import inquirer from 'inquirer';
 import searchableList from 'inquirer-autocomplete-prompt';
 import searchableCheckbox from 'inquirer-checkbox-plus-prompt';
 import ora from 'ora';
-import { randInt } from '@aryth/rand';
+import { randIn } from '@aryth/rand';
 import { linger } from '@valjoux/linger';
 import fuzzy from 'fuzzy';
+
+const HEX = 'hex';
 
 const countryList = [{
   name: 'Aruba',
@@ -688,10 +690,11 @@ const searchList = function (answers, input = '') {
 };
 const searchListLingered = async function (answers, input = '') {
   const conf = this;
-  return await linger(randInt(15, 75), searchList.bind(conf), answers, input);
+  return await linger(randIn(15, 75), searchList.bind(conf), answers, input);
 };
-const lightBlueAccent3 = HexDye(Cards.lightBlue.accent_3, BOLD);
-const blueAccent1 = HexDye(Cards.blue.accent_1, BOLD);
+const dyeFactory = DyeFactory.prep(HEX, BOLD);
+const lightBlueAccent3 = dyeFactory(Cards.lightBlue.accent_3);
+const blueAccent1 = dyeFactory(Cards.blue.accent_1);
 const DE = SP + (_ = '|', lightBlueAccent3(_)) + SP;
 const LB = blueAccent1('[');
 const RB = blueAccent1(']');
@@ -707,8 +710,8 @@ class WorldbankCli {
     const LIST = 'list';
     inquirer.registerPrompt(SEARCHABLE_LIST, searchableList);
     inquirer.registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox);
-    const grey = HexDye(Cards.grey.darken_2, UNDERLINE);
-    const DE = SP + (_ = '|', HexDye(Cards.lightBlue.accent_4, BOLD)(_)) + SP;
+    const grey = DyeFactory.prep(HEX, UNDERLINE)(Cards.grey.darken_2);
+    const DE = SP + (_ = '|', DyeFactory.prep(HEX, BOLD)(Cards.lightBlue.accent_4)(_)) + SP;
     const logger = says['worldbank'].attach(time);
     const prettyIndicatorList = indicatorList.map(({
       name,
