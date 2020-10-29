@@ -3,7 +3,7 @@ import { deco }                 from '@spare/deco'
 import { SP }                   from '@spare/enum-chars'
 import { decoTable }            from '@spare/logger'
 import { time }                 from '@valjoux/timestamp-pretty'
-import { getIndicators }        from '@volks/worldbank-indicator'
+import { rawIndicators }        from '@volks/worldbank-indicator'
 import ora                      from 'ora'
 import { countries }            from '../src/countries'
 import { IndicatorsCollection } from '../src/IndicatorsCollection'
@@ -13,7 +13,7 @@ const test = async () => {
   for (let key in IndicatorsCollection) {
     const indicators = IndicatorsCollection[key]
     spinner.start(time() + ' querying ' + deco(indicators) + ' for ' + deco(countries))
-    const table = await getIndicators({
+    const table = await rawIndicators({
       country: countries,
       indicator: Object.keys(indicators),
       year: [1999, 2019],
