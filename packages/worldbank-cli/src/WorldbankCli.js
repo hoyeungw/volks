@@ -1,5 +1,6 @@
 import { Cards }                           from '@palett/cards'
-import { HexDye }                          from '@palett/dye'
+import { DyeFactory }                      from '@palett/dye'
+import { HEX }                             from '@palett/enum-color-space'
 import { BOLD, UNDERLINE }                 from '@palett/enum-font-effects'
 import { says }                            from '@palett/says'
 import { deco, Deco }                      from '@spare/deco'
@@ -17,7 +18,6 @@ import { searchListLingered }              from './searchListLingered'
 
 const spinner = ora()
 
-
 export class WorldbankCli {
   static async start() {
     spinner.start(time() + ' initiating components')
@@ -28,8 +28,8 @@ export class WorldbankCli {
     inquirer.registerPrompt(SEARCHABLE_LIST, searchableList)
     inquirer.registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox)
 
-    const grey = HexDye(Cards.grey.darken_2, UNDERLINE)
-    const DE = SP + ('|' |> HexDye(Cards.lightBlue.accent_4, BOLD)) + SP
+    const grey = DyeFactory.prep(HEX, UNDERLINE)(Cards.grey.darken_2)
+    const DE = SP + ('|' |> DyeFactory.prep(HEX, BOLD)(Cards.lightBlue.accent_4)) + SP
     const logger = says['worldbank'].attach(time)
     const prettyIndicatorList = indicatorList
       .map(({ name, value, group }) => ({
@@ -84,7 +84,7 @@ export class WorldbankCli {
         { side: COUNTRY, banner: YEAR, sumBy: VALUE, distinctBy: INDICATOR },
         { side: YEAR, banner: COUNTRY, sumBy: VALUE, distinctBy: INDICATOR },
       ].map(({ side, banner, sumBy, distinctBy }) => ({
-        name: decoString(`(${ side }) cross (${ banner }) sum by (${ sumBy }) distinct by (${ distinctBy })`),
+        name: decoString(`(${side}) cross (${banner}) sum by (${sumBy}) distinct by (${distinctBy})`),
         value: { side, banner, sumBy, distinctBy }
       })),
     })

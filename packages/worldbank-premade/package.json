@@ -18,15 +18,15 @@
     "@aryth/comparer": "^0.3.0",
     "@aryth/distinct-vector": "^0.3.0",
     "@aryth/math": "^0.3.0",
-    "@spare/markdown": "^0.9.9",
+    "@spare/markdown": "^0.10.5",
     "@volks/worldbank-indicator": "^0.1.8"
   },
   "devDependencies": {
-    "@analys/enum-pivot-mode": "^0.4.11",
+    "@analys/enum-pivot-mode": "^0.4.23",
     "@aryth/bound-vector": "^0.3.0",
     "@typen/enum-data-types": "^0.1.10",
     "@typen/num-strict": "^0.1.10",
-    "@vect/column-mapper": "^0.2.10",
+    "@vect/column-mapper": "^0.3.4",
     "ora": "^5.1.0"
   },
   "repository": {

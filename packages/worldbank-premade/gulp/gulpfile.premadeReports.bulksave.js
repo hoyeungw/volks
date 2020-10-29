@@ -2,7 +2,8 @@ import { Table }                        from '@analys/table'
 import { esvar }                        from '@flua/utils'
 import { Vinylize }                     from '@flua/vinylize'
 import { Cards }                        from '@palett/cards'
-import { HexDye }                       from '@palett/dye'
+import { DyeFactory }                   from '@palett/dye'
+import { HEX }                          from '@palett/enum-color-space'
 import { BOLD, ITALIC }                 from '@palett/enum-font-effects'
 import { says }                         from '@palett/says'
 import { deco }                         from '@spare/deco'
@@ -20,7 +21,8 @@ const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
 const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF']
 const YEARS = [2019, 1993] // 2018, 2014, 2007, 2000, 1993, 1986,
-const red = HexDye(Cards.red.base, BOLD, ITALIC)
+const dyeFactory = DyeFactory.prep(HEX, BOLD, ITALIC)
+const red = dyeFactory(Cards.red.base)
 
 export const bulkSavePremadeReports = async () => {
   for (let key in IndicatorsCollection)
@@ -49,8 +51,7 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'indicator', distinctBy: 'country' })
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'country', banner: 'indicator', distinctBy: 'year' })
-  }
-  catch (e) {
+  } catch (e) {
     Xr()[red('error')](topic).trace(e |> deco) |> logger
   }
 }

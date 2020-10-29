@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/hoyeungw/volks#readme",
   "dependencies": {
-    "@acq/acq": "^0.2.12",
-    "@analys/enum-tabular-types": "^0.4.11",
-    "@spare/cite": "^0.9.9"
+    "@acq/acq": "^0.2.16",
+    "@analys/enum-tabular-types": "^0.4.23",
+    "@spare/cite": "^0.10.5"
   }
 }
