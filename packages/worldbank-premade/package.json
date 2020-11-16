@@ -15,15 +15,15 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.3.0",
-    "@aryth/distinct-vector": "^0.3.0",
-    "@aryth/math": "^0.3.0",
-    "@spare/markdown": "^0.10.5",
+    "@aryth/comparer": "^0.3.1",
+    "@aryth/distinct-vector": "^0.3.1",
+    "@aryth/math": "^0.3.1",
+    "@spare/markdown": "^0.10.6",
     "@volks/worldbank-indicator": "^0.1.9"
   },
   "devDependencies": {
     "@analys/enum-pivot-mode": "^0.4.23",
-    "@aryth/bound-vector": "^0.3.0",
+    "@aryth/bound-vector": "^0.3.1",
     "@typen/enum-data-types": "^0.1.10",
     "@typen/num-strict": "^0.1.10",
     "@vect/column-mapper": "^0.3.4",

@@ -17,7 +17,7 @@
   "dependencies": {
     "@acq/acq": "^0.2.16",
     "@analys/enum-tabular-types": "^0.4.23",
-    "@spare/cite": "^0.10.5",
+    "@spare/cite": "^0.10.6",
     "@volks/worldbank-indicator": "^0.1.9"
   },
   "repository": {
