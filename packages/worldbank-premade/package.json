@@ -1,6 +1,6 @@
 {
   "name": "@volks/worldbank-premade",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "A worldbank-premade",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -19,7 +19,7 @@
     "@aryth/distinct-vector": "^0.3.1",
     "@aryth/math": "^0.3.1",
     "@spare/markdown": "^0.10.6",
-    "@volks/worldbank-indicator": "^0.1.9"
+    "@volks/worldbank-indicator": "^0.1.10"
   },
   "devDependencies": {
     "@analys/enum-pivot-mode": "^0.4.23",
