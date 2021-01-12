@@ -28,14 +28,14 @@
 
 #### Install
 ```console
-$ npm install @volks/oneself
+$ npm install @volks/worldbank-cli
 ```
 
 #### Usage
 ```js
-import { worldbank-cli } from '@volks/worldbank-cli'
+import { WorldbankCli } from '@volks/worldbank-cli'
 
-worldbank-cli() // undefined
+WorldbankCli() // undefined
 ```
 
 #### Meta

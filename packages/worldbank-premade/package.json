@@ -27,7 +27,7 @@
     "@typen/enum-data-types": "^0.1.10",
     "@typen/num-strict": "^0.1.10",
     "@vect/column-mapper": "^0.3.4",
-    "ora": "^5.1.0"
+    "ora": "^5.2.0"
   },
   "repository": {
     "type": "git",
