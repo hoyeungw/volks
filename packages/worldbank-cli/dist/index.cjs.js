@@ -707,9 +707,9 @@ const searchListLingered = async function (answers, input = '') {
 const dyeFactory = dye.DyeFactory.prep(HEX, enumFontEffects.BOLD);
 const lightBlueAccent3 = dyeFactory(cards.Cards.lightBlue.accent_3);
 const blueAccent1 = dyeFactory(cards.Cards.blue.accent_1);
-const DE = enumChars.SP + (_ = '|', lightBlueAccent3(_)) + enumChars.SP;
-const LB = blueAccent1('[');
-const RB = blueAccent1(']');
+enumChars.SP + (_ = '|', lightBlueAccent3(_)) + enumChars.SP;
+blueAccent1('[');
+blueAccent1(']');
 
 const spinner = ora__default['default']();
 class WorldbankCli {
@@ -724,7 +724,7 @@ class WorldbankCli {
     inquirer__default['default'].registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox__default['default']);
     const grey = dye.DyeFactory.prep(HEX, enumFontEffects.UNDERLINE)(cards.Cards.grey.darken_2);
     const DE = enumChars.SP + (_ = '|', dye.DyeFactory.prep(HEX, enumFontEffects.BOLD)(cards.Cards.lightBlue.accent_4)(_)) + enumChars.SP;
-    const logger$1 = says.says['worldbank'].attach(timestampPretty.time);
+    says.says['worldbank'].attach(timestampPretty.time);
     const prettyIndicatorList = indicatorList.map(({
       name,
       value,

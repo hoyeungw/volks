@@ -695,9 +695,9 @@ const searchListLingered = async function (answers, input = '') {
 const dyeFactory = DyeFactory.prep(HEX, BOLD);
 const lightBlueAccent3 = dyeFactory(Cards.lightBlue.accent_3);
 const blueAccent1 = dyeFactory(Cards.blue.accent_1);
-const DE = SP + (_ = '|', lightBlueAccent3(_)) + SP;
-const LB = blueAccent1('[');
-const RB = blueAccent1(']');
+SP + (_ = '|', lightBlueAccent3(_)) + SP;
+blueAccent1('[');
+blueAccent1(']');
 
 const spinner = ora();
 class WorldbankCli {
@@ -712,7 +712,7 @@ class WorldbankCli {
     inquirer.registerPrompt(SEARCHABLE_CHECKBOX, searchableCheckbox);
     const grey = DyeFactory.prep(HEX, UNDERLINE)(Cards.grey.darken_2);
     const DE = SP + (_ = '|', DyeFactory.prep(HEX, BOLD)(Cards.lightBlue.accent_4)(_)) + SP;
-    const logger = says['worldbank'].attach(time);
+    says['worldbank'].attach(time);
     const prettyIndicatorList = indicatorList.map(({
       name,
       value,

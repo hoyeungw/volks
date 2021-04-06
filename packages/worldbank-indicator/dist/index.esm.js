@@ -35,7 +35,7 @@ const WITHIN_5_YEARS = [2015, 2020];
 
 const parseLabel = label => Array.isArray(label) ? label : [label];
 const parseYear = year => {
-  if (Array.isArray(year) && (year === null || year === void 0 ? void 0 : year.length)) return year.sort(NUM_ASC), year;
+  if (Array.isArray(year) && year !== null && year !== void 0 && year.length) return year.sort(NUM_ASC), year;
   if (isNumeric(year)) return [year, year];
   return WITHIN_5_YEARS;
 };
@@ -170,7 +170,7 @@ const worldbankSamplesToTable = (samples, countries, years, autoRefine) => {
   }) => id).mutateColumn('countryiso3code', (x, i) => {
     var _table$cell;
 
-    return (x === null || x === void 0 ? void 0 : x.length) ? x : (_table$cell = table.cell(i, 'country')) === null || _table$cell === void 0 ? void 0 : _table$cell.id;
+    return x !== null && x !== void 0 && x.length ? x : (_table$cell = table.cell(i, 'country')) === null || _table$cell === void 0 ? void 0 : _table$cell.id;
   }).mutateColumn('country', ({
     value
   }) => value).renameColumn('date', 'year').renameColumn('country', 'countryName').renameColumn('countryiso3code', 'country').proliferateColumn({
