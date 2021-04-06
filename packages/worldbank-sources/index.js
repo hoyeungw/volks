@@ -18,6 +18,7 @@ import { GlobalFinancialInclusion }                                    from './r
 import { GlobalFinancialInclusionAndConsumerProtectionSurvey }         from './resources/sources/GlobalFinancialInclusionAndConsumerProtectionSurvey'
 import { GlobalFinancialInclusionAndConsumerProtectionSurveyInternal } from './resources/sources/GlobalFinancialInclusionAndConsumerProtectionSurveyInternal'
 import { GlobalPartnershipForEducation }                               from './resources/sources/GlobalPartnershipForEducation'
+import { GlobalPublicProcurement }                                     from './resources/sources/GlobalPublicProcurement'
 import { HealthEquityAndFinancialProtectionIndicators }                from './resources/sources/HealthEquityAndFinancialProtectionIndicators'
 import { HealthNutritionAndPopulationStatistics }                      from './resources/sources/HealthNutritionAndPopulationStatistics'
 import { HealthNutritionAndPopulationStatisticsByWealthQuintile }      from './resources/sources/HealthNutritionAndPopulationStatisticsByWealthQuintile'
@@ -37,7 +38,7 @@ import { QuarterlyExternalDebtStatisticsGdds }                         from './r
 import { QuarterlyExternalDebtStatisticsSdds }                         from './resources/sources/QuarterlyExternalDebtStatisticsSdds'
 import { QuarterlyPublicSectorDebt }                                   from './resources/sources/QuarterlyPublicSectorDebt'
 import { RemittancePricesWorldwideReceivingCountries }                 from './resources/sources/RemittancePricesWorldwideReceivingCountries'
-import { RemittancePricesWorldwideSendingCountries }                   from './resources/sources/RemittancePricesWorldwideSendingCountries'
+// import { RemittancePricesWorldwideSendingCountries }                   from './resources/sources/RemittancePricesWorldwideSendingCountries'
 import { StatisticalCapacityIndicators }                               from './resources/sources/StatisticalCapacityIndicators'
 import { TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity }   from './resources/sources/TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity'
 
@@ -64,6 +65,7 @@ export const Sources = {
   GlobalFinancialInclusion,
   GlobalFinancialInclusionAndConsumerProtectionSurvey,
   GlobalFinancialInclusionAndConsumerProtectionSurveyInternal,
+  GlobalPublicProcurement,
   GlobalPartnershipForEducation,
   HealthEquityAndFinancialProtectionIndicators,
   HealthNutritionAndPopulationStatistics,
@@ -84,7 +86,7 @@ export const Sources = {
   QuarterlyExternalDebtStatisticsSdds,
   QuarterlyPublicSectorDebt,
   RemittancePricesWorldwideReceivingCountries,
-  RemittancePricesWorldwideSendingCountries,
+  // RemittancePricesWorldwideSendingCountries,
   StatisticalCapacityIndicators,
   TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity,
 }

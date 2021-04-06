@@ -15,7 +15,7 @@ export const IdaResultsMeasurementSystem = {
     ['SE.SEC.ENRR.LO.FE'   , 'Gross enrolment ratio, lower secondary, female (%)'                                          , ['Edu']                       ], 
     ['SH.DYN.MORT'         , 'Mortality rate, under-5 (per 1,000 live births)'                                             , ['Health', 'Aid', 'Climate']  ], 
     ['SH.H2O.BASW.ZS'      , 'People using at least basic drinking water services (% of population)'                       , ['Health', 'Env']             ], 
-    ['SH.HIV.INCD.ZS'      , 'Incidence of HIV (per 1,000 uninfected population ages 15-49)'                               , ['Health']                    ], 
+    ['SH.HIV.INCD.ZS'      , 'Incidence of HIV, ages 15-49 (per 1,000 uninfected population ages 15-49)'                   , ['Health']                    ], 
     ['SH.STA.BASS.ZS'      , 'People using at least basic sanitation services (% of population)'                           , ['Health', 'Env']             ], 
     ['SH.STA.BRTC.ZS'      , 'Births attended by skilled health staff (% of total)'                                        , ['Health', 'Gender']          ], 
     ['SH.STA.MMRT'         , 'Maternal mortality ratio (modeled estimate, per 100,000 live births)'                        , ['Health', 'Gender', 'Aid']   ], 
