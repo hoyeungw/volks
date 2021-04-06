@@ -12,7 +12,7 @@ const FILENAME = 'countryList'
 export const saveCountryList = async () => {
   const samples = Object.entries(CountryIsos)
     .map(
-      ([name, id]) => ({ name: name.replace(/_/g, SP), value: id })
+      ([ name, id ]) => ({ name: name.replace(/_/g, SP), value: id })
     )
   samples.length |> says['countryList.length']
   await Vinylize(FILENAME + '.js')
