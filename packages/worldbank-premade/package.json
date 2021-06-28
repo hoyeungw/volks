@@ -18,7 +18,7 @@
     "@aryth/comparer": "^0.3.22",
     "@aryth/distinct-vector": "^0.3.22",
     "@aryth/math": "^0.3.22",
-    "@spare/markdown": "^0.11.21",
+    "@spare/markdown": "^0.11.22",
     "@volks/worldbank-indicator": "^0.1.11"
   },
   "devDependencies": {
