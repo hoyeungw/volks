@@ -19,8 +19,8 @@ import { IndicatorsCollection }         from '../src/IndicatorsCollection'
 
 const DEST = 'packages/worldbank-premade/resources'
 const logger = says['reportMaker'].attach(time)
-const COUNTRIES = ['USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF']
-const YEARS = [2019, 1993] // 2018, 2014, 2007, 2000, 1993, 1986,
+const COUNTRIES = [ 'USA', 'CHN', 'JPN', 'GBR', 'DEU', 'RUS', 'IND', 'SSF' ]
+const YEARS = [ 2021, 1993 ] // 2018, 2014, 2007, 2000, 1993, 1986,
 const dyeFactory = DyeFactory.prep(HEX, BOLD, ITALIC)
 const red = dyeFactory(Cards.red.base)
 
@@ -70,9 +70,9 @@ const scopeAndWriteFile = function (table, { side, banner, distinctBy }) {
   const filename = title + '.md'
   const stream = Vinylize(filename)
     .p('## ' + title + LF + LF)
-    .p((header ?? '') + LF + LF)
+    .p(( header ?? '' ) + LF + LF)
   Xr('writing').file(filename) |> logger
-  for (let [key, table] of Object.entries(crostabCollection)) {
+  for (let [ key, table ] of Object.entries(crostabCollection)) {
     const meta = table.meta
     // Xr('add file')[distinctBy](key).p(meta.filter |> deco) |> logger
     stream
@@ -85,7 +85,7 @@ const scopeAndWriteFile = function (table, { side, banner, distinctBy }) {
       .p(LF + '---' + LF + LF)
   }
   stream
-    .p((footer ?? '') + LF + LF)
+    .p(( footer ?? '' ) + LF + LF)
     .pipe(gulp.dest(dest))
   Xr('written').file(filename) |> logger
 }

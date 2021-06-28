@@ -1,4 +1,4 @@
-export const InternationalDebtStatistics = {
+export const InternationalDebtStatisticsDssi = {
   head: ['id', 'name', 'topics'], 
   rows: [
     ['BM.GSR.TOTL.CD'     , 'Imports of goods, services and primary income (BoP, current US$)'                                   , ['Econ', 'Debt', 'Trade']], 

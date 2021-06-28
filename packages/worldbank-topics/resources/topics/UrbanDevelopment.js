@@ -22,7 +22,7 @@ export const UrbanDevelopment = {
     ['IS.VEH.ROAD.K1'   , 'Vehicles (per km of road)'                                                                   , ['Urban', 'Infras']                     ], 
     ['SH.H2O.SAFE.UR.ZS', 'Improved water source, urban (% of urban population with access)'                            , ['Climate', 'Infras', 'Health', 'Urban']], 
     ['SH.STA.ACSN.UR'   , 'Improved sanitation facilities, urban (% of urban population with access)'                   , ['Health', 'Urban']                     ], 
-    ['SH.STA.TRAF.P5'   , 'Mortality caused by road traffic injury (per 100,000 people)'                                , ['Health', 'Urban']                     ], 
+    ['SH.STA.TRAF.P5'   , 'Mortality caused by road traffic injury (per 100,000 population)'                            , ['Health', 'Urban']                     ], 
     ['SI.POV.URGP'      , 'Urban poverty gap at national poverty lines (%)'                                             , ['Poverty', 'Urban']                    ], 
     ['SI.POV.URHC'      , 'Urban poverty headcount ratio at national poverty lines (% of urban population)'             , ['Poverty', 'Urban']                    ], 
     ['SP.URB.GROW'      , 'Urban population growth (annual %)'                                                          , ['Climate', 'Urban']                    ], 

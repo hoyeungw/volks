@@ -3,7 +3,7 @@ export const EnvironmentSocialAndGovernanceEsgData = {
   rows: [
     ['AG.LND.AGRI.ZS'   , 'Agricultural land (% of land area)'                                                                       , ['AgriRural', 'Climate', 'Env']              ], 
     ['AG.LND.FRST.ZS'   , 'Forest area (% of land area)'                                                                             , ['AgriRural', 'Climate', 'Env']              ], 
-    ['AG.PRD.FOOD.XD'   , 'Food production index (2004-2006 = 100)'                                                                  , ['AgriRural']                                ], 
+    ['AG.PRD.FOOD.XD'   , 'Food production index (2014-2016 = 100)'                                                                  , ['AgriRural']                                ], 
     ['CC.EST'           , 'Control of Corruption: Estimate'                                                                          , null                                         ], 
     ['EG.CFT.ACCS.ZS'   , 'Access to clean fuels and technologies for cooking (% of population)'                                     , ['Env']                                      ], 
     ['EG.EGY.PRIM.PP.KD', 'Energy intensity level of primary energy (MJ/$2011 PPP GDP)'                                              , ['Energy', 'Env']                            ], 

@@ -413,7 +413,7 @@ export const Health = {
     ['SH.STA.SUIC.FE.P5'   , 'Suicide mortality rate, female (per 100,000 female population)'                                                                 , ['Health']                                  ], 
     ['SH.STA.SUIC.MA.P5'   , 'Suicide mortality rate, male (per 100,000 male population)'                                                                     , ['Health']                                  ], 
     ['SH.STA.SUIC.P5'      , 'Suicide mortality rate (per 100,000 population)'                                                                                , ['Health']                                  ], 
-    ['SH.STA.TRAF.P5'      , 'Mortality caused by road traffic injury (per 100,000 people)'                                                                   , ['Health', 'Urban']                         ], 
+    ['SH.STA.TRAF.P5'      , 'Mortality caused by road traffic injury (per 100,000 population)'                                                               , ['Health', 'Urban']                         ], 
     ['SH.STA.WASH.P5'      , 'Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (per 100,000 population)'                      , ['Health', 'Env']                           ], 
     ['SH.STA.WAST.FE.ZS'   , 'Prevalence of wasting, weight for height, female (% of children under 5)'                                                       , ['Health']                                  ], 
     ['SH.STA.WAST.MA.ZS'   , 'Prevalence of wasting, weight for height, male (% of children under 5)'                                                         , ['Health']                                  ], 
