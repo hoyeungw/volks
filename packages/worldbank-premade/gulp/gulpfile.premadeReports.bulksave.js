@@ -2,7 +2,7 @@ import { Table }                        from '@analys/table'
 import { esvar }                        from '@flua/utils'
 import { Vinylize }                     from '@flua/vinylize'
 import { Cards }                        from '@palett/cards'
-import { DyeFactory }                   from '@palett/dye'
+import { DyeFactory }                   from '@palett/dye-factory'
 import { HEX }                          from '@palett/enum-color-space'
 import { BOLD, ITALIC }                 from '@palett/enum-font-effects'
 import { says }                         from '@palett/says'
@@ -26,16 +26,15 @@ const red = dyeFactory(Cards.red.base)
 
 export const bulkSavePremadeReports = async () => {
   for (let key in IndicatorsCollection)
-    if (key === 'Agriculture') {
-      await saveGroup({
-        topic: key,
-        indicator: IndicatorsCollection[key],
-        country: COUNTRIES,
-        year: YEARS
-      }).then(() => {
-        Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
-      })
-    }
+    // if (key === 'Business')
+    await saveGroup({
+      topic: key,
+      indicator: IndicatorsCollection[key],
+      country: COUNTRIES,
+      year: YEARS
+    }).then(() => {
+      Xr().finish(key).countries(COUNTRIES |> deco).year(YEARS |> deco) |> logger
+    })
 }
 
 const saveGroup = async ({ topic, indicator, country, year }) => {
@@ -52,6 +51,7 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
     scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'country', banner: 'indicator', distinctBy: 'year' })
   } catch (e) {
+    console.error(e)
     Xr()[red('error')](topic).trace(e |> deco) |> logger
   }
 }
