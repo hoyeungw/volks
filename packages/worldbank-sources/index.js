@@ -37,7 +37,7 @@ import { PppsRegulatoryQuality }                                       from './r
 import { QuarterlyExternalDebtStatisticsGdds }                         from './resources/sources/QuarterlyExternalDebtStatisticsGdds'
 import { QuarterlyExternalDebtStatisticsSdds }                         from './resources/sources/QuarterlyExternalDebtStatisticsSdds'
 import { QuarterlyPublicSectorDebt }                                   from './resources/sources/QuarterlyPublicSectorDebt'
-import { RemittancePricesWorldwideReceivingCountries }                 from './resources/sources/RemittancePricesWorldwideReceivingCountries'
+// import { RemittancePricesWorldwideReceivingCountries }                 from './resources/sources/RemittancePricesWorldwideReceivingCountries'
 // import { RemittancePricesWorldwideSendingCountries }                   from './resources/sources/RemittancePricesWorldwideSendingCountries'
 import { StatisticalCapacityIndicators }                               from './resources/sources/StatisticalCapacityIndicators'
 import { TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity }   from './resources/sources/TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity'
@@ -85,7 +85,7 @@ export const Sources = {
   QuarterlyExternalDebtStatisticsGdds,
   QuarterlyExternalDebtStatisticsSdds,
   QuarterlyPublicSectorDebt,
-  RemittancePricesWorldwideReceivingCountries,
+  // RemittancePricesWorldwideReceivingCountries,
   // RemittancePricesWorldwideSendingCountries,
   StatisticalCapacityIndicators,
   TheAtlasOfSocialProtectionIndicatorsOfResilienceAndEquity,
