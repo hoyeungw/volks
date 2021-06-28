@@ -11,8 +11,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -20,6 +20,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |                 1 |
   | 2018 |              0 |                 1 |
   | 2017 |              0 |               1.1 |
@@ -58,8 +59,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -67,6 +68,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |               1.1 |
   | 2018 |              0 |               1.2 |
   | 2017 |              0 |               1.5 |
@@ -105,8 +107,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -114,6 +116,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |               7.5 |
   | 2018 |              0 |               7.5 |
   | 2017 |              0 |               7.5 |
@@ -152,8 +155,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -161,6 +164,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |                 0 |
   | 2018 |              0 |                 0 |
   | 2017 |              0 |                 0 |
@@ -199,8 +203,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -208,6 +212,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |               6.5 |
   | 2018 |              0 |               6.5 |
   | 2017 |              0 |               6.8 |
@@ -246,8 +251,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -255,6 +260,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |           11.8 |                 1 |
   | 2018 |              0 |               1.1 |
   | 2017 |              0 |               1.1 |
@@ -293,8 +299,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -302,6 +308,7 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
+  | 2020 |              0 |                 0 |
   | 2019 |              0 |               7.2 |
   | 2018 |              0 |              14.4 |
   | 2017 |              0 |                15 |
@@ -340,8 +347,8 @@
 
 ##### Sides definition
   - min: 1993
-  - dif: 26
-  - max: 2019
+  - dif: 27
+  - max: 2020
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -349,7 +356,8 @@
 
   | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
   | ---- | -------------- | ----------------- |
-  | 2019 |           28.7 |                36 |
+  | 2020 |           27.5 |                 0 |
+  | 2019 |           37.7 |                36 |
   | 2018 |              0 |                45 |
   | 2017 |              0 |                52 |
   | 2016 |              0 |                57 |
@@ -366,53 +374,6 @@
   | 2005 |              0 |               206 |
   | 2004 |              0 |               251 |
   | 2003 |              0 |               306 |
-  | 2002 |              0 |                 0 |
-  | 2001 |              0 |                 0 |
-  | 2000 |              0 |                 0 |
-  | 1999 |              0 |                 0 |
-  | 1998 |              0 |                 0 |
-  | 1997 |              0 |                 0 |
-  | 1996 |              0 |                 0 |
-  | 1995 |              0 |                 0 |
-  | 1994 |              0 |                 0 |
-  | 1993 |              0 |                 0 |
----
-
-### SAS
-
-##### Table-spec:(year) cross (indicator) sum by (value) when (country) is (South Asia)
-
-##### Filter definition
-  - country: South Asia
-
-##### Sides definition
-  - min: 1993
-  - dif: 26
-  - max: 2019
-
-##### Banners definition
-  - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
-  - IC.REG.COST.PC.ZS: Cost of business start-up procedures (% of GNI per capita)
-
-  | year | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
-  | ---- | -------------- | ----------------- |
-  | 2019 |           28.3 |               8.3 |
-  | 2018 |              0 |              11.3 |
-  | 2017 |              0 |              21.8 |
-  | 2016 |              0 |              13.7 |
-  | 2015 |              0 |              14.7 |
-  | 2014 |              0 |              15.8 |
-  | 2013 |              0 |              20.4 |
-  | 2012 |              0 |              18.8 |
-  | 2011 |              0 |              21.7 |
-  | 2010 |              0 |              24.5 |
-  | 2009 |              0 |              28.5 |
-  | 2008 |              0 |              37.1 |
-  | 2007 |              0 |              40.1 |
-  | 2006 |              0 |              43.5 |
-  | 2005 |              0 |              45.2 |
-  | 2004 |              0 |              45.8 |
-  | 2003 |              0 |              42.8 |
   | 2002 |              0 |                 0 |
   | 2001 |              0 |                 0 |
   | 2000 |              0 |                 0 |

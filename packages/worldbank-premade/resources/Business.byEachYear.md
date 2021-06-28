@@ -18,7 +18,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -34,7 +33,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1994
@@ -53,7 +51,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -69,7 +66,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1995
@@ -88,7 +84,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -104,7 +99,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1996
@@ -123,7 +117,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -139,7 +132,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1997
@@ -158,7 +150,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -174,7 +165,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1998
@@ -193,7 +183,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -209,7 +198,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 1999
@@ -228,7 +216,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -244,7 +231,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 2000
@@ -263,7 +249,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -279,7 +264,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 2001
@@ -298,7 +282,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -314,7 +297,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 2002
@@ -333,7 +315,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -349,7 +330,6 @@
   | RUS     |           53.2 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |                 0 |
-  | SAS     |              0 |                 0 |
 ---
 
 ### 2003
@@ -368,7 +348,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -384,7 +363,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               306 |
-  | SAS     |              0 |                43 |
 ---
 
 ### 2004
@@ -403,7 +381,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -419,7 +396,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               251 |
-  | SAS     |              0 |                46 |
 ---
 
 ### 2005
@@ -438,7 +414,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -454,7 +429,6 @@
   | RUS     |           36.2 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               206 |
-  | SAS     |              0 |                45 |
 ---
 
 ### 2006
@@ -473,7 +447,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -489,7 +462,6 @@
   | RUS     |              0 |                 0 |
   | IND     |           15.9 |                 0 |
   | SSF     |              0 |               202 |
-  | SAS     |              0 |                44 |
 ---
 
 ### 2007
@@ -508,7 +480,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -524,7 +495,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               184 |
-  | SAS     |              0 |                40 |
 ---
 
 ### 2008
@@ -543,7 +513,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -559,7 +528,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               140 |
-  | SAS     |              0 |                37 |
 ---
 
 ### 2009
@@ -578,7 +546,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -594,7 +561,6 @@
   | RUS     |           52.2 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               116 |
-  | SAS     |              0 |                29 |
 ---
 
 ### 2010
@@ -613,7 +579,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -629,7 +594,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |               106 |
-  | SAS     |              0 |                25 |
 ---
 
 ### 2011
@@ -648,7 +612,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -664,7 +627,6 @@
   | RUS     |              0 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |              90.1 |
-  | SAS     |              0 |              21.7 |
 ---
 
 ### 2012
@@ -683,7 +645,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -699,7 +660,6 @@
   | RUS     |           46.2 |                 0 |
   | IND     |              0 |                 0 |
   | SSF     |              0 |              76.9 |
-  | SAS     |              0 |              18.8 |
 ---
 
 ### 2013
@@ -718,7 +678,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -734,7 +693,6 @@
   | RUS     |              0 |               1.5 |
   | IND     |              0 |              41.5 |
   | SSF     |              0 |                71 |
-  | SAS     |              0 |              20.4 |
 ---
 
 ### 2014
@@ -753,7 +711,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -769,7 +726,6 @@
   | RUS     |              0 |               1.4 |
   | IND     |           35.9 |              16.4 |
   | SSF     |              0 |              59.2 |
-  | SAS     |              0 |              15.8 |
 ---
 
 ### 2015
@@ -788,7 +744,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -804,7 +759,6 @@
   | RUS     |              0 |               1.4 |
   | IND     |              0 |              14.5 |
   | SSF     |              0 |                59 |
-  | SAS     |              0 |              14.7 |
 ---
 
 ### 2016
@@ -823,7 +777,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -839,7 +792,6 @@
   | RUS     |              0 |               1.2 |
   | IND     |              0 |                14 |
   | SSF     |              0 |              56.5 |
-  | SAS     |              0 |              13.7 |
 ---
 
 ### 2017
@@ -858,7 +810,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -874,7 +825,6 @@
   | RUS     |              0 |               1.1 |
   | IND     |              0 |                15 |
   | SSF     |              0 |              52.2 |
-  | SAS     |              0 |              21.8 |
 ---
 
 ### 2018
@@ -893,7 +843,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -909,7 +858,6 @@
   | RUS     |              0 |               1.1 |
   | IND     |              0 |              14.4 |
   | SSF     |              0 |              44.6 |
-  | SAS     |              0 |              11.3 |
 ---
 
 ### 2019
@@ -928,7 +876,6 @@
   - RUS: Russian Federation
   - IND: India
   - SSF: Sub-Saharan Africa
-  - SAS: South Asia
 
 ##### Banners definition
   - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
@@ -943,8 +890,40 @@
   | DEU     |              0 |               6.5 |
   | RUS     |           11.8 |                 1 |
   | IND     |              0 |               7.2 |
-  | SSF     |           28.7 |              36.3 |
-  | SAS     |           28.3 |               8.3 |
+  | SSF     |           37.7 |              36.3 |
+---
+
+### 2020
+
+##### Table-spec:(country) cross (indicator) sum by (value) when (year) is (2020)
+
+##### Filter definition
+  - year: 2020
+
+##### Sides definition
+  - USA: United States
+  - CHN: China
+  - JPN: Japan
+  - GBR: United Kingdom
+  - DEU: Germany
+  - RUS: Russian Federation
+  - IND: India
+  - SSF: Sub-Saharan Africa
+
+##### Banners definition
+  - IC.FRM.TRNG.ZS: Firms offering formal training (% of firms)
+  - IC.REG.COST.PC.ZS: Cost of business start-up procedures (% of GNI per capita)
+
+  | country | IC.FRM.TRNG.ZS | IC.REG.COST.PC.ZS |
+  | ------- | -------------- | ----------------- |
+  | USA     |              0 |                 0 |
+  | CHN     |              0 |                 0 |
+  | JPN     |              0 |                 0 |
+  | GBR     |              0 |                 0 |
+  | DEU     |              0 |                 0 |
+  | RUS     |              0 |                 0 |
+  | IND     |              0 |                 0 |
+  | SSF     |           27.5 |                 0 |
 ---
 
 
