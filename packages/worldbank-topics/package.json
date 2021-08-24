@@ -1,6 +1,6 @@
 {
   "name": "@volks/worldbank-topics",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A worldbank-topics",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/hoyeungw/volks#readme",
   "dependencies": {
-    "@acq/acq": "^0.2.17",
+    "@acq/acq": "^0.2.19",
     "@analys/enum-tabular-types": "^0.5.2",
-    "@spare/cite": "^0.11.22"
+    "@spare/cite": "^0.12.4"
   }
 }

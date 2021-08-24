@@ -1,6 +1,6 @@
 {
   "name": "@volks/worldbank-premade",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A worldbank-premade",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,19 +15,19 @@
     "test": "node -r @babel/register test/test.index.js"
   },
   "dependencies": {
-    "@aryth/comparer": "^0.3.22",
-    "@aryth/distinct-vector": "^0.3.22",
-    "@aryth/math": "^0.3.22",
-    "@spare/markdown": "^0.11.22",
-    "@volks/worldbank-indicator": "^0.1.12"
+    "@aryth/comparer": "^0.3.26",
+    "@aryth/distinct-vector": "^0.3.26",
+    "@aryth/math": "^0.3.26",
+    "@spare/markdown": "^0.12.4",
+    "@volks/worldbank-indicator": "^0.1.13"
   },
   "devDependencies": {
     "@analys/enum-pivot-mode": "^0.5.2",
-    "@aryth/bound-vector": "^0.3.22",
+    "@aryth/bound-vector": "^0.3.26",
     "@typen/enum-data-types": "^0.1.17",
     "@typen/num-strict": "^0.1.17",
     "@vect/column-mapper": "^0.4.4",
-    "ora": "^5.4.1"
+    "ora": "^6.0.0"
   },
   "repository": {
     "type": "git",
