@@ -3,4 +3,5 @@ export const IncomeLevels = {
   LIC:          'Low income',
   LMC: 'Lower middle income',
   UMC: 'Upper middle income',
+  INX:      'Not classified',
 }

@@ -69,14 +69,14 @@ const cli = async () => {
     type: LIST,
     default: '2015',
     message: 'Please select start year',
-    choices: range(2020, 1990),
+    choices: range(2021, 1990),
   },])
   Xr(greyNow()).select({ indicators, countries, start } |> deco) |> logger
   const reg = /^(?<=\s*)[\w.]+(?=\s+\|)/ // /(?<=\|\s*)\w+$/
   const table = Table.from(await getIndicator({
     country: countries.map(word => word.match(reg)[0]),
     indicator: indicators.map(word => word.match(reg)[0]),
-    year: [start, 2020],
+    year: [start, 2021],
     format: TABLE,
     spin: true
   }))

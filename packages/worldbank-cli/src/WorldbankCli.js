@@ -92,7 +92,7 @@ export class WorldbankCli {
     const tableSeries = await seriesIndicators({
       country: countries,
       indicator: indicators,
-      year: [start, 2020],
+      year: [start, 2021],
       autoRefine: true,
       spin: false
     }, spec)

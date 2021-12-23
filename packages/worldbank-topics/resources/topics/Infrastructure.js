@@ -26,6 +26,7 @@ export const Infrastructure = {
     ['IE.PPI.TRAN.CD'   , 'Investment in transport with private participation (current US$)'                                                             , ['Infras', 'Private']                       ], 
     ['IE.PPI.WATR.CD'   , 'Investment in water and sanitation with private participation (current US$)'                                                  , ['Infras', 'Private']                       ], 
     ['IE.PPN.ENGY.CD'   , 'Public private partnerships investment in energy (current US$)'                                                               , ['Infras']                                  ], 
+    ['IE.PPN.ICTI.CD'   , 'Public private partnerships investment in ICT (current US$)'                                                                  , ['Infras']                                  ], 
     ['IE.PPN.TELE.CD'   , 'Public private partnerships investment in telecom (current US$)'                                                              , ['Infras']                                  ], 
     ['IE.PPN.TRAN.CD'   , 'Public private partnerships investment in transport (current US$)'                                                            , ['Infras']                                  ], 
     ['IE.PPN.WATR.CD'   , 'Public private partnerships investment in water and sanitation (current US$)'                                                 , ['Infras']                                  ], 

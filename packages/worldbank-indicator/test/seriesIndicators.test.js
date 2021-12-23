@@ -7,8 +7,8 @@ import { seriesIndicators }     from '../src/seriesIndicators'
 const test = async () => {
   const tables = await seriesIndicators({
     indicator: IndicatorsCollection.MajorEconomy,
-    country: ['CHN', 'USA', 'DEU', 'RUS'],
-    year: [1999, 2019],
+    country: [ 'CHN', 'USA', 'DEU', 'RUS' ],
+    year: [ 1999, 2021 ],
     autoRefine: true,
     spin: true
   }, {
@@ -17,7 +17,7 @@ const test = async () => {
     sumBy: 'value',
     distinctBy: 'country'
   })
-  for (let [key, table] of Object.entries(tables)) {
+  for (let [ key, table ] of Object.entries(tables)) {
     table.title |> deco |> says[key]
     table.meta |> deco |> says[key]
     table |> decoTable |> says[key]

@@ -45,11 +45,11 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
     await Vinylize(topic + '.table.js')
       .p(esvar(topic))
       .p(Verse.table(table))
-      .asyncPipe(gulp.dest(DEST))
+      .asyncPipe(gulp.dest(DEST + '/raw-data'))
     table |> DecoTable({ top: 3, bottom: 1 }) |> logger
-    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'indicator', distinctBy: 'country' })
-    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
-    scopeAndWriteFile.call({ dest: DEST, topic }, table, { side: 'country', banner: 'indicator', distinctBy: 'year' })
+    scopedToWriteMarkdown.call({ dest: DEST, topic }, table, { side: 'year', banner: 'indicator', distinctBy: 'country' })
+    scopedToWriteMarkdown.call({ dest: DEST, topic }, table, { side: 'year', banner: 'country', distinctBy: 'indicator' })
+    scopedToWriteMarkdown.call({ dest: DEST, topic }, table, { side: 'country', banner: 'indicator', distinctBy: 'year' })
   } catch (e) {
     console.error(e)
     Xr()[red('error')](topic).trace(e |> deco) |> logger
@@ -63,7 +63,7 @@ const saveGroup = async ({ topic, indicator, country, year }) => {
  * @param {string} banner
  * @param {string} distinctBy
  */
-const scopeAndWriteFile = function (table, { side, banner, distinctBy }) {
+const scopedToWriteMarkdown = function (table, { side, banner, distinctBy }) {
   const { dest, topic, header, footer } = this
   const crostabCollection = seriesCrostab(table, { side, banner, sumBy: 'value', distinctBy, spin: true })
   const title = topic + '.byEach' + capitalize(distinctBy)
